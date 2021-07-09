@@ -1,91 +1,32 @@
-@import url('https://fonts.googleapis.com/css2? família=Open+Sans:wght@300&display=swap');
-
-/*
-GERAL
-*/
-
-body{
-    font-family: "Open Sans", sans-serif;
-    color: white;
-    
+#barra-navegacao {
+    box-shadow: 0 0 0.5em black;
+    height: 70px; 
+    background-color: black; 
 }
 
-/*
-NAVEGAÇÃO
-*/
-
-.barra-navegacao {
-    height: 70px;
-    display: flex;
-    box-shadow: 0 0 0.5em rgb(56, 56, 56);
-    background-color: black;
-    align-items: center;
-    
-
-}
-
-.LogoProVest{
-    margin-left: 0px ; 
-    height: 120px;
-    width: 120px;
-    
-}
-
-.caixa-pesquisa{
-
-    margin-right: 0px;
-    margin-top: 5px;
-    border-radius: 50em;
-    width: 180px;
-    border: 0;
-    
-    
-}
-
-.foto-perfil{
+.caixa-pesquisa {
+    outline: 0;
+    border-radius: 30px;
+    border: 0px;
     margin-top: 20px;
-    height: 35px;
-    width: 35px;
-    border-radius: 50px;
+
+}
+
+#logo-barra-navegacao {
+    margin-left: 0% ; 
+    height: 70px; 
+    width: 80px;
     
 }
 
-.nome-usuario{
-    margin-left: 15px;
-    margin-top: 25px;
+#foto-perfil {
+    width: 50px;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+#nome-perfil {
     color: white;
-    
-}
-
-.nome-link{
-    text-decoration: none;
-}
-
-.icone-tres-pontos{
-    margin-top: 24px;
-    height: 30px;
-    width: 30px;
-    
-}
-
-.lista-navegacao {
-    margin-left: 650px;
-    list-style: none;
-    display: flex;
-    padding: 0;
-}
-
-/*
-DESENVOLVIMENTO
-*/
-
-.icone-add img{
-    box-shadow: 0 0 0.5em rgb(56, 56, 56);
-    border-radius: 50px;
-    height: 35px;
-    width: 35px;
-    margin-left: 1015px;
-    bottom: 40px;
-    position:fixed;
-
+    font-weight: bold;
 }

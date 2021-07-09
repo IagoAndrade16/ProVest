@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/indexStyles.css">
     <title>ProVest</title>
     <!-- Bootstrap -->
@@ -24,34 +26,45 @@
 
 </head>
 
-<body>
+<body style="background-color: #f1f1f1; font-family: Open Sans;">
 
-    <header class="barra-navegacao">
-        <a href="#"><img class="LogoProVest" src="../img/logoProVest.png" alt="LogoProVest"></a>
+    <!--Logo e barra de pesquisa-->
+    <div class="container-fluid" id="barra-navegacao">
+        <div class="row">
+            <div class="col-md-1">
+                <img src="../img/logoProVest.png" alt="LogoProVest" id="logo-barra-navegacao" class="img-fluid">
+            </div>
+            <div class="col-md-2">
+            <form action="#">
+                <input class="caixa-pesquisa" type="text" placeholder="   Pesquisar">
+            </form>
+    </div>
+            
 
-        <form action="#" method="POST">
-            <input class="caixa-pesquisa" type="text" name="barra-pesquisa" placeholder="Faça a sua pesquisa">
-        </form>
+        <!--Dropbox-->            
+    <div class="col-md-7">
 
-        <nav>
-            <ul class="lista-navegacao">
-                <li><a href="#"><img class="foto-perfil" src="../img/FotoPerfil.jpeg"></a></li>
-                <li><a class="nome-link" href="#">
-                        <p class="nome-usuario">Iago</p>
-                    </a></li>
-                <li><a href="#"><img class="icone-tres-pontos" src="../img/IconeTresPontos.png"
-                            alt="LogoTresPontos"></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="icone-add" >
-        <img src="../img/IconeAdicionar.png" alt="IconeAdicionar">
     </div>
 
 
+    <!--Foto de perfil-->
+    <div class="col-md-1">
+        <a href="#">
+            <img src="../img/fotoPessoa.jpg" alt="foto de perfil" id="foto-perfil">
+        </a>
+    </div>
 
 
+    <!--Nome e mais informações do perfil-->
+    <div class="col-md-1">
+        <br>
+        <a href="#" id="nome-perfil">
+            Iago
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+            </svg>
+        </a>
+    </div>
 </body>
 
 </html>
