@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    font-family: "Open Sans", sans-serif;
+}
+/*
+NAVEGAÇÃO
+*/
+
+.barra{
+    background-color: black;
+    height: 5rem;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+
+}
+.logoprovest img{
+    height: 10rem;
+    width: 10rem;
+    padding: 0rem;
+    margin-top: -40px;
+}
+
+/*
+ESTRUTURA
+*/
+
+.titulo-insira-email{
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+     
+}
+.instruncao p{
+    text-align: center;
+}
+.e-mail-enviar input{
+    border-radius: 20px;
+    padding: 10px;
+    width: 240px;
+    margin-top: 15px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f1f1;
+
+}
+.btn-enviar button{
+
+    background-color: white;
+    margin-left: 0px;
+    border-radius: 20px; 
+    padding: 10px;
+    width: 185px;
+    margin-top: 30px;
+    outline:0;
+    border-color: black;
+    font-family: "Open Sans", sans-serif;
+
+}
