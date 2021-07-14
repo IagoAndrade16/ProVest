@@ -47,16 +47,18 @@ ESTRUTURA
     
 }
 
-.estado input{
+.estado select{
     border-radius: 20px;
-    padding: 10px;
-    width: 240px;
+    padding: 9px;
+    width: 262px;
     margin-top: 15px;
     border: none;
     outline:0;
     box-shadow: 0 0 0.5em rgb(56, 56, 56);
     font-family: 'Open Sans', sans-serif;
     background-color: #f1f1f1;
+    color: gray;
+    
 }
 
 .cidade input{
@@ -94,6 +96,19 @@ ESTRUTURA
     background-color: #f1f1f1;
 
 }
+.caixa-concordar {
+    padding: 15px;
+    font-size: 12px;
+    color: #708090;
+}
+.caixa-concordar a{
+    color: black;
+    text-decoration: none;
+}
+.caixa-ok{
+    
+}
+
 .botao button{
     
     background-color: white;
@@ -101,20 +116,23 @@ ESTRUTURA
     border-radius: 20px; 
     padding: 10px;
     width: 190px;
-    margin-top: 30px;
+    margin-top: 15px;
     outline:0;
     border-color: black;
     font-family: 'Open Sans', sans-serif;
     
     
 }
-
-.Login, a{
-    color: black;
+.suporte{
     text-align: center;
-    text-decoration: none;
-    
+    font-size: 15px;
 }
-.Login p{
-    color: gray;
+
+.Login{
+    color: black;
+    text-decoration: none;
+}
+
+.ja-tem-uma-conta {
+    color: #708090;
 }

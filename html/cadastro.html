@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b21197af3e.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
@@ -23,34 +24,70 @@
         </div>
     </header>
 
-    <a href="#">
-        <div class="titulo">
-            <h1>Crie sua conta</h1>
-        </div>
-    </a>
 
+    <div class="titulo">
+        <h1>Crie sua conta</h1>
+    </div>
 
-    <div class="cadastro">
+    <div>
         <form action="#" method="POST">
             <center>
                 <div class="nome-usuario">
-                    <input type="text" name="Nome-de-usuario" placeholder="   Nome de usuário">
+                    <input type="text" name="Nome-de-usuario" placeholder=" Nome de usuário">
                 </div>
 
                 <div class="estado">
-                    <input type="text" name="Estado" placeholder="   Estado">
+                    <select name="Estado">
+                        <option>Estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="DF">Distrito Federal</option>
+                    </select>
+
                 </div>
 
                 <div class="cidade">
-                    <input type="text" name="Cidade" placeholder="   Cidade">
+                    <input type="text" name="Cidade" placeholder=" Cidade">
                 </div>
 
                 <div class="e-mail">
-                    <input type="text" name="E-mail" placeholder="   E-mail">
+                    <input type="text" name="E-mail" placeholder=" E-mail">
                 </div>
 
                 <div class="senha">
-                    <input type="password" name="Senha" placeholder="   Senha">
+                    <input type="password" name="Senha" placeholder=" Senha">
+                </div>
+
+                <div class="caixa-concordar">
+                    <input class="caixa-ok" type="checkbox" name="politica-privacidade">
+                    <label for="politica-privacidade">Criar uma conta significa que você está bem com <a href="#">nossos
+                            <br> Termos de Serviço,</a> Política de <a href="#"> Privacidade</a> e nossas <br> <a
+                            href="#">Configurações </a>de nofificação padrão.</label>
+
                 </div>
 
                 <div class="botao">
@@ -63,8 +100,8 @@
         </form>
     </div>
 
-    <div class="Login">
-        <p>Ja tem uma conta?<a href="#"> Clique aqui</a></p>
+    <div class="suporte">
+        <p class="ja-tem-uma-conta">Ja tem uma conta?<a class="Login" href="#"> Clique aqui</a></p>
     </div>
 
 </body>
