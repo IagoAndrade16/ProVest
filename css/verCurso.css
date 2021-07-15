@@ -1,38 +1,37 @@
-#barrad-navegacao {
+#barra-navegacao {
     box-shadow: 0 0 0.5em black;
-    height: 5rem;     
+    height: 70px; 
+    background-color: black; 
 }
 
 .caixa-pesquisa {
     outline: 0;
     border-radius: 30px;
     border: 0px;
+    margin-top: 20px;
     height: 30px;
     width: 200px;
-    margin-bottom: 22px;
 
 }
 
 #logo-barra-navegacao {
-    margin-top: -23px;
-    margin-left: -15px; 
-    height: 7rem; 
-    width: 7rem;
+    margin-left: 0% ; 
+    height: 70px; 
+    width: 80px;
     
 }
 
 #foto-perfil {
     width: 50px;
     border-radius: 50px;
-    margin-top: -25px;
-    margin-left: 760px;
+    margin-top: 10px;
+    margin-left: 75px;
 }
 
 #nome-perfil {
     color: white;
     font-weight: bold;
-    margin-left: 20px;
-    margin-bottom: 25px;
+    margin-left: 45px;
 }
 
 /* Dropbox Estilos*/
@@ -43,9 +42,7 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
-    margin-top: -50px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    margin-top: 5px;
 }
   
 .dropdown {
@@ -78,24 +75,3 @@
 .dropdown:hover .dropbtn {
     background-color: #000;
 }
-
-
-#criar-novoCurso-botao {
-    margin-left: 92%;
-    margin-top: 48%;
-    border-radius: 50px;
-    width: 4rem;
-    height: 4rem;
-    background-color: #fff;
-    border: none;
-    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
-}
-
-#cursos-em {
-    margin: 30px;
-    font-size: 1.7rem;
-}
-
-
-
-
