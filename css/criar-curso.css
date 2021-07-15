@@ -1,0 +1,77 @@
+/*
+GERAL
+*/
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    font-family: "Open Sans", sans-serif;
+}
+
+/*
+CABEÇALHO
+*/
+
+.barra-navegacao{
+    
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    height: 5rem;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    
+}
+.logoProvest{
+    display: flex;
+    height: 10rem;
+    width: 10rem;
+    padding: 0;
+    margin-top: -40px;
+}
+
+/*
+Navegação
+*/
+
+.alinhar-nav{
+    margin-left: 4rem;
+}
+
+.lista-navegacao{
+    display: flex;
+    list-style: none;
+}
+
+.foto-pessoa{
+    
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    margin-left: 60rem;
+    
+}
+.div-nome{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+}
+
+.style-nome{
+    color: white;
+    text-decoration: none;
+}
+
+.div-tres-pontos{
+    margin-top: 11px;
+
+}
+.style-tres-pontos{
+    color: white;
+}
+.div-1{
+    display: flex;
+    flex-direction: column;
+
+}
