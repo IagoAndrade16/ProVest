@@ -20,6 +20,7 @@ CABEÇALHO
     height: 5rem;
     box-shadow: 0 0 0.5em rgb(56, 56, 56);
     
+    
 }
 .logoProvest{
     display: flex;
@@ -34,7 +35,7 @@ Navegação
 */
 
 .alinhar-nav{
-    margin-left: 4rem;
+    margin-left: 1rem;
 }
 
 .lista-navegacao{
@@ -50,7 +51,7 @@ Navegação
     margin-left: 60rem;
     
 }
-.div-nome{
+.div-link-nome{
     margin-top: 10px;
     margin-left: 10px;
     height: 40px;
@@ -58,7 +59,7 @@ Navegação
     text-decoration: none;
 }
 
-.style-nome{
+.link-nome{
     color: white;
     text-decoration: none;
 }
@@ -70,8 +71,122 @@ Navegação
 .style-tres-pontos{
     color: white;
 }
-.div-1{
-    display: flex;
-    flex-direction: column;
 
+/*
+TELA
+*/
+
+.style-nome{
+    border-radius: 20px;
+    padding: 10px;
+    width: 240px;
+    margin-top: 15px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f1f1;
+}
+.estado select{
+    border-radius: 20px;
+    padding: 10px;
+    width: 240px;
+    margin-top: 15px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f1f1;
+
+}
+.style-descricao{
+    border-radius: 10px;
+    padding: 10px;
+    width: 240px;
+    margin-top: 15px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f1f1;
+
+}
+.quadro-add-foto{
+    border-radius: 10px;
+    padding: 50px;
+    width: 50px;
+    margin-top: 15px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f1f1;
+}
+#icone-mais{
+    margin-left: 1rem;
+    color: black;
+}
+.style-cidade{
+    border-radius: 20px;
+    padding: 10px;
+    width: 240px;
+    margin-top: 15px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f1f1;
+
+}
+.style-endereco{
+    border-radius: 20px;
+    padding: 10px;
+    width: 240px;
+    margin-top: 15px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f1f1;
+}
+.style-telefone{
+    border-radius: 20px;
+    padding: 10px;
+    width: 240px;
+    margin-top: 15px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f1f1;
+}
+.style-celular{
+    border-radius: 20px;
+    padding: 10px;
+    width: 240px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f1f1;
+}
+.btn-criar-curso{
+    background-color: white;
+    margin-left: 0px;
+    border-radius: 20px; 
+    padding: 10px;
+    width: 190px;
+    margin-top: 30px;
+    outline:0;
+    border-color: black;
+    font-family: "Open Sans", sans-serif;
+}
+.div-1{
+    display: table;
+    margin-left: 20rem;
+}
+.div-2{
+    display: table;
+    margin-left: 49rem;
+    margin-top: -38rem;
 }
