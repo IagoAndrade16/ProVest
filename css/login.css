@@ -89,3 +89,17 @@ ESTRUTURA
     text-decoration: none;
 
 }
+
+/*
+SCROLLBAR
+*/
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: radial-gradient(transparent, #666);
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: radial-gradient(transparent, black);
+}

@@ -1,6 +1,7 @@
 /*
 GERAL
 */
+
 body{
     margin: 0;
     padding: 0;
@@ -13,6 +14,7 @@ CABEÇALHO
 */
 
 .barra-navegacao{
+    
     
     display: flex;
     justify-content: center;
@@ -182,6 +184,7 @@ TELA
     font-family: "Open Sans", sans-serif;
 }
 .div-1{
+    
     display: table;
     margin-left: 20rem;
 }
@@ -189,4 +192,18 @@ TELA
     display: table;
     margin-left: 49rem;
     margin-top: -38rem;
+}
+
+/*
+SCROLLBAR
+*/
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: radial-gradient(transparent, #666);
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: radial-gradient(transparent, black);
 }
