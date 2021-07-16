@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/LogoProVest.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/b21197af3e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/criar-curso.css">
+    <title>Criar Curso</title>
+</head>
+
+<body>
+
+    <header class="barra-navegacao">
+        <div><a href="#"><img class="logoProvest" src="../img/logoProVest.png"></a></div>
+
+        <nav class="alinhar-nav">
+            <ul class="lista-navegacao">
+                <li><a href="#"><img class="foto-pessoa" src="../img/fotoPessoa.jpg"></a></li>
+                <li class="div-link-nome"><a class="link-nome" href="#">Iago</a></li>
+                <li class="div-tres-pontos"><a class="style-tres-pontos" href="#"><i class="fa fa-ellipsis-v"
+                            aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+
+        <form action="" method="POST">
+
+            <div class="div-1">
+
+                <h1>Criar Curso</h1>
+
+                <p><strong>Nome:</strong></p>
+                <div class="nome-input">
+                    <input class="style-nome" type="text" name="Nome">
+                </div>
+                <p><strong>Categoria:</strong></p>
+
+                <input type="checkbox" name="Pré-ENEM">
+                <label for="Categoria-Pré-ENEM">Pré-ENEM</label>
+                <br>
+                <input type="checkbox" name="Pré-Vestibular">
+                <label for="Categoria-Pré-Vestibular">Pré-Vestibular</label>
+                <br>
+                <input type="checkbox" name="Concursos Militares">
+                <label for="Categoria-Concursos Militares">Concursos Militares</label>
+                <br>
+                <input type="checkbox" name="Concursos Públicos">
+                <label for="Categoria-Concursos Públicos">Concursos Públicos</label>
+                <br>
+                <input type="checkbox" name="Outro">
+                <label for="Categoria-Outro">Outro</label>
+
+                <p><strong>Modalidade de Ensino:</strong></p>
+
+                <input type="checkbox" name="Pré-ENEM">
+                <label for="Categoria-Presencial">Presencial</label>
+                <br>
+                <input type="checkbox" name="Pré-Vestibular">
+                <label for="Categoria-Online">Online</label>
+
+
+                <div class="estado">
+                    <p><strong>Estado:</strong></p>
+                    <select>
+                        <option>Estado</option>
+                        <option name="Acre" value="AC">Acre</option>
+                        <option name="Alagoas" value="AL">Alagoas</option>
+                        <option name="Amapá" value="AP">Amapá</option>
+                        <option name="Amazonas" value="AM">Amazonas</option>
+                        <option name="Bahia" value="BA">Bahia</option>
+                        <option name="Ceará" value="CE">Ceará</option>
+                        <option name="Espírito Santo" value="ES">Espírito Santo</option>
+                        <option name="Goiás" value="GO">Goiás</option>
+                        <option name="Maranhão" value="MA">Maranhão</option>
+                        <option name="Mato Grosso" value="MT">Mato Grosso</option>
+                        <option name="Mato Grosso do Sul" value="MS">Mato Grosso do Sul</option>
+                        <option name="Minas Gerais" value="MG">Minas Gerais</option>
+                        <option name="Pará" value="PA">Pará</option>
+                        <option name="Paraíba" value="PB">Paraíba</option>
+                        <option name="Paraná" value="PR">Paraná</option>
+                        <option name="Pernambuco" value="PE">Pernambuco</option>
+                        <option name="Piauí" value="PI">Piauí</option>
+                        <option name="Rio de Janeiro" value="RJ">Rio de Janeiro</option>
+                        <option name="Rio Grande do Norte" value="RN">Rio Grande do Norte</option>
+                        <option name="Rio Grande do Sul" value="RS">Rio Grande do Sul</option>
+                        <option name="Rondônia" value="RO">Rondônia</option>
+                        <option name="Roraima" value="RR">Roraima</option>
+                        <option name="Santa Catarina" value="SC">Santa Catarina</option>
+                        <option name="São Paulo" value="SP">São Paulo</option>
+                        <option name="Sergipe" value="SE">Sergipe</option>
+                        <option name="Tocantins" value="TO">Tocantins</option>
+                        <option name="Distrito Federal" value="DF">Distrito Federal</option>
+                    </select>
+
+                </div>
+
+                <p><strong>Descrição:</strong></p>
+                <div class="div-descricao">
+                    <textarea class="style-descricao" type="text" name="message"></textarea>
+                </div>
+            </div>
+
+
+            <div class="div-2">
+
+                <p><strong>Adicionar Foto</strong></p>
+                <a href="#">
+                    <div class="quadro-add-foto">
+                        <i id="icone-mais" class="fa fa-plus-circle" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <p><strong>Cidade:</strong></p>
+                <div class="div-cidade">
+                    <input class="style-cidade" type="text" name="nome">
+                </div>
+
+                <p><strong>Endereço:</strong></p>
+                <div class="div-endereco">
+                    <input class="style-endereco" type="text" name="endereço">
+                </div>
+
+                <p><strong>Telefone:</strong></p>
+                <div class="div-telefone">
+                    <input class="style-telefone" type="text" name="telefone">
+                </div>
+
+                <p><b>Celular:</b></p>
+                <div class="div-celular">
+                    <input class="style-celular" type="text" name="celular">
+                </div>
+
+                <button class="btn-criar-curso" type="submit">Cria Curso</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
