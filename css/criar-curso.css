@@ -43,12 +43,15 @@ Navegação
 */
 
 .alinhar-nav{
-    margin-left: 17rem;
+    margin-left: 18rem;
     margin-top: -6.5rem;
+    display: -webkit-box;display: -ms-flexbox;display: flex;
 }
 
 .lista-navegacao{
-    display: flex;
+    
+    display: -webkit-box;display: -ms-flexbox;display: flex;
+    
     list-style: none;
 }
 
