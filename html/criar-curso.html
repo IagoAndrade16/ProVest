@@ -5,77 +5,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/LogoProVest.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/b21197af3e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/criar-curso.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/criar-curso.css">
+    <link rel="shortcut icon" href="../img/LogoProVest.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/b21197af3e.js" crossorigin="anonymous"></script>
     <title>Criar Curso</title>
 </head>
 
 <body>
-    
-    <main>
 
-        <header class="barra-navegacao">
-            <center>
-                <img class="logoProvest" src="../img/logoProVest.png">
-            </center>
+    <header class="header">
+        <a href="#"><img src="../img/logoProVest.png"></a>
+        <nav>
+            <ul class="menu">
+                <li><a class="foto" href="#"><img src="/img/fotoPessoa.jpg"></a></li>
+                <li><a href="#">Iago</a></li>
+                <li><a href="#"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <nav class="alinhar-nav">
-                <ul class="lista-navegacao">
-                    <li><a href="#"><img class="foto-pessoa" src="../img/fotoPessoa.jpg"></a></li>
-                    <li class="div-link-nome"><a class="link-nome" href="#">Iago</a></li>
-                    <li class="div-tres-pontos"><a class="style-tres-pontos" href="#"><i class="fa fa-ellipsis-v"
-                                aria-hidden="true"></i></a></li>
-                </ul>
-            </nav>
-        </header>
+    <h1 class="texto">Criar Cursos</h1>
 
-
-
-        <form action="" method="POST">
-
-            <div class="div-1">
-                <br><br>
-                <h1>Criar Curso</h1>
-                <br>
-
-                <p><strong>Nome:</strong></p>
-                <div class="nome-input">
-                    <input class="style-nome" type="text" name="Nome">
+    <section class="flex-box">
+        <center>
+            <form action="" method="POST">
+                <div class="input">
+                    <input type="text" name="Nome" placeholder="Nome:">
                 </div>
-                <br>
-                <p><strong>Categoria:</strong></p>
-                <br>
-                <input type="checkbox" id="Categoria-Pré-ENEM" name="Pré-ENEM">
-                <label for="Categoria-Pré-ENEM">Pré-ENEM</label>
-                <br>
-                <input type="checkbox" id="Categoria-Pré-Vestibular" name="Pré-Vestibular">
-                <label for="Categoria-Pré-Vestibular">Pré-Vestibular</label>
-                <br>
-                <input type="checkbox" id="Categoria-Concursos Militares" name="Concursos Militares">
-                <label for="Categoria-Concursos Militares">Concursos Militares</label>
-                <br>
-                <input type="checkbox" id="Categoria-Concursos-Públicos" name="Concursos Públicos">
-                <label for="Categoria-Concursos-Públicos">Concursos Públicos</label>
-                <br>
-                <input type="checkbox" id="Categoria-Outro" name="Outro">
-                <label for="Categoria-Outro">Outro</label>
-                <br><br>
 
-                <p><strong>Modalidade de Ensino:</strong></p>
-                <br>
-                <input type="checkbox" id="Categoria-Presencial" name="Pré-ENEM">
-                <label for="Categoria-Presencial">Presencial</label>
-                <br>
-                <input type="checkbox" id="Categoria-Online" name="Pré-Vestibular">
-                <label for="Categoria-Online">Online</label>
-                <br><br>
+                <div>
+                    <p>Categoria:</p>
+                    <br>
+                    <input class="checkbox-1" type="checkbox" id="Categoria-Pré-ENEM" name="Pré-ENEM">
+                    <label for="Categoria-Pré-ENEM">Pré-ENEM</label>
+                </div>
 
-                <div class="estado">
-                    <p><strong>Estado:</strong></p>
+                <div>
+                    <input  class="checkbox-2" type="checkbox" id="Pré-Vestibular" name="Pré-Vestibular">
+                    <label for="Pré-Vestibular">Pré-Vestibular</label>
+                </div>
+
+                <div>
+                    <input  class="checkbox-3" type="checkbox" id="Concursos Militares" name="Concursos Militares">
+                    <label for="Concursos Militares">Concursos Militares</label>
+                </div>
+
+                <div>
+                    <input class="checkbox-4" type="checkbox" id="Concursos Públicos" name="Concursos Públicos">
+                    <label for="Concursos Públicos">Concursos Públicos</label>
+                </div>
+
+                <div>
+                    <input class="checkbox-5" type="checkbox" id="Outro" name="Outro">
+                    <label for="Outro">Outro</label>
+                </div>
+
+                <div>
+                    <p>Modalidade de Ensino:</p>
+                    <br>
+                    <input class="checkbox-6" type="checkbox" id="Presencial" name="Presencial">
+                    <label for="Presencial">Presencial</label>
+                </div>
+
+                <div>
+                    <input class="checkbox-7" type="checkbox" id="On-line" name="On-line">
+                    <label for="On-line">On-line</label>
+
+                </div>
+
+                <div class="input">
                     <select>
                         <option>Estado</option>
                         <option name="Acre" value="AC">Acre</option>
@@ -106,55 +107,49 @@
                         <option name="Tocantins" value="TO">Tocantins</option>
                         <option name="Distrito Federal" value="DF">Distrito Federal</option>
                     </select>
+                </div>
+
+                <div class="input">
+                    <textarea type="text" name="descricao" placeholder="Descrição:"></textarea>
+                </div>
+
+                <!------------------------------MEIO------------------------------>
+
+                <div>
+                    <p>Adicionar foto</p>
+                    <a href="#">
+                        <div class="icone">
+                            <img src="../img/btn-add.png">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="input">
+                    <select>
+                        <option>Cidades</option>
+                    </select>
+                </div>
+
+                <div class="input">
+                    <input type="text" name="endereco" placeholder="Endereço:">
+                </div>
+
+                <div class="input">
+                    <input type="text" name="telefone" placeholder="Telefone:">
+                </div>
+
+                <div class="input">
+                    <input type="text" name="telefone" placeholder="Celular/WhatsApp:">
+                </div>
+                <br>
+                <div class="btn">
+                    <button type="submit" name="btn-criar">Criar Curso</button>
 
                 </div>
                 <br>
-                <p><strong>Descrição:</strong></p>
-                <div class="div-descricao">
-                    <textarea class="style-descricao" type="text" name="message"></textarea>
-                </div>
-            </div>
-
-
-            <div class="div-2">
-
-                <p><strong>Adicionar Foto</strong></p>
-                <a href="#">
-                    <div class="quadro-add-foto">
-                        <i id="icone-mais" class="fa fa-plus" aria-hidden="true"></i>
-
-                    </div>
-                </a>
-                <br>
-                <p><strong>Cidade:</strong></p>
-                <div class="div-cidade">
-                    <input class="style-cidade" type="text" name="nome">
-                </div>
-                <br>
-                <p><strong>Endereço:</strong></p>
-                <div class="div-endereco">
-                    <input class="style-endereco" type="text" name="endereço">
-                </div>
-                <br>
-                <p><strong>Telefone:</strong></p>
-                <div class="div-telefone">
-                    <input class="style-telefone" type="text" name="telefone">
-                </div>
-                <br>
-                <p><b>Celular:</b></p>
-                <br>
-                <div class="div-celular">
-                    <input class="style-celular" type="text" name="celular">
-                </div>
-
-                <button class="btn-criar-curso" type="submit">Cria Curso</button>
-
-            </div>
-
-        </form>
-
-    </main>
-
+            </form>
+        </center>
+    </section>
 
 </body>
 
