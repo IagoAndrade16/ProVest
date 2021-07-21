@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-#barrad-navegacao {
+#barra-navegacao {
     box-shadow: 0 0 0.5em black;
-    height: 5rem;     
+    height: 72px;
 }
 
 .caixa-pesquisa {
@@ -10,30 +9,29 @@
     border: 0px;
     height: 30px;
     width: 200px;
-    margin-bottom: 22px;
+    padding-left: 10px;
 
 }
 
 #logo-barra-navegacao {
-    margin-top: -23px;
+
     margin-left: -15px; 
-    height: 7rem; 
+    height: 90px; 
     width: 7rem;
+    box-shadow: 0 0 0.5em black;
     
 }
 
 #foto-perfil {
     width: 50px;
     border-radius: 50px;
-    margin-top: -25px;
-    margin-left: 760px;
+    margin-left: 740px;
 }
 
 #nome-perfil {
     color: white;
     font-weight: bold;
     margin-left: 20px;
-    margin-bottom: 25px;
 }
 
 /* Dropbox Estilos*/
@@ -44,8 +42,6 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
-    margin-top: -50px;
-    margin-bottom: 10px;
     margin-left: 10px;
 }
   
@@ -83,17 +79,18 @@
 
 #criar-novoCurso-botao {
     margin-left: 92%;
-    margin-top: 48%;
+    margin-top: 35%;
     border-radius: 50px;
     width: 4rem;
     height: 4rem;
     background-color: #fff;
     border: none;
     box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    position: fixed;
 }
 
 #cursos-em {
-    margin: 30px;
+    margin: 50px;
     font-size: 1.7rem;
 }
 
@@ -112,5 +109,4 @@ SCROLLBAR
 }
 
 
-=======
->>>>>>> 1b6620efdb4c53d455372d8b4ae83e91f66875fd
+
