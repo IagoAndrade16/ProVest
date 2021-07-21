@@ -1,3 +1,186 @@
-body {
-    background-color: #F1F1F1;
+body, ul, li, p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    width: 100%;
+    
+
+}
+a{
+    text-decoration: none;
+    color: white;
+
+}
+.header{
+    
+    position: fixed;
+    left: 0;
+    top: 0%;
+    padding: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.header img{
+    height: 7rem;
+    width: 7rem;
+
+}
+.menu{
+    display: flex;
+
+}
+.menu li {
+    margin-left: 3px;
+    
+}
+.menu li a{
+    margin-right: 15px;
+    display: block;
+
+}
+.menu img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+}
+.foto{
+    margin-top: -8px;
+
+}
+.texto{
+    margin-top: 10rem;
+    text-align: center;
+    
+}
+
+/*
+CSS FLEXBOX 1
+*/
+.flex-box{
+    margin: 2rem;
+    border: 2px solid white;}
+
+.flex-box p{
+    margin-top: 1rem;
+}
+.checkbox-1{
+    margin-left: -1.4rem;
+        
+    
+}
+.checkbox-2{
+    margin-left: 1.1rem;
+    
+}
+.checkbox-3{
+    margin-left: 4.3rem;
+    
+}
+.checkbox-4{
+    margin-left: 4.1rem;
+    
+}
+.checkbox-5{
+    margin-left: -3.7rem;
+    
+}
+.checkbox-6{
+    margin-left: -1.2rem;
+    
+}
+.checkbox-7{
+    margin-left: -2.9rem;
+    
+}
+.input input{
+    margin-top: 1rem;
+    color: gray;
+    border-radius: 20px;
+    padding: 10px;
+    width: 240px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+}
+.input select{
+    margin-top: 1rem;
+    color: gray;
+    border-radius: 20px;
+    padding: 10px;
+    width: 261px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+}
+.input textarea{
+
+    margin-top: 1rem;
+    color: gray;
+    border-radius: 15px;
+    padding: 10px;
+    width: 240px;
+    border: none;
+    outline:0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+    resize: none;
+}
+.icone{
+    margin-top: 1rem;
+    border-radius: 10px;
+    height: 5rem;
+    width: 5rem;
+    border: 2px solid black;
+}
+.icone img{
+    margin-top: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+}
+.icone:hover{
+    background: radial-gradient(transparent, #666);
+}
+.btn button{
+    background-color: white;
+    margin-left: 1.5rem;
+    border-radius: 20px; 
+    padding: 10px;
+    width: 150px;
+    margin-top: 30px;
+    outline:0;
+    border-color: black;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    
+}
+.btn button:hover{
+    background: radial-gradient(transparent, #666);
+}
+/*
+SCROLLBAR
+*/
+::-webkit-scrollbar{
+    width: 5px;
+
+}
+::-webkit-scrollbar-thumb{
+    background: radial-gradient(transparent, #666);
+    border-radius: 1rem;
+
+}
+::-webkit-scrollbar-thumb:hover{
+    background: radial-gradient(transparent, black);
+
 }
