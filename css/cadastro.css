@@ -4,13 +4,16 @@ body{
     background-color: #f1f1f1;
     font-family: 'Open Sans', sans-serif;
 }
+h1,h2,h3,h4,h5,h6, p{
+    color: #212529;
+}
 
 /*
 NAVEGAÇÃO
 */
 
 .barra{
-    background-color: black;
+    background-color: #212529;
     height: 5rem;
     box-shadow: 0 0 0.5em rgb(56, 56, 56);
 
@@ -114,7 +117,7 @@ ESTRUTURA
     width: 190px;
     margin-top: 15px;
     outline:0;
-    border-color: black;
+    border-color: #212529;
     font-family: 'Open Sans', sans-serif;
     
     
