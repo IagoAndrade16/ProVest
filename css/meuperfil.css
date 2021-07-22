@@ -1,5 +1,6 @@
-body{
+body, html{
     background-color: #f1f1f1;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 
@@ -57,4 +58,3 @@ body{
     margin-top: -15px;
 
 }
-

@@ -1,41 +1,53 @@
-#barra-navegacao {
+body, html{
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
+}
+#barra-navegacao{
     box-shadow: 0 0 0.5em black;
     height: 72px;
-}
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 
-.caixa-pesquisa {
+}
+.caixa-pesquisa{
     outline: 0;
     border-radius: 30px;
     border: 0px;
     height: 30px;
     width: 200px;
     padding-left: 10px;
+    box-shadow: 0 0 0.3em white;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 
 }
-
-#logo-barra-navegacao {
-
+#logo-barra-navegacao{
+    
     margin-left: -15px; 
-    height: 90px; 
+    height: 100px;
+    width: 100px; 
     width: 7rem;
     box-shadow: 0 0 0.5em black;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
     
 }
-
-#foto-perfil {
+#foto-perfil{
     width: 50px;
     border-radius: 50px;
-    margin-left: 740px;
-}
+    margin-left: 820px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 
-#nome-perfil {
+}
+#nome-perfil{
     color: white;
     font-weight: bold;
     margin-left: 20px;
+    text-decoration: none;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
 }
 
 /* Dropbox Estilos*/
-.dropbtn {
+
+.dropbtn{
     background-color: #000;
     color: white;
     padding: 16px;
@@ -43,41 +55,48 @@
     border: none;
     cursor: pointer;
     margin-left: 10px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
 }
-  
-.dropdown {
+.dropdown{
     position: relative;
     display: inline-block;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
 }
-  
-.dropdown-content {
+.dropdown-content{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
 }
-  
-.dropdown-content a {
+.dropdown-content a{
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 
-.dropdown-content a:hover {background-color: #f1f1f1}
-  
+}
+.dropdown-content a:hover {background-color: #f1f1f1;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
+}
 .dropdown:hover .dropdown-content {
     display: block;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
 }
-  
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn{
     background-color: #000;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
 }
-
-
-#criar-novoCurso-botao {
+#criar-novoCurso-botao{
     margin-left: 92%;
     margin-top: 35%;
     border-radius: 50px;
@@ -85,28 +104,31 @@
     height: 4rem;
     background-color: #fff;
     border: none;
-    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
     position: fixed;
-}
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 
-#cursos-em {
+}
+#cursos-em{
     margin: 50px;
     font-size: 1.7rem;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 /*
 SCROLLBAR
 */
+
 ::-webkit-scrollbar{
     width: 5px;
+
 }
 ::-webkit-scrollbar-thumb{
     background: radial-gradient(transparent, #666);
     border-radius: 1rem;
+
 }
 ::-webkit-scrollbar-thumb:hover{
     background: radial-gradient(transparent, black);
+
 }
-
-
-
