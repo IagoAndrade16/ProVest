@@ -63,19 +63,6 @@ ESTRUTURA
     color: gray;
     
 }
-
-.cidade input{
-    border-radius: 20px;
-    padding: 10px;
-    width: 240px;
-    margin-top: 15px;
-    border: none;
-    outline:0;
-    box-shadow: 0 0 0.5em rgb(56, 56, 56);
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f1f1f1;
-}
-
 .e-mail input{
     border-radius: 20px;
     padding: 10px;
