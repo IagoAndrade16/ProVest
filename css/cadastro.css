@@ -117,10 +117,12 @@ ESTRUTURA
     width: 190px;
     margin-top: 15px;
     outline:0;
+    color: #212529;
     border-color: #212529;
     font-family: 'Open Sans', sans-serif;
-    
-    
+}
+.botao button:hover{
+    background: radial-gradient(transparent, #666);
 }
 .suporte{
     text-align: center;

@@ -4,6 +4,9 @@ body{
     background-color: #f1f1f1;
     font-family: "Open Sans", sans-serif;
 }
+h1,h2,h3,h4,h5,h6, a{
+    color: #212529;
+}
 /*
 NAVEGAÇÃO
 */
@@ -52,6 +55,9 @@ ESTRUTURA
     border-color: black;
     font-family: "Open Sans", sans-serif;
 
+}
+.btn-redefinir button:hover{
+    background: radial-gradient(transparent, #666);
 }
 /*
 SCROLLBAR
