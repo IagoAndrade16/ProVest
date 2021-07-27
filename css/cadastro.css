@@ -36,7 +36,7 @@ ESTRUTURA
 }
 
 .nome-usuario input{
-    border-radius: 20px;
+    border-radius: .25rem;
     padding: 10px;
     width: 240px;
     margin-top: 15px;
@@ -51,7 +51,7 @@ ESTRUTURA
 }
 
 .estado select{
-    border-radius: 20px;
+    border-radius: .25rem;
     padding: 9px;
     width: 262px;
     margin-top: 15px;
@@ -64,7 +64,7 @@ ESTRUTURA
     
 }
 .e-mail input{
-    border-radius: 20px;
+    border-radius: .25rem;
     padding: 10px;
     width: 240px;
     margin-top: 15px;
@@ -75,7 +75,7 @@ ESTRUTURA
     background-color: #f1f1f1;
 }
 .senha input{
-    border-radius: 20px;
+    border-radius: .25rem;
     padding: 10px;
     width: 240px;
     margin-top: 15px;
@@ -99,7 +99,7 @@ ESTRUTURA
     
     background-color: white;
     margin-left: 0px;
-    border-radius: 20px; 
+    border-radius: .25rem; 
     padding: 10px;
     width: 190px;
     margin-top: 15px;
@@ -133,7 +133,7 @@ SCROLLBAR
 }
 ::-webkit-scrollbar-thumb{
     background: radial-gradient(transparent, #666);
-    border-radius: 1rem;
+    border-radius: .25rem;
 }
 ::-webkit-scrollbar-thumb:hover{
     background: radial-gradient(transparent, black);

@@ -37,7 +37,7 @@ ESTRUTURA
     text-align: center;
 }
 .e-mail-enviar input{
-    border-radius: 20px;
+    border-radius: .25rem;
     padding: 10px;
     width: 240px;
     margin-top: 15px;
@@ -52,7 +52,7 @@ ESTRUTURA
 
     background-color: white;
     margin-left: 0px;
-    border-radius: 20px; 
+    border-radius: .25rem; 
     padding: 10px;
     width: 185px;
     margin-top: 30px;
@@ -73,7 +73,7 @@ SCROLLBAR
 }
 ::-webkit-scrollbar-thumb{
     background: radial-gradient(transparent, #666);
-    border-radius: 1rem;
+    border-radius: .25rem;
 }
 ::-webkit-scrollbar-thumb:hover{
     background: radial-gradient(transparent, black);

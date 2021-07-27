@@ -107,7 +107,7 @@ CSS FLEXBOX 1
 .input input{
     margin-top: 1rem;
     color: gray;
-    border-radius: 20px;
+    border-radius: .25rem;
     padding: 10px;
     width: 240px;
     border: none;
@@ -119,7 +119,7 @@ CSS FLEXBOX 1
 .input select{
     margin-top: 1rem;
     color: gray;
-    border-radius: 20px;
+    border-radius: .25rem;
     padding: 10px;
     width: 261px;
     border: none;
@@ -132,7 +132,7 @@ CSS FLEXBOX 1
 
     margin-top: 1rem;
     color: gray;
-    border-radius: 15px;
+    border-radius: .25rem;
     padding: 10px;
     width: 240px;
     border: none;
@@ -144,7 +144,7 @@ CSS FLEXBOX 1
 }
 .icone{
     margin-top: 1rem;
-    border-radius: 10px;
+    border-radius: .25rem;
     height: 5rem;
     width: 5rem;
     border: 2px solid black;
@@ -161,7 +161,7 @@ CSS FLEXBOX 1
 .btn button{
     background-color: white;
     margin-left: 1.5rem;
-    border-radius: 20px; 
+    border-radius: .25rem; 
     padding: 10px;
     width: 150px;
     margin-top: 30px;
@@ -183,7 +183,7 @@ SCROLLBAR
 }
 ::-webkit-scrollbar-thumb{
     background: radial-gradient(transparent, #666);
-    border-radius: 1rem;
+    border-radius: .25rem;
 
 }
 ::-webkit-scrollbar-thumb:hover{
