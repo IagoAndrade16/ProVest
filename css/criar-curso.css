@@ -25,6 +25,7 @@ a{
     height: 8rem;
     background-color: #212529;
     display: flex;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
