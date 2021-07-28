@@ -191,3 +191,66 @@ SCROLLBAR
     background: radial-gradient(transparent, black);
 
 }
+@media only screen and (max-width: 340px){
+
+    .flex-box label{
+        font-size: 15px;
+    }
+
+    .checkbox-1{
+        margin-left: -3rem;
+
+    }
+    .checkbox-2{
+        margin-left: -1rem;
+        
+    }
+    
+    .checkbox-3{
+        margin-left: 1.5rem;
+        
+    }
+    .checkbox-4{
+        margin-left: 1.3rem;
+        
+    }
+    .checkbox-5{
+        margin-left: -4.8rem;
+        
+    }
+    .checkbox-6{
+        margin-left: -2.7rem;
+        
+    }
+    .checkbox-7{
+        margin-left: -4.0rem;
+        
+    }
+}
+
+@media only screen and (max-width: 280px){
+    .input input{
+        width: 200px;
+    }
+    .input select{
+        width: 220px;
+    }
+    .input textarea{
+        width: 200px;
+    }
+    .checkbox-2{
+        margin-left: -1rem;
+        
+    }
+    .checkbox-3{
+        margin-left: 1.5rem;
+        
+    }
+    .checkbox-4{
+        margin-left: 1.3rem;
+        
+    }
+    .checkbox-5{
+        margin-left: -4.8rem;
+    }
+}
