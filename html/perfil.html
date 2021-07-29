@@ -20,10 +20,10 @@
 
   <!--Barra de navegação-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <div class="container-fluid ">
+    <div class="container-fluid shadow-sm">
       <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img class="img-fluid" src="../img/logoProVest.png" alt="logo - ProVest" width="102px" height="102px">
+      <a class="navbar-brand" href="index.html">
+        <img class="img-fluid" src="../img/logoProVest.png" alt="logo - ProVest" width="50px" height="50px">
       </a>
     </div>
     </div>
@@ -31,12 +31,15 @@
   <form action="">
     <div class="container">
       <div class="row gx-5">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div class="p-3">
             <h1>Meu Perfil</h1>
             <h4 style="margin-bottom: 20px;">Foto de perfil</h4>
-            <img src="../img/fotoPessoa.jpg" alt="Foto-perfil" width="150px" height="150px"
+            <a href="#" id="foto-perfil" title="Trocar foto">
+              <img src="../img/fotoPessoa.jpg" alt="Foto-perfil" width="150px" height="150px"
               style="border-radius: 100px;">
+            </a>
+
           </div>
         </div>
 
@@ -58,8 +61,6 @@
               <label class="form-label">Senha</label>
               <input type="password" class="form-control" id="exampleInputPassword1">
             </div>
-
-            <button type="submit" class="btn btn-dark">Salvar alterações</button>
           </div>
         </div>
 
@@ -105,6 +106,7 @@
               <label class="form-label">Cidade: </label>
               <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
+            <button type="submit" class="btn btn-dark">Salvar alterações</button>
           </div>
         </div>
       </div>
@@ -112,7 +114,7 @@
 
   <!-- Fim das informações do perfil-->
 
-
+  <hr style="margin-bottom: 30px;">
   <!-- Meus cursos-->
 
   <div class="container">
@@ -156,7 +158,7 @@
                   Presencial
                 </li>
               </ul>
-              <a href="#" class="btn btn-dark">Editar</a>
+              <a href="editar-curso.html" class="btn btn-dark">Editar</a>
             </div>
           </div>
         </div>
@@ -194,7 +196,7 @@
                   Presencial
                 </li>
               </ul>
-              <a href="#" class="btn btn-dark">Editar</a>
+              <a href="editar-curso.html" class="btn btn-dark">Editar</a>
             </div>
           </div>
         </div>
@@ -232,7 +234,7 @@
                   Presencial
                 </li>
               </ul>
-              <a href="#" class="btn btn-dark">Editar</a>
+              <a href="editar-curso.html" class="btn btn-dark">Editar</a>
             </div>
           </div>
         </div>

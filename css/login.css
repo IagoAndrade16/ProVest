@@ -83,9 +83,6 @@ ESTRUTURA
     color: #212529;
     font-family: "Open Sans", sans-serif;
 }
-.botao-entrar button:hover{
-    background: radial-gradient(transparent, #666);
-}
 
 .criar-conta{
     text-align: center;
@@ -95,6 +92,7 @@ ESTRUTURA
 .criar-conta a{
     color: black;
     text-decoration: none;
+    font-weight: 600;
 
 }
 
