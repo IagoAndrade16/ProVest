@@ -160,21 +160,15 @@ CSS FLEXBOX 1
     background: radial-gradient(transparent, #666);
 }
 .btn button{
-    background-color: white;
-    margin-left: 1.5rem;
-    border-radius: .25rem; 
+    margin-left: 1.2rem;
     padding: 10px;
-    width: 150px;
+    width: 170px;
     margin-top: 30px;
     outline:0;
-    border-color: #212529;
-    color: #212529;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     
 }
-.btn button:hover{
-    background: radial-gradient(transparent, #666);
-}
+
 /*
 SCROLLBAR
 */
@@ -253,4 +247,4 @@ SCROLLBAR
     .checkbox-5{
         margin-left: -4.8rem;
     }
-} 
+}
