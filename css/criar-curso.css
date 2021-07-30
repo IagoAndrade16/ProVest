@@ -110,7 +110,7 @@ CSS FLEXBOX 1
     color: gray;
     border-radius: .25rem;
     padding: 10px;
-    width: 240px;
+    width: 261px;
     border: none;
     outline:0;
     box-shadow: 0 0 0.5em rgb(56, 56, 56);
@@ -135,7 +135,7 @@ CSS FLEXBOX 1
     color: gray;
     border-radius: .25rem;
     padding: 10px;
-    width: 240px;
+    width: 261px;
     border: none;
     outline:0;
     box-shadow: 0 0 0.5em rgb(56, 56, 56);
@@ -160,7 +160,8 @@ CSS FLEXBOX 1
     background: radial-gradient(transparent, #666);
 }
 .btn button{
-    margin-left: 1.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     padding: 10px;
     width: 170px;
     margin-top: 30px;

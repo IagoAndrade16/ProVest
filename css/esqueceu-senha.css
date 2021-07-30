@@ -62,10 +62,7 @@ ESTRUTURA
     font-family: "Open Sans", sans-serif;
 
 }
-.btn-enviar button:hover{
-    background: radial-gradient(transparent, #666);
-}
-/*
+
 SCROLLBAR
 */
 ::-webkit-scrollbar{
