@@ -16,50 +16,54 @@
 </head>
 
 <body>
-  <!--Barra de navegação-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand" href="index.html">
-        <img src="../img/logoProVest.png" alt="logo - ProVest" width="102px" height="102px" class="img-fluid"
-          style="border-radius: 50px; margin-right: 10px;">
+<!--Barra de navegação-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="../img/logoProVest.png" alt="logo - ProVest" width="50px" height="50px" class="img-fluid"
+        style="border-radius: 50px; margin-right: 10px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Form e botao pesquisar -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <form class="d-flex">
+          <input class="form-control me-3" type="search" placeholder="Pesquise por cursos" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+        </form>
+        <!--DropDown-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Cursos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Militares</a></li>
+            <li><a class="dropdown-item" href="#">Concursos públicos</a></li>
+            <li><a class="dropdown-item" href="#">Enem</a></li>
+            <li><a class="dropdown-item" href="#">Outros vestibulares</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <a class="navbar-brand" href="criar-curso.html">
+        Cadastrar Curso
       </a>
 
-      <!-- Form e botao pesquisar -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <form class="d-flex">
-            <input class="form-control me-3" type="search" placeholder="Pesquise por cursos" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Pesquisar</button>
-          </form>
-          <!--DropDown-->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Cursos
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Militares</a></li>
-              <li><a class="dropdown-item" href="#">Concursos públicos</a></li>
-              <li><a class="dropdown-item" href="#">Enem</a></li>
-              <li><a class="dropdown-item" href="#">Outros vestibulares</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <a class="navbar-brand" href="criar-curso.html">
-          Cadastrar Curso
-        </a>
-
-        <!-- Foto e nome do perfil -->
-        <a class="navbar-brand" href="perfil.html">
-          <img src="../img/fotoPessoa.jpg" alt="" width="40" height="24" class="img-fluid"
-            style="border-radius: 50px; margin-right: 10px;">
-          Iago
-        </a>
-      </div>
+      <!-- Foto e nome do perfil -->
+      <a class="navbar-brand" href="perfil.html">
+        <img src="../img/fotoPessoa.jpg" alt="" width="40" height="24" class="img-fluid"
+          style="border-radius: 50px; margin-right: 10px;">
+        Iago
+      </a>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <div class="container px-0">
     <div class="row">
