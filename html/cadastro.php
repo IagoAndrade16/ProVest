@@ -33,10 +33,16 @@
         <h1>Crie sua conta</h1>
     </div>
 
+    <?php
+
+    $estados = ["Estados","Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "SantaCatarina", "SãoPaulo", "Sergipe","Tocantins","DistritoFederal"];
+
+    ?>
+
     <div>
         <form action="../php/cadastrar.php" method="POST">
-        
-        <center>
+
+            <center>
                 <div class="nome-usuario">
                     <input type="text" name="nome_usuario" placeholder=" Nome de usuário">
                 </div>
@@ -44,42 +50,27 @@
                 <div class="estado">
 
                     <select name="estado_usuario">
-                        <option>Estado</option>
-                        <option name="Acre">Acre</option>
-                        <option name="Alagoas">Alagoas</option>
-                        <option name="Amapá">Amapá</option>
-                        <option name="Amazonas">Amazonas</option>
-                        <option name="Bahia">Bahia</option>
-                        <option name="Ceará">Ceará</option>
-                        <option name="Espírito Santo">Espírito Santo</option>
-                        <option name="Goiás">Goiás</option>
-                        <option name="Maranhão">Maranhão</option>
-                        <option name="Mato Grosso">Mato Grosso</option>
-                        <option name="Mato Grosso do Sul">Mato Grosso do Sul</option>
-                        <option name="Minas Gerais">Minas Gerais</option>
-                        <option name="Pará">Pará</option>
-                        <option name="Paraíba">Paraíba</option>
-                        <option name="Paraná">Paraná</option>
-                        <option name="Pernambuco">Pernambuco</option>
-                        <option name="Piauí">Piauí</option>
-                        <option name="Rio de Janeiro">Rio de Janeiro</option>
-                        <option name="Rio Grande do Norte">Rio Grande do Norte</option>
-                        <option name="Rio Grande do Sul">Rio Grande do Sul</option>
-                        <option name="Rondônia">Rondônia</option>
-                        <option name="Roraima">Roraima</option>
-                        <option name="Santa Catarina">Santa Catarina</option>
-                        <option name="São Paulo">São Paulo</option>
-                        <option name="Sergipe">Sergipe</option>
-                        <option name="Tocantins">Tocantins</option>
-                        <option name="Distrito Federal">Distrito Federal</option>
+                        <?php foreach($estados as $i){ ?>
+                        
+                        <option value=" <?php echo $i; ?> ">
+                            <?php echo $i; ?>
+                        </option>
+
+                        <?php } ?>
                     </select>
 
                 </div>
 
                 <div class="estado">
+
                     <select name="cidade_usuario">
-                        <option>Cidade</option>
+
+                        <option value=" <?php echo $i; ?> ">
+                            <?php echo $i; ?>
+                        </option>
+
                     </select>
+
                 </div>
 
                 <div class="e-mail">
