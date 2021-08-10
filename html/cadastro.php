@@ -33,12 +33,13 @@
         <h1>Crie sua conta</h1>
     </div>
 
+    <!--------------------------------------------------------CODIGO PHP-------------------------------------------------------->
     <?php
 
     $estados = ["Estados","Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "SantaCatarina", "SãoPaulo", "Sergipe","Tocantins","DistritoFederal"];
 
     ?>
-
+    <!--------------------------------------------------------CODIGO PHP-------------------------------------------------------->
     <div>
         <form action="../php/cadastrar.php" method="POST">
 
@@ -48,7 +49,7 @@
                 </div>
 
                 <div class="estado">
-
+                <!--------------------------------------------------------CODIGO PHP-------------------------------------------------------->
                     <select name="estado_usuario">
                         <?php foreach($estados as $i){ ?>
                         
@@ -58,11 +59,11 @@
 
                         <?php } ?>
                     </select>
-
+                <!--------------------------------------------------------CODIGO PHP-------------------------------------------------------->            
                 </div>
 
                 <div class="estado">
-
+                <!--------------------------------------------------------CODIGO PHP-------------------------------------------------------->            
                     <select name="cidade_usuario">
 
                         <option value=" <?php echo $i; ?> ">
@@ -70,7 +71,7 @@
                         </option>
 
                     </select>
-
+                <!--------------------------------------------------------CODIGO PHP-------------------------------------------------------->
                 </div>
 
                 <div class="e-mail">
