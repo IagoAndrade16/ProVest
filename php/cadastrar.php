@@ -18,7 +18,7 @@ if (mysqli_query($mysqli, $sql)){
 
 }else{
     
-    echo "ERRO NO CADASTRO <br>" . $sql . '<br>' . mysqli_error($mysqli);  //"<script>alert('ERRO NO CADASTRO'); window.location = '../html/cadastro.html' </script>";
+    echo "<script>alert('ERRO NO CADASTRO'); window.location = '../html/cadastro.html' </script>";
 
 }
 

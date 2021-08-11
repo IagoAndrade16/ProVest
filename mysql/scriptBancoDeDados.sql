@@ -24,4 +24,4 @@ CREATE TABLE usuarios (
 	cidadeU varchar(20) NOT NULL,
 	PRIMARY KEY (codU)
 );
-ALTER TABLE usuarios ADD CONSTRAINT usuarios_fk0 FOREIGN KEY (codU) REFERENCES cursos(codU);
+ALTER TABLE cursos ADD CONSTRAINT usuarios_fk0 FOREIGN KEY (codU) REFERENCES usuarios(codU);
