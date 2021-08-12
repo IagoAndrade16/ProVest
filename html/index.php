@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -60,7 +61,7 @@
         <a class="navbar-brand" href="perfil.html">
           <img src="../img/fotoPessoa.jpg" alt="" width="40" height="24" class="img-fluid"
             style="border-radius: 50px; margin-right: 10px;">
-          Iago
+          <?php echo $_SESSION['']; ?>
         </a>
       </div>
     </div>

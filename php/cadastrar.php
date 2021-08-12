@@ -13,11 +13,11 @@ $sql = "INSERT INTO usuarios(senhaU, nomeU, estadoU, emailU, cidadeU) VALUE('$se
 mysqli_select_db($mysqli, '$db');
 
 if (mysqli_query($mysqli, $sql)) {
+    echo "<script>alert('Conta Criada!'); window.location = '../html/login.html'</script>";
 
-    echo "<script>alert('Conta Criada!'); window.location = '../html/index.html'</script>";
 } else {
-
     echo "<script>alert('ERRO NO CADASTRO'); window.location = '../html/cadastro.html' </script>";
+    
 }
 
 mysqli_close($mysqli);
