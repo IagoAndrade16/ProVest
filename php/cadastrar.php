@@ -9,7 +9,7 @@ $email_usuario = $_POST['e_mail_usuario'];
 $cidade_usuario = $_POST['cidade_usuario'];
 $mysqli = new mysqli($host, $usuario, $senha, $db);
 
-$sql = "INSERT INTO usuarios(senhaU, nomeU, estadoU, emailU, cidadeU) VALUE('$senha_usuario', '$nome_usuario', '$estado_usuario', '$email_usuario', '$cidade_usuario');";
+$sql = "INSERT INTO usuarios(senhaU, nomeU, estadoU, emailU, cidadeU) VALUE('${senha_usuario}', '${nome_usuario}', '${estado_usuario}', '${email_usuario}', '${cidade_usuario}');";
 mysqli_select_db($mysqli, '$db');
 
 if (mysqli_query($mysqli, $sql)) {

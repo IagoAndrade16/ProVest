@@ -15,7 +15,7 @@ $row = mysqli_num_rows($result);
 if ($row == 1) {
     $_SESSION['senha'] = $senhaU;
     $_SESSION['email-de-usuario'] = $emailU;
-    header('Location: ../html/index.php');
+    header('Location: ../html/index.html');
     exit();
 
 } else {
