@@ -1,15 +1,13 @@
-<?php include("conexao.php"); ?>
+<?php include("conexao.php");
 
-<?php
-
-$senha_usuario = $_POST['senha_usuario'];
-$nome_usuario = $_POST['nome_usuario'];
-$estado_usuario = $_POST['estado_usuario'];
-$email_usuario = $_POST['e_mail_usuario'];
-$cidade_usuario = $_POST['cidade_usuario'];
+$senha_usuario = addslashes($_POST['senha_usuario']);
+$nome_usuario = addslashes($_POST['nome_usuario']);
+$estado_usuario = addslashes($_POST['estado_usuario']);
+$email_usuario = addslashes($_POST['e_mail_usuario']);
+$cidade_usuario = addslashes($_POST['cidade_usuario']);
 $mysqli = new mysqli($host, $usuario, $senha, $db);
 
-$sql = "INSERT INTO usuarios(senhaU, nomeU, estadoU, emailU, cidadeU) VALUE('${senha_usuario}', '${nome_usuario}', '${estado_usuario}', '${email_usuario}', '${cidade_usuario}');";
+$sql = "INSERT INTO usuarios(senhaU, nomeU, estadoU, emailU, cidadeU) VALUE('{$senha_usuario}', '${nome_usuario}', '${estado_usuario}', '${email_usuario}', '${cidade_usuario}');";
 mysqli_select_db($mysqli, '$db');
 
 if (mysqli_query($mysqli, $sql)) {

@@ -4,8 +4,8 @@ session_start();
 
 include("conexao.php");
 
-$senhaU = mysqli_real_escape_string($mysqli, $_POST['senha']);
-$emailU = mysqli_real_escape_string($mysqli, $_POST['email-de-usuario']);
+$senhaU = addslashes($_POST['senha']);
+$emailU = addslashes($_POST['email-de-usuario']);
 
 $credenciais = "SELECT senhaU, emailU FROM usuarios WHERE senhaU = '${senhaU}'and emailU = '${emailU}'";
 
