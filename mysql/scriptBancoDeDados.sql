@@ -1,15 +1,15 @@
 CREATE TABLE cursos (
     codU INT NOT NULL,
 	categoria TEXT NOT NULL,
-	nome varchar(50) NOT NULL,
+	nome varchar(255) NOT NULL,
 	estados varchar(255),
-	e_mails varchar(30) NOT NULL,
+	e_mails varchar(255) NOT NULL,
 	cidadeC TEXT,
 	endereçoC TEXT,
-	telefC varchar(15),
-	celularC varchar(15),
+	telefC varchar(255),
+	celularC varchar(255),
 	fotoPerfilC TEXT NOT NULL,
-	tipoEnsino varchar(10) NOT NULL,
+	tipoEnsino varchar(255) NOT NULL,
 	descricao TEXT NOT NULL,
 	PRIMARY KEY (codU)
     
@@ -17,11 +17,11 @@ CREATE TABLE cursos (
 
 CREATE TABLE usuarios (
 	codU INT(11) NOT NULL AUTO_INCREMENT,
-	senhaU varchar(16) NOT NULL,
-	nomeU varchar(40) NOT NULL,
-	estadoU varchar(40) NOT NULL,
-	emailU varchar(30) NOT NULL,
-	cidadeU varchar(20) NOT NULL,
+	senhaU varchar(255) NOT NULL,
+	nomeU varchar(255) NOT NULL,
+	estadoU varchar(255) NOT NULL,
+	emailU varchar(255) NOT NULL,
+	cidadeU varchar(255) NOT NULL,
 	PRIMARY KEY (codU)
 );
 ALTER TABLE cursos ADD CONSTRAINT usuarios_fk0 FOREIGN KEY (codU) REFERENCES usuarios(codU);
