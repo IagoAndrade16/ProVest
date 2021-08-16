@@ -2,23 +2,27 @@
 
 session_start();
 
-include("conexao.php");
+try {
 
-$senhaU = addslashes($_POST['senha']);
-$emailU = addslashes($_POST['email-de-usuario']);
+    include("conexao.php");
 
-$credenciais = "SELECT senhaU, emailU FROM usuarios WHERE senhaU = '${senhaU}'and emailU = '${emailU}'";
+    $senhaU = addslashes($_POST['senha']);
+    $emailU = addslashes($_POST['email-de-usuario']);
 
-$result = mysqli_query($mysqli, $credenciais);
-$row = mysqli_num_rows($result);
+    $credenciais = "SELECT senhaU, emailU FROM usuarios WHERE senhaU = '${senhaU}'and emailU = '${emailU}'";
 
-if ($row == 1) {
-    $_SESSION['senha'] = $senhaU;
-    $_SESSION['email-de-usuario'] = $emailU;
-    header('Location: ../html/index.html');
+    $result = mysqli_query($mysqli, $credenciais);
+    $row = mysqli_num_rows($result);
 
-} else {
-    header('Location: ../html/login.html');
-    exit();
-
+    if ($row == 1) {
+        $_SESSION['senha'] = $senhaU;
+        $_SESSION['email-de-usuario'] = $emailU;
+        header('Location: ../html/index.html');
+    } else {
+        throw new Exception("<script>alert('LOGIN INCORRETO'); window.location = '../html/login.html'</script>");
+        //header('Location: ../html/login.html');
+        exit();
+    }
+} catch (Exception $e) {
+    echo $e->getMessage();
 }
