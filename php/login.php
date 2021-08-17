@@ -1,9 +1,7 @@
 <?php
 
-session_start();
-
 try {
-
+    session_start();
     include("conexao.php");
 
     $senhaU = addslashes($_POST['senha']);
@@ -17,10 +15,10 @@ try {
     if ($row == 1) {
         $_SESSION['senha'] = $senhaU;
         $_SESSION['email-de-usuario'] = $emailU;
-        header('Location: ../html/index.html');
+        header('Location: ../html/index.php');
+        exit();
     } else {
         throw new Exception("<script>alert('LOGIN INCORRETO'); window.location = '../html/login.html'</script>");
-        //header('Location: ../html/login.html');
         exit();
     }
 } catch (Exception $e) {
