@@ -34,7 +34,7 @@ try {
             throw new Exception("<script>alert('NOME COM MENOS DE 3 CARACTERS'); window.location = '../html/cadastro.html'</script>");
         }
     } else {
-        throw new Exception("<script>alert('CAMPO SENHA NÃO PREENCHIDO'); window.location = '../html/cadastro.html'</script>");
+        throw new Exception("<script>alert('CAMPO NOME NÃO PREENCHIDO'); window.location = '../html/cadastro.html'</script>");
     }
 
     //VALIDAÇÃO ESTADO
