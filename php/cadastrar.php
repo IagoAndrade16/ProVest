@@ -50,7 +50,7 @@ try {
     }
 
     //VALIDAÇÃO CIDADE
-    if ($_POST['Cidade_usuario'] == "Cidade") {
+    if ($_POST['cidade_usuario'] == "Cidade") {
         echo "<script>alert('CAMPO CIDADE NÃO SELECIONADO'); window.location = '../html/cadastro.html'</script>";
     }
 
