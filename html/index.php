@@ -1,6 +1,16 @@
 <?php
 session_start();
-include("../php/verifica_login.php"); ?>
+/*
+if (isset($_SESSION['nomeUsuario'])) {
+  var_dump('existe usuario' . $_SESSION['nomeUsuario']);
+} else {
+  var_dump('N existe sessão ');
+}
+
+*/
+include("../php/verifica_login.php");
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -57,7 +67,7 @@ include("../php/verifica_login.php"); ?>
         <!-- Foto e nome do perfil -->
         <a class="navbar-brand" href="perfil.html">
           <img src="../img/fotoPessoa.jpg" alt="" width="40" height="24" class="img-fluid" style="border-radius: 50px; margin-right: 10px;">
-          <?php echo $_SESSION['email-de-usuario']; ?>
+          <?php echo $_SESSION['nomeUsuario']; ?>
           <a style="text-decoration: none; color: #fff;" href="../php/logout.php">Logout</a>
         </a>
 
