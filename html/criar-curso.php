@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,13 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b21197af3e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/criar-curso.css">
     <link rel="shortcut icon" href="../img/LogoProVest.ico" type="image/x-icon">
     <title>ProVest | Criar Curso</title>
@@ -26,8 +25,10 @@
         <a href="index.php"><img src="../img/logoProVest.png"></a>
         <nav>
             <ul class="menu">
-                <li><a class="foto" href="perfil.html"><img src="../img/fotoPessoa.jpg"></a></li>
-                <li><a href="perfil.html">Iago</a></li>
+                <li><a class="foto" href="perfil.html"> <i class="fa fa-user" aria-hidden="true"></i>
+                        <!--<img src="../img/fotoPessoa.jpg">-->
+                    </a></li>
+                <li><a href="perfil.html"> <?php echo $_SESSION['nomeUsuario']; ?> </a></li>
             </ul>
         </nav>
     </header>
@@ -54,14 +55,12 @@
                 </div>
 
                 <div>
-                    <input class="checkbox-3" type="checkbox" required="" required="" id="Concursos Militares"
-                        name="Concursos Militares">
+                    <input class="checkbox-3" type="checkbox" required="" required="" id="Concursos Militares" name="Concursos Militares">
                     <label style="color: #212529;" for="Concursos Militares">Concursos Militares</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-4" type="checkbox" required="" id="Concursos Públicos"
-                        name="Concursos Públicos">
+                    <input class="checkbox-4" type="checkbox" required="" id="Concursos Públicos" name="Concursos Públicos">
                     <label style="color: #212529;" for="Concursos Públicos">Concursos Públicos</label>
                 </div>
 

@@ -1,15 +1,6 @@
 <?php
 session_start();
-/*
-if (isset($_SESSION['nomeUsuario'])) {
-  var_dump('existe usuario' . $_SESSION['nomeUsuario']);
-} else {
-  var_dump('N existe sessão ');
-}
-
-*/
 include("../php/verifica_login.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +12,7 @@ include("../php/verifica_login.php");
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/b21197af3e.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/index.css">
   <link rel="shortcut icon" href="../img/LogoProVest.ico" type="image/x-icon">
   <title>ProVest | Home</title>
@@ -60,15 +52,16 @@ include("../php/verifica_login.php");
           </li>
         </ul>
 
-        <a class="navbar-brand" href="criar-curso.html">
+        <a class="navbar-brand" href="criar-curso.php">
           Cadastrar Curso
         </a>
 
         <!-- Foto e nome do perfil -->
         <a class="navbar-brand" href="perfil.html">
-          <img src="../img/fotoPessoa.jpg" alt="" width="40" height="24" class="img-fluid" style="border-radius: 50px; margin-right: 10px;">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <!--<img src="../img/fotoPessoa.jpg" alt="" width="40" height="24" class="img-fluid" style="border-radius: 50px;">-->
           <?php echo $_SESSION['nomeUsuario']; ?>
-          <a style="text-decoration: none; color: #fff;" href="../php/logout.php">Logout</a>
+          <a class="navbar-brand" style="text-decoration: none; color: #fff;" href="../php/logout.php">Sair</a>
         </a>
 
       </div>
@@ -79,7 +72,7 @@ include("../php/verifica_login.php");
     <div class="row gx-5">
       <div class="col">
         <div class="p-3">
-          <h4>Cursos em "Volta Redonda"</h4>
+          <h4>Cursos em "<?php echo $_SESSION['cidadeUsuario']; ?>"</h4>
         </div>
       </div>
     </div>
@@ -115,7 +108,7 @@ include("../php/verifica_login.php");
                   Presencial
                 </li>
               </ul>
-              <a href="ver-curso.html" class="btn btn-dark">Ver curso</a>
+              <a href="ver-curso.php" class="btn btn-dark">Ver curso</a>
             </div>
           </div>
         </div>
@@ -146,7 +139,7 @@ include("../php/verifica_login.php");
                   Presencial
                 </li>
               </ul>
-              <a href="ver-curso.html" class="btn btn-dark">Ver curso</a>
+              <a href="ver-curso.php" class="btn btn-dark">Ver curso</a>
             </div>
           </div>
         </div>
@@ -177,7 +170,7 @@ include("../php/verifica_login.php");
                   Presencial
                 </li>
               </ul>
-              <a href="ver-curso.html" class="btn btn-dark">Ver curso</a>
+              <a href="ver-curso.php" class="btn btn-dark">Ver curso</a>
             </div>
           </div>
         </div>

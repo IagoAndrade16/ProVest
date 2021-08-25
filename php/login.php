@@ -6,7 +6,7 @@ include("conexao.php");
 $senhaU = $_POST['senha'];
 $emailU = $_POST['email'];
 
-$credenciais = "SELECT senhaU, emailU, nomeU FROM usuarios WHERE senhaU = '${senhaU}' and emailU = '${emailU}'";
+$credenciais = "SELECT senhaU, emailU, nomeU, cidadeU FROM usuarios WHERE senhaU = '${senhaU}' and emailU = '${emailU}'";
 
 $result = $mysqli->query($credenciais);
 
@@ -16,6 +16,7 @@ if ($row == 1) {
     $linha = $result->fetch_assoc();
     $_SESSION['senha'] = $linha['senhaU'];
     $_SESSION['email'] = $linha['emailU'];
+    $_SESSION['cidadeUsuario'] = $linha['cidadeU'];
     $_SESSION['nomeUsuario'] = $linha['nomeU'];
     header('Location: ../html/index.php');
     exit();
