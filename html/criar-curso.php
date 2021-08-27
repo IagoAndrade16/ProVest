@@ -37,7 +37,7 @@
 
     <section class="flex-box">
         <center>
-            <form action="" method="POST">
+            <form action="../php/criar-cursos.php" method="POST">
                 <div class="input">
                     <input type="text" name="Nome" required="" placeholder="Nome:">
                 </div>
@@ -118,7 +118,7 @@
                 </div>
 
                 <div class="input">
-                    <input type="text" name="telefone" required="" placeholder="Celular/WhatsApp:">
+                    <input type="text" name="celular" required="" placeholder="Celular/WhatsApp:">
                 </div>
                 <br>
                 <div class="btn">

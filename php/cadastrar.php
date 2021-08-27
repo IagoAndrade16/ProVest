@@ -8,13 +8,7 @@ try {
     $email_usuario = addslashes($_POST['e_mail_usuario']);
     $cidade_usuario = addslashes($_POST['cidade_usuario']);
     $mysqli = new mysqli($host, $usuario, $senha, $db);
-
-    function Verificaemail($email_usuario)
-    {
-        $verific = "SELECT emailU FROM usuarios WHERE emailU == $email_usuario";
-       
-    }
-
+    
     //FUNÇÃO DE VALIDAR O EMAIL
     function ValidarEmail($email_usuario)
     {
@@ -68,3 +62,5 @@ try {
 } catch (Exception $e) {
     echo $e->getMessage();
 }
+
+?>
