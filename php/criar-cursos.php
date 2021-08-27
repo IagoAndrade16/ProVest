@@ -3,16 +3,16 @@
 include('conexao.php');
 
 $nome = $_POST['Nome'];
-$PréENEM = $_POST['Pré-ENEM'];
-$PréVestibular = $_POST['Pré-Vestibular'];
-$ConcursosMilitares = $_POST['Concursos Militares'];
-$ConcursosPúblicos = $_POST['Concursos Públicos'];
-$Outro = $_POST['Outro'];
-$Presencial = $_POST['Presencial'];
-$OnLine = $_POST['On-line'];
-$Estado = $_POST['Estado'];
+$préENEM = $_POST['Pré-ENEM'];
+$préVestibular = $_POST['Pré-Vestibular'];
+$concursosMilitares = $_POST['Concursos Militares'];
+$concursosPúblicos = $_POST['Concursos Públicos'];
+$outro = $_POST['Outro'];
+$presencial = $_POST['Presencial'];
+$onLine = $_POST['On-line'];
+$estado = $_POST['Estado'];
 $descricao = $_POST['descricao'];
-$Cidade = $_POST['Cidade'];
+$cidade = $_POST['Cidade'];
 $endereco = $_POST['endereco'];
 $telefone = $_POST['telefone'];
 $celular = $_POST['celular'];
