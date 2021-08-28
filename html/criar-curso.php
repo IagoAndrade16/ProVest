@@ -39,57 +39,57 @@
         <center>
             <form action="../php/criar-cursos.php" method="POST">
                 <div class="input">
-                    <input type="text" name="Nome" required="" placeholder="Nome:">
+                    <input type="text" name="nome"  placeholder="Nome:">
                 </div>
 
                 <div>
                     <p>Categoria:</p>
                     <br>
-                    <input class="checkbox-1" type="checkbox" required="" id="Categoria-Pré-ENEM" name="Pré-ENEM">
+                    <input class="checkbox-1" type="checkbox"  id="Categoria-Pré-ENEM" name="categoria[]">
                     <label style="color: #212529;" for="Categoria-Pré-ENEM">Pré-ENEM</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-2" type="checkbox" required="" id="Pré-Vestibular" name="Pré-Vestibular">
+                    <input class="checkbox-2" type="checkbox"  id="Pré-Vestibular" name="categoria[]">
                     <label style="color: #212529;" for="Pré-Vestibular">Pré-Vestibular</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-3" type="checkbox" required="" required="" id="Concursos Militares" name="Concursos Militares">
+                    <input class="checkbox-3" type="checkbox" id="Concursos Militares" name="categoria[]">
                     <label style="color: #212529;" for="Concursos Militares">Concursos Militares</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-4" type="checkbox" required="" id="Concursos Públicos" name="Concursos Públicos">
+                    <input class="checkbox-4" type="checkbox" id="Concursos Públicos" name="categoria[]">
                     <label style="color: #212529;" for="Concursos Públicos">Concursos Públicos</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-5" type="checkbox" required="" id="Outro" name="Outro">
+                    <input class="checkbox-5" type="checkbox"  id="Outro" name="categoria[]">
                     <label style="color: #212529;" for="Outro">Outro</label>
                 </div>
 
                 <div>
                     <p>Modalidade de Ensino:</p>
                     <br>
-                    <input class="checkbox-6" type="checkbox" required="" id="Presencial" name="Presencial">
+                    <input class="checkbox-6" type="checkbox"  id="Presencial" name="ensino[]">
                     <label style="color: #212529;" for="Presencial">Presencial</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-7" type="checkbox" required="" id="On-line" name="On-line">
+                    <input class="checkbox-7" type="checkbox"  id="On-line" name="ensino[]">
                     <label style="color: #212529;" for="On-line">On-line</label>
 
                 </div>
 
                 <div class="input">
 
-                    <select id="Estado"></select>
+                    <select id="Estado" name="estado"></select>
 
                 </div>
 
                 <div class="input">
-                    <textarea type="text" name="descricao" required="" placeholder="Descrição:"></textarea>
+                    <textarea type="text" name="descricao"  placeholder="Descrição:"></textarea>
                 </div>
 
                 <!------------------------------MEIO------------------------------>
@@ -104,21 +104,21 @@
                 </div>
 
                 <div class="input">
-                    <select id="Cidade">
+                    <select id="Cidade" name="cidade">
                         <option>Cidades</option>
                     </select>
                 </div>
 
                 <div class="input">
-                    <input type="text" name="endereco" required="" placeholder="Endereço:">
+                    <input type="text" name="endereco"  placeholder="Endereço:">
                 </div>
 
                 <div class="input">
-                    <input type="text" name="telefone" required="" placeholder="Telefone:">
+                    <input type="text" name="telefone"  placeholder="Telefone:">
                 </div>
 
                 <div class="input">
-                    <input type="text" name="celular" required="" placeholder="Celular/WhatsApp:">
+                    <input type="text" name="celular"  placeholder="Celular/WhatsApp:">
                 </div>
                 <br>
                 <div class="btn">

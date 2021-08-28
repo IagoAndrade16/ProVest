@@ -49,7 +49,7 @@ try {
     }
 
     //COMANDO QUE PEGA OS DADOS DO CAMPO CADASTRO
-    $sql = "INSERT INTO usuarios(senhaU, nomeU, estadoU, emailU, cidadeU) VALUE('{$senha_usuario}', '${nome_usuario}', '${estado_usuario}', '${email_usuario}', '${cidade_usuario}');";
+    $sql = "INSERT INTO usuarios(senhaU, nomeU, estadoU, emailU, cidadeU) VALUE('${senha_usuario}', '${nome_usuario}', '${estado_usuario}', '${email_usuario}', '${cidade_usuario}');";
     mysqli_select_db($mysqli, '$db');
 
     if (mysqli_query($mysqli, $sql)) {

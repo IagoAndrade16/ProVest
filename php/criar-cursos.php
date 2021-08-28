@@ -1,27 +1,29 @@
 <?php
-
+session_start();
 include('conexao.php');
 
-$nome = $_POST['Nome'];
-$préENEM = $_POST['Pré-ENEM'];
-$préVestibular = $_POST['Pré-Vestibular'];
-$concursosMilitares = $_POST['Concursos Militares'];
-$concursosPúblicos = $_POST['Concursos Públicos'];
-$outro = $_POST['Outro'];
-$presencial = $_POST['Presencial'];
-$onLine = $_POST['On-line'];
-$estado = $_POST['Estado'];
-$descricao = $_POST['descricao'];
-$cidade = $_POST['Cidade'];
+//$categoria = $_POST['categoria'];
+$nome = $_POST['nome'];
+$estado = $_POST['estado'];
+$cidade = $_POST['cidade'];
 $endereco = $_POST['endereco'];
 $telefone = $_POST['telefone'];
 $celular = $_POST['celular'];
+//$tipo = $_POST['ensino'];
+$descricao = $_POST['descricao'];
 
-$sql = "INSERT INTO cursos(categoria, nome, estados, cidadeC, endereçoC, telefC, celularC, tipoEnsino, descricao) VALUE('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}');";
+$criarCurso = "INSERT INTO cursos(nome, estados, cidadeC, endereçoC, telefC, celularC, descricao) VALUE('$nome', '$estado', '$cidade', '$endereco', '$telefone', '$celular', '$descricao')";
+$result = $mysqli->query($criarCurso);
 
+$row = $result->num_rows;
 
-
-
-
+if ($row == 1){
+    header('Location: ../html/index.php');
+    
+}else{
+    var_dump($row);
+    echo "<script>alert('Cadastro Invalido');</script>";
+    
+}
 
 ?>
