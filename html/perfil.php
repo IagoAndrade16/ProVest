@@ -1,3 +1,10 @@
+<?php 
+session_start();
+include("../php/verifica_login.php");
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,7 +37,7 @@
     </div>
     </div>
   </nav>
-  <form action="">
+  <form action="../php/perfil.php" method="POST">
     <div class="container">
       <div class="row gx-5">
         <div class="col-md-4">
@@ -51,17 +58,17 @@
           <div class="p-3">
             <h4 style="margin-bottom: 30px;">Informações gerais</h4>
             <div class="mb-3">
-              <label class="form-label">Nome: </label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label class="form-label">Nome atual: <?php echo $_SESSION['nomeUsuario']; ?></label>
+              <input type="text" placeholder="Troque seu nome aqui" class="form-control" id="exampleInputEmail1" name="usuario" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-              <label class="form-label">Endereço de email:</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">Nós nunca vamos compartilhar seu email com ninguém</div>
+              <label class="form-label">E-mail atual: <?php echo $_SESSION['email']; ?></label>
+              <input type="email" name="email" placeholder="Troque seu e-mail aqui" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Nós nunca vamos compartilhar seu email com ninguém.</div>
             </div>
             <div class="mb-3">
-              <label class="form-label">Senha</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label class="form-label">Quer redefinir sua Senha?</label>
+              <input type="password" name="senha" placeholder="Troque sua senha aqui" class="form-control" id="exampleInputPassword1">
             </div>
           </div>
         </div>
@@ -70,14 +77,14 @@
           <div class="p-3">
             <h4 style="margin-bottom: 30px; color: #fff;">Informações gerais</h4>
             <div class="mb-3">
-              <label class="form-label">Estado: </label>
-              <select class="form-select" aria-label="Default select example" id="Estado"></select>
+              <label class="form-label">Quer redefinir seu Estado?</label>
+              <select class="form-select" name="estado" aria-label="Default select example" id="Estado"></select>
             </div>
 
 
             <div class="mb-3">
-              <label class="form-label">Cidade: </label>
-              <select class="form-select" aria-label="Default select example" id="Cidade"><option>Cidade</option>></select>
+              <label class="form-label">Quer redefinir sua Cidade?</label>
+              <select class="form-select" name="cidade" aria-label="Default select example" id="Cidade"><option>Cidade</option>></select>
             </div>
             <button type="submit" class="btn btn-dark">Salvar alterações</button>
           </div>
