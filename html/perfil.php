@@ -58,12 +58,12 @@ include("../php/verifica_login.php");
           <div class="p-3">
             <h4 style="margin-bottom: 30px;">Informações gerais</h4>
             <div class="mb-3">
-              <label class="form-label">Nome atual: <?php echo $_SESSION['nomeUsuario']; ?></label>
-              <input type="text" placeholder="Troque seu nome aqui" class="form-control" id="exampleInputEmail1" name="usuario" aria-describedby="emailHelp">
+              <label class="form-label">Nome</label>
+              <input type="text" placeholder="<?php echo $_SESSION['nomeUsuario']; ?>" class="form-control" id="exampleInputEmail1" name="usuario" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-              <label class="form-label">E-mail atual: <?php echo $_SESSION['email']; ?></label>
-              <input type="email" name="email" placeholder="Troque seu e-mail aqui" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label class="form-label">E-mail</label>
+              <input type="email" name="email" placeholder="<?php echo $_SESSION['email']; ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">Nós nunca vamos compartilhar seu email com ninguém.</div>
             </div>
             <div class="mb-3">
@@ -77,14 +77,14 @@ include("../php/verifica_login.php");
           <div class="p-3">
             <h4 style="margin-bottom: 30px; color: #fff;">Informações gerais</h4>
             <div class="mb-3">
-              <label class="form-label">Quer redefinir seu Estado?</label>
+              <label class="form-label">Estado: <?php echo $_SESSION['estado']; ?></label>
               <select class="form-select" name="estado" aria-label="Default select example" id="Estado"></select>
             </div>
 
 
             <div class="mb-3">
-              <label class="form-label">Quer redefinir sua Cidade?</label>
-              <select class="form-select" name="cidade" aria-label="Default select example" id="Cidade"><option>Cidade</option>></select>
+              <label class="form-label">Cidade</label>
+              <select class="form-select" placeholder="<?php echo $_SESSION['cidadeUsuario']; ?>" name="cidade" aria-label="Default select example" id="Cidade"><option><?php echo $_SESSION['cidadeUsuario']; ?></option>></select>
             </div>
             <button type="submit" class="btn btn-dark">Salvar alterações</button>
           </div>

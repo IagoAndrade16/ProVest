@@ -55,7 +55,7 @@ include("../php/verifica_login.php");
         </a>
 
         <!-- Foto e nome do perfil -->
-        <a class="navbar-brand" href="perfil.html">
+        <a class="navbar-brand" href="perfil.php">
           <i class="fa fa-user" aria-hidden="true"></i>
           <!--<img src="../img/fotoPessoa.jpg" alt="" width="40" height="24" class="img-fluid" style="border-radius: 50px; margin-right: 10px;">-->
           <?php echo $_SESSION['nomeUsuario']; ?>

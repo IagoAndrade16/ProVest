@@ -27,7 +27,7 @@ include("../php/verifica_login.php");
         <a href="index.php"><img src="../img/logoProVest.png"></a>
         <nav>
             <ul class="menu">
-                <li><a class="foto" href="perfil.html"> <i class="fa fa-user" aria-hidden="true"></i>
+                <li><a class="foto" href="perfil.php"> <i class="fa fa-user" aria-hidden="true"></i>
                         <!--<img src="../img/fotoPessoa.jpg">-->
                     </a></li>
                 <li><a href="perfil.html"> <?php echo $_SESSION['nomeUsuario']; ?> </a></li>
