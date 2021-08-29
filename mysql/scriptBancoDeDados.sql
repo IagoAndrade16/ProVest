@@ -3,7 +3,6 @@ CREATE TABLE cursos (
 	categoria TEXT NOT NULL,
 	nome varchar(255) NOT NULL,
 	estados varchar(255),
-	e_mails varchar(255) NOT NULL,
 	cidadeC TEXT,
 	endereçoC TEXT,
 	telefC varchar(255),
@@ -11,7 +10,7 @@ CREATE TABLE cursos (
 	fotoPerfilC TEXT NOT NULL,
 	tipoEnsino varchar(255) NOT NULL,
 	descricao TEXT NOT NULL
-
+	    
 );
 
 CREATE TABLE usuarios (
