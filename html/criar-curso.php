@@ -47,39 +47,39 @@ include("../php/verifica_login.php");
                 <div>
                     <p>Categoria:</p>
                     <br>
-                    <input class="checkbox-1" type="checkbox"  id="Categoria-Pré-ENEM" name="categoria[]">
+                    <input class="checkbox-1" type="checkbox" value="Pré-ENEM" id="Categoria-Pré-ENEM" name="hob[]">
                     <label style="color: #212529;" for="Categoria-Pré-ENEM">Pré-ENEM</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-2" type="checkbox"  id="Pré-Vestibular" name="categoria[]">
+                    <input class="checkbox-2" type="checkbox" value="Pré-Vestibular" id="Pré-Vestibular" name="hob[]">
                     <label style="color: #212529;" for="Pré-Vestibular">Pré-Vestibular</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-3" type="checkbox" id="Concursos Militares" name="categoria[]">
+                    <input class="checkbox-3" type="checkbox" value="Concursos Militares"  id="Concursos Militares" name="hob[]">
                     <label style="color: #212529;" for="Concursos Militares">Concursos Militares</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-4" type="checkbox" id="Concursos Públicos" name="categoria[]">
+                    <input class="checkbox-4" type="checkbox" value="Concursos Públicos" id="Concursos Públicos" name="hob[]">
                     <label style="color: #212529;" for="Concursos Públicos">Concursos Públicos</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-5" type="checkbox"  id="Outro" name="categoria[]">
+                    <input class="checkbox-5" type="checkbox" value="Outro" id="Outro" name="hob[]">
                     <label style="color: #212529;" for="Outro">Outro</label>
                 </div>
 
                 <div>
                     <p>Modalidade de Ensino:</p>
                     <br>
-                    <input class="checkbox-6" type="checkbox"  id="Presencial" name="ensino[]">
+                    <input class="checkbox-6" type="checkbox" value="Presencial" id="Presencial" name="ensino[]">
                     <label style="color: #212529;" for="Presencial">Presencial</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-7" type="checkbox"  id="On-line" name="ensino[]">
+                    <input class="checkbox-7" type="checkbox"  value="On-line" id="On-line" name="ensino[]">
                     <label style="color: #212529;" for="On-line">On-line</label>
 
                 </div>
