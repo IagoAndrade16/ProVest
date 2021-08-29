@@ -25,3 +25,13 @@ CREATE TABLE usuarios (
 	PRIMARY KEY (codU)
 );
 ALTER TABLE cursos ADD CONSTRAINT usuarios_fk0 FOREIGN KEY (codU) REFERENCES usuarios(codU);
+
+
+/* Código SQL tela cadastro */
+INSERT INTO usuarios(senhaU, nomeU, estadoU, emailU, cidadeU) VALUE('${senha_usuario}', '${nome_usuario}', '${estado_usuario}', '${email_usuario}', '${cidade_usuario}');
+
+/* Código SQL tela login */
+SELECT codU, estadoU, senhaU, emailU, nomeU, cidadeU FROM usuarios WHERE senhaU = '${senhaU}' and emailU = '${emailU}'
+
+/* Código SQL tela perfil */
+UPDATE usuarios SET nomeU = '$usuario' WHERE codU = $session
