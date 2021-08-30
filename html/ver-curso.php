@@ -60,6 +60,7 @@ include("../php/verifica_login.php");
           <!--<img src="../img/fotoPessoa.jpg" alt="" width="40" height="24" class="img-fluid" style="border-radius: 50px; margin-right: 10px;">-->
           <?php echo $_SESSION['nomeUsuario']; ?>
         </a>
+        <a class="navbar-brand" style="text-decoration: none; color: #fff;" href="../php/logout.php">Sair</a>
       </div>
     </div>
   </nav>
