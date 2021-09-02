@@ -29,7 +29,7 @@ include("../php/verifica_login.php");
                 <li><a class="foto" href="perfil.php"><i class="fa fa-user" aria-hidden="true"></i>
                         <!--<img src="../img/fotoPessoa.jpg"></a>-->
                 </li>
-                <li><a href="perfil.html"> <?php echo $_SESSION['nomeUsuario']; ?> </a></li>
+                <li><a href="perfil.php"> <?php echo $_SESSION['nomeUsuario']; ?> </a></li>
             </ul>
         </nav>
     </header>

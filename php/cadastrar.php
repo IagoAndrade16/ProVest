@@ -1,4 +1,5 @@
 <?php include("conexao.php");
+session_start();
 
 try {
 
@@ -21,31 +22,38 @@ try {
 
     //VALIDAÇÃO NOME
     if (empty($_POST['senha_usuario'])) {
-        throw new Exception("<script>alert('CAMPO SENHA NÃO PREENCHIDO'); window.location = '../html/cadastro.html'</script>");
+        $_SESSION['senhaV'] = true;
+        throw new Exception("<script>window.location = '../html/cadastro.php'</script>");
     }
     if (!empty($_POST['nome_usuario'])) {
         if (strlen($_POST['nome_usuario']) < 3) {
-            throw new Exception("<script>alert('NOME COM MENOS DE 3 CARACTERS'); window.location = '../html/cadastro.html'</script>");
+            $_SESSION['letras'] = true;
+            throw new Exception("<script>window.location = '../html/cadastro.php'</script>");
         }
     } else {
-        throw new Exception("<script>alert('CAMPO NOME NÃO PREENCHIDO'); window.location = '../html/cadastro.html'</script>");
+        $_SESSION['vazio'] = true;
+        throw new Exception("<script>window.location = '../html/cadastro.php'</script>");
     }
 
     //VALIDAÇÃO ESTADO
     if ($_POST['estado_usuario'] == "Estado") {
-        echo "<script>alert('CAMPO ESTADO NÃO SELECIONADO'); window.location = '../html/cadastro.html'</script>";
+        $_SESSION['eu'] = true;
+        echo "<script>window.location = '../html/cadastro.php'</script>";
     }
 
     //VALIDAÇÃO EMAIL
     if (empty($email_usuario)) {
-        throw new Exception("<script>alert('CAMPO E-MAIL NÃO PREENCHIDO'); window.location = '../html/cadastro.html'</script>");
+        $_SESSION['vazio_em'] = true;
+        throw new Exception("<script>window.location = '../html/cadastro.php'</script>");
     } elseif (!ValidarEmail($email_usuario)) {
-        throw new Exception("<script>alert('CAMPO E-MAIL INVALIDO'); window.location = '../html/cadastro.html'</script>");
+        $_SESSION['valida'] = true;
+        throw new Exception("<script>window.location = '../html/cadastro.php'</script>");
     }
 
     //VALIDAÇÃO CIDADE
     if ($_POST['cidade_usuario'] == "Cidade") {
-        echo "<script>alert('CAMPO CIDADE NÃO SELECIONADO'); window.location = '../html/cadastro.html'</script>";
+        $_SESSION['ci'] = true;
+        echo "<script>window.location = '../html/cadastro.php'</script>";
     }
 
     //COMANDO QUE PEGA OS DADOS DO CAMPO CADASTRO
@@ -53,9 +61,10 @@ try {
     mysqli_select_db($mysqli, '$db');
 
     if (mysqli_query($mysqli, $sql)) {
-        echo "<script>alert('Conta Criada!'); window.location = '../html/login.html'</script>";
+        echo "<script>window.location = '../html/login.php'</script>";
     } else {
-        echo "<script>alert('ERRO NO CADASTRO'); window.location = '../html/cadastro.html' </script>";
+        $_SESSION['erro'] = true;
+        echo "<script>window.location = '../html/cadastro.php' </script>";
     }
 
     mysqli_close($mysqli);
