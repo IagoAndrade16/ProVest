@@ -100,8 +100,8 @@
 
                 <div class="caixa-concordar">
                     <input class="caixa-ok" type="checkbox" required="" name="politica-privacidade">
-                    <label for="politica-privacidade">Criar uma conta significa que você está bem com <a href="#">nossos
-                            Termos de Serviço,</a> Política de <a href="#"> Privacidade</a> e nossas <a href="#">Configurações </a>de nofificação padrão.</label>
+                    <label for="politica-privacidade">Criar uma conta significa que você está bem com <a href="../html/servico.html">nossos
+                            Termos de Serviço</a> e Política de <a href="../html/pv.html"> Privacidade.</a></label>
 
                 </div>
 
