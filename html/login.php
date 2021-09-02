@@ -61,7 +61,7 @@
         </form>
 
         <div class="criar-conta">
-            <p>Novo aqui?<a href="cadastro.html"> Crie sua conta</a></p>
+            <p>Novo aqui?<a href="cadastro.php"> Crie sua conta</a></p>
         </div>
 
 
