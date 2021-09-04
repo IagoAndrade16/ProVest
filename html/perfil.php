@@ -30,6 +30,7 @@ include("../php/verifica_login.php");
       <a class="navbar-brand" href="navegacao.php">
         <img class="img-fluid" src="../img/logoProVest.png" alt="logo - ProVest" width="50px" height="50px">
       </a>
+      <a class="navbar-brand" style="text-decoration: none; color: #fff;" href="../php/logout.php">Sair</a>
     </div>
     </div>
   </nav>
