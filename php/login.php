@@ -20,7 +20,7 @@ if ($row == 1) {
     $_SESSION['estado'] = $linha['estadoU'];
     $_SESSION['cidadeUsuario'] = $linha['cidadeU'];
     $_SESSION['nomeUsuario'] = $linha['nomeU'];
-    header('Location: ../html/index.php');
+    header('Location: ../html/navegacao.php');
     exit();
 } else {
     $_SESSION['incorreto'] = true;

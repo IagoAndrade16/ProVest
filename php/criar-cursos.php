@@ -28,7 +28,7 @@ $result1 = $mysqli->query("CALL `sptipo `('$tip');");
 
 $criarCurso = "INSERT INTO cursos(categoria, celularC, cidadeC, codU, descricao, endereçoC, estados, nome, tipoEnsino, telefC) VALUE('$chk','$celular','$cidade', $sessionC, '$descricao', '$endereco', '$estado', '$nome', '$tip', '$telefone');";
 $result1 = $mysqli->query($criarCurso);
-header('Location:../html/index.php');
+header('Location:../html/navegacao.php');
 
 
 ?>

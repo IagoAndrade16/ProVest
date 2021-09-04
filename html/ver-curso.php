@@ -22,7 +22,7 @@ include("../php/verifica_login.php");
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <!-- Logo -->
-      <a class="navbar-brand" href="index.php">
+      <a class="navbar-brand" href="navegacao.php">
         <img src="../img/logoProVest.png" alt="logo - ProVest" width="50px" height="50px" class="img-fluid" style="border-radius: 50px; margin-right: 10px;">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

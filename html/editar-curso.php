@@ -23,7 +23,7 @@ include("../php/verifica_login.php");
 <body>
 
     <header class="header">
-        <a href="index.php"><img src="../img/logoProVest.png"></a>
+        <a href="navegacao.php"><img src="../img/logoProVest.png"></a>
         <nav>
             <ul class="menu">
                 <li><a class="foto" href="perfil.php"><i class="fa fa-user" aria-hidden="true"></i>

@@ -1,13 +1,67 @@
-/*
-SCROLLBAR
-*/
-::-webkit-scrollbar{
-    width: 5px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
-::-webkit-scrollbar-thumb{
-    background: radial-gradient(transparent, #666);
-    border-radius: .25rem;
+
+body {
+    max-width: 100vw;
+    max-height: 10vw;
+    background-image: url("../img/RE4wppK.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 28px;
 }
-::-webkit-scrollbar-thumb:hover{
-    background: radial-gradient(transparent, black);
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav a {
+    margin: 4px;
+}
+
+.nav i {
+    color: #fff;
+    font-size: 22px;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    color: #fff;
+}
+
+.container h1 {
+    font-size: 80px;
+    margin-top: 50px;
+}
+
+.btn {
+    background-color: #fff;
+    text-decoration: none;
+    margin-top: 200px;
+    color: black;
+    padding: 12px;
+    border-radius: 4px;
+    transition: all 0.5s;
+    
+}
+
+.btn:hover {
+    background-color: black;
+    border: 1px solid #fff;
+    color: #fff;
 }

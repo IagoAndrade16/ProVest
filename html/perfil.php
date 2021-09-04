@@ -27,7 +27,7 @@ include("../php/verifica_login.php");
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
     <div class="container-fluid shadow-sm">
       <!-- Logo -->
-      <a class="navbar-brand" href="index.php">
+      <a class="navbar-brand" href="navegacao.php">
         <img class="img-fluid" src="../img/logoProVest.png" alt="logo - ProVest" width="50px" height="50px">
       </a>
     </div>
