@@ -55,15 +55,29 @@ include("../php/verifica_login.php");
             <div class="mb-3">
               <label class="form-label">Nome</label>
               <input type="text" placeholder="<?php echo $_SESSION['nomeUsuario']; ?>" class="form-control" id="exampleInputEmail1" name="usuario" aria-describedby="emailHelp">
+              <?php if (isset($_SESSION['userInvalid'])) : ?>
+                <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Campo nome invalido</p>
+              <?php endif;
+              unset($_SESSION['userInvalid']); ?>
             </div>
             <div class="mb-3">
               <label class="form-label">E-mail</label>
+
               <input type="email" name="email" placeholder="<?php echo $_SESSION['email']; ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <?php if (isset($_SESSION['invalid'])) : ?>
+                <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Campo e-mail invalido</p>
+              <?php endif;
+              unset($_SESSION['invalid']); ?>
+
               <div id="emailHelp" class="form-text">Nós nunca vamos compartilhar seu email com ninguém.</div>
             </div>
             <div class="mb-3">
               <label class="form-label">Quer redefinir sua Senha?</label>
               <input type="password" name="senha" placeholder="Troque sua senha aqui" class="form-control" id="exampleInputPassword1">
+              <?php if (isset($_SESSION['passInvalid'])) : ?>
+                <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Campo senha invalido</p>
+              <?php endif;
+              unset($_SESSION['passInvalid']); ?>
             </div>
           </div>
         </div>
@@ -74,6 +88,10 @@ include("../php/verifica_login.php");
             <div class="mb-3">
               <label class="form-label">Estado: <?php echo $_SESSION['estado']; ?></label>
               <select class="form-select" name="estado" aria-label="Default select example" id="Estado"></select>
+              <?php if (isset($_SESSION['estaInvalid'])) : ?>
+                <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Campo estado invalido</p>
+              <?php endif;
+              unset($_SESSION['estaInvalid']); ?>
             </div>
 
 
@@ -82,8 +100,16 @@ include("../php/verifica_login.php");
               <select class="form-select" placeholder="<?php echo $_SESSION['cidadeUsuario']; ?>" name="cidade" aria-label="Default select example" id="Cidade">
                 <option><?php echo $_SESSION['cidadeUsuario']; ?></option>>
               </select>
+              <?php if (isset($_SESSION['cidadInvalid'])) : ?>
+                <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Campo cidade invalido</p>
+              <?php endif;
+              unset($_SESSION['cidadInvalid']); ?>
+              <?php if (isset($_SESSION['no'])) : ?>
+                <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Campo cidade invalido</p>
+              <?php endif;
+              unset($_SESSION['no']); ?>
             </div>
-            <button type="submit" class="btn btn-dark">Salvar Alterações</button>
+            <button name="salvar" type="submit" class="btn btn-dark">Salvar Alterações</button>
             <button type="submit" name="btn-delete" value="btn-delete" class="btn btn-outline-danger">Excluir Conta <i class="fa fa-trash" aria-hidden="true"></i></button>
           </div>
         </div>
