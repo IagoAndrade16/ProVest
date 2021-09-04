@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
 include("../php/verifica_login.php");
 ?>
 
@@ -23,25 +23,30 @@ include("../php/verifica_login.php");
 
 <body>
 
-    <header class="header">
-        <a href="navegacao.php"><img src="../img/logoProVest.png"></a>
-        <nav>
-            <ul class="menu">
-                <li><a class="foto" href="perfil.php"> <i class="fa fa-user" aria-hidden="true"></i>
-                        <!--<img src="../img/fotoPessoa.jpg">-->
-                    </a></li>
-                <li><a href="perfil.php"> <?php echo $_SESSION['nomeUsuario']; ?> </a></li>
+    <header>
+        <a href="navegacao.php"><img width="50px" height="50px" src="../img/logoProVest.png"></a>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="perfil.php"> <i class="fa fa-user" aria-hidden="true"></i> <?php echo $_SESSION['nomeUsuario']; ?> <a href="../php/logout.php">ㅤSair</a></a></li>
             </ul>
         </nav>
+
     </header>
 
-    <h1 class="texto"><strong>Criar Curso</strong></h1>
+    <center>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="texto">Criar Curso</h1>
+    </center>
 
     <section class="flex-box">
         <center>
             <form action="../php/criar-cursos.php" method="POST">
                 <div class="input">
-                    <input type="text" name="nome"  placeholder="Nome:">
+                    <input type="text" name="nome" placeholder="Nome:">
                 </div>
 
                 <div>
@@ -57,7 +62,7 @@ include("../php/verifica_login.php");
                 </div>
 
                 <div>
-                    <input class="checkbox-3" type="checkbox" value="Concursos Militares"  id="Concursos Militares" name="hob[]">
+                    <input class="checkbox-3" type="checkbox" value="Concursos Militares" id="Concursos Militares" name="hob[]">
                     <label style="color: #212529;" for="Concursos Militares">Concursos Militares</label>
                 </div>
 
@@ -79,7 +84,7 @@ include("../php/verifica_login.php");
                 </div>
 
                 <div>
-                    <input class="checkbox-7" type="checkbox"  value="On-line" id="On-line" name="ensino[]">
+                    <input class="checkbox-7" type="checkbox" value="On-line" id="On-line" name="ensino[]">
                     <label style="color: #212529;" for="On-line">On-line</label>
 
                 </div>
@@ -91,7 +96,7 @@ include("../php/verifica_login.php");
                 </div>
 
                 <div class="input">
-                    <textarea type="text" name="descricao"  placeholder="Descrição:"></textarea>
+                    <textarea type="text" name="descricao" placeholder="Descrição:"></textarea>
                 </div>
 
                 <!------------------------------MEIO------------------------------>
@@ -112,15 +117,15 @@ include("../php/verifica_login.php");
                 </div>
 
                 <div class="input">
-                    <input type="text" name="endereco"  placeholder="Endereço:">
+                    <input type="text" name="endereco" placeholder="Endereço:">
                 </div>
 
                 <div class="input">
-                    <input type="text" name="telefone"  placeholder="Telefone:">
+                    <input type="text" name="telefone" placeholder="Telefone:">
                 </div>
 
                 <div class="input">
-                    <input type="text" name="celular"  placeholder="Celular/WhatsApp:">
+                    <input type="text" name="celular" placeholder="Celular/WhatsApp:">
                 </div>
                 <br>
                 <div class="btn">

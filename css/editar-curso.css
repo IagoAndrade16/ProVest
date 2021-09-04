@@ -1,4 +1,4 @@
-body, ul, li, p{
+body, ul, li, p {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -7,144 +7,120 @@ body, ul, li, p{
     width: 100%;
 }
 
-h1,h2,h3,h4,h5,h6, p{
+h1, h2, h3, h4, h5, h6, p {
     color: #212529;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
-
 }
-.header{
-    
-    position: fixed;
-    left: 0;
-    top: 0%;
-    padding: 0;
-    width: 100%;
+
+header {
     height: 75px;
-    background-color: #212529;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 100%;
     display: flex;
-    box-shadow: 0 0 0.5em rgb(56, 56, 56);
     justify-content: space-between;
+    background-color: #212529;
+    position: fixed;
+}
+
+header a {
+    padding: 10px;
+}
+
+.menu {
+    display: grid;
+    flex-wrap: nowrap;
+    justify-items: center;
     align-items: center;
-    flex-wrap: wrap;
-
-}
-.header img{
-    height: 50px;
-    width: 50px;
-    margin-left: 15px;
-
-}
-.menu{
-    display: flex;
-
-}
-.menu li {
-    margin-left: 3px;
-    
-}
-.menu li a{
-    margin-right: 15px;
-    display: block;
-
-}
-.menu img{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-
-}
-.foto{
-    margin-top: -8px;
-
-}
-.texto{
-    margin-top: 10rem;
-    text-align: center;
-    
+    padding: 10px;
 }
 
 /*
 CSS FLEXBOX 1
 */
-.flex-box{
+
+.flex-box {
     margin: 2rem;
-    border: 2px solid white;}
-
-.flex-box p{
-    margin-top: 1rem;
-    
+    border: 2px solid white;
 }
-.checkbox-1{
+
+.flex-box p {
+    margin-top: 1rem;
+}
+
+.checkbox-1 {
     margin-left: -1.4rem;
-    
-    
 }
-.checkbox-2{
-    margin-left: 1.1rem;
-    
-}
-.checkbox-3{
-    margin-left: 4.3rem;
-    
-}
-.checkbox-4{
-    margin-left: 4.1rem;
-    
-}
-.checkbox-5{
-    margin-left: -3.7rem;
-    
-}
-.checkbox-6{
-    margin-left: -1.2rem;
-    
-}
-.checkbox-7{
-    margin-left: -2.9rem;
-    
-}
-.input input{
-    margin-top: 1rem;
-    color: gray;
-    border-radius: .25rem;
-    padding: 10px;
-    width: 261px;
-    border: none;
-    outline:0;
-    box-shadow: 0 0 0.5em rgb(56, 56, 56);
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    background-color: #f1f1f1;
-}
-.input select{
-    margin-top: 1rem;
-    color: gray;
-    border-radius: .25rem;
-    padding: 10px;
-    width: 261px;
-    border: none;
-    outline:0;
-    box-shadow: 0 0 0.5em rgb(56, 56, 56);
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    background-color: #f1f1f1;
-}
-.input textarea{
 
+.checkbox-2 {
+    margin-left: 1.1rem;
+}
+
+.checkbox-3 {
+    margin-left: 4.3rem;
+}
+
+.checkbox-4 {
+    margin-left: 4.1rem;
+}
+
+.checkbox-5 {
+    margin-left: -3.7rem;
+}
+
+.checkbox-6 {
+    margin-left: -1.2rem;
+}
+
+.checkbox-7 {
+    margin-left: -2.9rem;
+}
+
+.input input {
     margin-top: 1rem;
     color: gray;
     border-radius: .25rem;
     padding: 10px;
     width: 261px;
     border: none;
-    outline:0;
+    outline: 0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+}
+
+.input select {
+    margin-top: 1rem;
+    color: gray;
+    border-radius: .25rem;
+    padding: 10px;
+    width: 261px;
+    border: none;
+    outline: 0;
+    box-shadow: 0 0 0.5em rgb(56, 56, 56);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+}
+
+.input textarea {
+    margin-top: 1rem;
+    color: gray;
+    border-radius: .25rem;
+    padding: 10px;
+    width: 261px;
+    border: none;
+    outline: 0;
     box-shadow: 0 0 0.5em rgb(56, 56, 56);
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     background-color: #f1f1f1;
     resize: none;
 }
-.icone{
+
+.icone {
     margin-top: 1rem;
     border-radius: .25rem;
     height: 5rem;
@@ -152,99 +128,97 @@ CSS FLEXBOX 1
     border: 2px solid black;
     border-color: #212529;
 }
-.icone img{
+
+.icone img {
     margin-top: 1.5rem;
     height: 2rem;
     width: 2rem;
 }
 
-.btn button{
+.icone:hover {
+    background: radial-gradient(transparent, #666);
+}
+
+.btn button {
     margin-left: 1rem;
     margin-right: 1rem;
     padding: 10px;
     width: 170px;
     margin-top: 30px;
-    outline:0;
+    outline: 0;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    
 }
 
 /*
 SCROLLBAR
 */
-::-webkit-scrollbar{
-    width: 5px;
 
+::-webkit-scrollbar {
+    width: 5px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: radial-gradient(transparent, #666);
     border-radius: .25rem;
-
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background: radial-gradient(transparent, black);
-
 }
-@media only screen and (max-width: 340px){
 
-    .flex-box label{
+@media only screen and (max-width: 340px) {
+    .flex-box label {
         font-size: 15px;
     }
-
-    .checkbox-1{
+    .checkbox-1 {
         margin-left: -3rem;
-
     }
-    .checkbox-2{
+    .checkbox-2 {
         margin-left: -1rem;
-        
     }
-    
-    .checkbox-3{
+    .checkbox-3 {
         margin-left: 1.5rem;
-        
     }
-    .checkbox-4{
+    .checkbox-4 {
         margin-left: 1.3rem;
-        
     }
-    .checkbox-5{
+    .checkbox-5 {
         margin-left: -4.8rem;
-        
     }
-    .checkbox-6{
+    .checkbox-6 {
         margin-left: -2.7rem;
-        
     }
-    .checkbox-7{
+    .checkbox-7 {
         margin-left: -4.0rem;
-        
     }
 }
 
-@media only screen and (max-width: 280px){
-    .input input{
+@media only screen and (max-width: 487px) {
+    .menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .input input {
         width: 200px;
     }
-    .input select{
+    .input select {
         width: 220px;
     }
-    .input textarea{
+    .input textarea {
         width: 200px;
     }
-    .checkbox-2{
+    .checkbox-2 {
         margin-left: -1rem;
-        
     }
-    .checkbox-3{
+    .checkbox-3 {
         margin-left: 1.5rem;
-        
     }
-    .checkbox-4{
+    .checkbox-4 {
         margin-left: 1.3rem;
-        
     }
-    .checkbox-5{
+    .checkbox-5 {
         margin-left: -4.8rem;
     }
 }
