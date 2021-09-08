@@ -42,7 +42,8 @@ include("../php/verifica_login.php");
             <h1>Meu Perfil</h1>
             <h4 style="margin-bottom: 20px;">Foto de perfil</h4>
             <a href="#" id="foto-perfil" title="Trocar foto">
-              <img src="../img/fotoPessoa.jpg" alt="Foto-perfil" width="150px" height="150px" style="border-radius: 100px;">
+              <i style="color: #212529; font-size: 200px;" class="fa fa-user-circle-o" aria-hidden="true"></i>
+              <!--<img src="../img/fotoPessoa.jpg" alt="Foto-perfil" width="150px" height="150px" style="border-radius: 100px;">-->
             </a>
 
           </div>
