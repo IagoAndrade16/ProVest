@@ -1,7 +1,7 @@
 <?php
 
-include('conexao.php');
 session_start();
+include('conexao.php');
 $sessionedi = $_SESSION['code'];
 
 $categoria = $_POST['cat'];
@@ -17,49 +17,49 @@ $tipE = "";
 $telefC = $_POST['telefone'];
 
 
-foreach($categoria as $categoriaresult){
-    $cat.=$categoriaresult. ","; 
+foreach ($categoria as $categoriaresult) {
+    $cat .= $categoriaresult . ",";
 }
 $result1 = $mysqli->query("CALL `edcategoria `('$cat');");
 
-foreach($tipoEnsino as $tiporesult){
-    $tipE.=$tiporesult. ","; 
+foreach ($tipoEnsino as $tiporesult) {
+    $tipE .= $tiporesult . ",";
 }
 $result8 = $mysqli->query("CALL `edtipo `('$tipE');");
 
-if (empty($categoria)){
+if (!empty($categoria)) {
     $edit1 = "UPDATE cursos SET categoria = '$cat' WHERE codU = $sessionedi";
     $result1 = $mysqli->query($edit1);
 }
-if (empty($celularC)){
+if (!empty($celularC)) {
     $edit2 = "UPDATE cursos SET celularC = '$celularC' WHERE codU = $sessionedi";
     $result2 = $mysqli->query($edit2);
 }
-if (empty($descricao)){
+if (!empty($descricao)) {
     $edit3 = "UPDATE cursos SET descricao = '$descricao' WHERE codU = $sessionedi";
     $result3 = $mysqli->query($edit3);
 }
-if (empty($cidadeC)){
+if (!empty($cidadeC)) {
     $edit4 = "UPDATE cursos SET cidadeC = '$cidadeC' WHERE codU = $sessionedi";
     $result4 = $mysqli->query($edit4);
 }
-if (empty($endereçoC)){
+if (!empty($endereçoC)) {
     $edit5 = "UPDATE cursos SET endereçoC = '$endereçoC' WHERE codU = $sessionedi";
     $result5 = $mysqli->query($edit5);
 }
-if (empty($estados)){
+if (!empty($estados)) {
     $edit6 = "UPDATE cursos SET estados = '$estados' WHERE codU = $sessionedi";
     $result6 = $mysqli->query($edit6);
 }
-if (empty($nome)){
+if (!empty($nome)) {
     $edit7 = "UPDATE cursos SET nome = '$nome' WHERE codU = $sessionedi";
     $result7 = $mysqli->query($edit7);
 }
-if (empty($tipoEnsino)){
+if (!empty($tipoEnsino)) {
     $edit8 = "UPDATE cursos SET tipoEnsino = '$tipE' WHERE codU = $sessionedi";
     $result8 = $mysqli->query($edit8);
 }
-if (empty($telefC)){
+if (!empty($telefC)) {
     $edit9 = "UPDATE cursos SET telefC = '$telefC' WHERE codU = $sessionedi";
     $result9 = $mysqli->query($edit9);
 }

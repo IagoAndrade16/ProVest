@@ -1,5 +1,7 @@
-<?php session_start();
+<?php
+session_start();
 include("../php/verifica_login.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -32,7 +34,7 @@ include("../php/verifica_login.php");
         </nav>
 
     </header>
-    
+
     <center>
         <br>
         <br>
@@ -46,45 +48,45 @@ include("../php/verifica_login.php");
             <form action="" method="POST">
                 <div class="input">
                     <p>Nome Atual:</p>
-                    <input type="text" name="Nome" required="" placeholder="<?php echo $_SESSION['nome']; ?>">
+                    <input type="text" name="Nome" placeholder="<?php echo $_SESSION['nome']; ?>">
                 </div>
 
                 <div>
                     <p>Categoria Atual: <?php echo $_SESSION['categoria']; ?> </p>
                     <br>
-                    <input class="checkbox-1" type="checkbox" required="" id="Categoria-Pré-ENEM" value="Pré-ENEM" name="cat[]">
+                    <input class="checkbox-1" type="checkbox" id="Categoria-Pré-ENEM" value="Pré-ENEM" name="cat[]">
                     <label style="color: #212529;" for="Categoria-Pré-ENEM">Pré-ENEM</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-2" type="checkbox" required="" id="Pré-Vestibular" value="Pré-Vestibular" name="cat[]">
+                    <input class="checkbox-2" type="checkbox" id="Pré-Vestibular" value="Pré-Vestibular" name="cat[]">
                     <label style="color: #212529;" for="Pré-Vestibular">Pré-Vestibular</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-3" type="checkbox" required="" id="Concursos Militares" value="Concursos Militares" name="cat[]">
+                    <input class="checkbox-3" type="checkbox" id="Concursos Militares" value="Concursos Militares" name="cat[]">
                     <label style="color: #212529;" for="Concursos Militares">Concursos Militares</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-4" type="checkbox" required="" id="Concursos Públicos" value="Concursos Públicos" name="cat[]">
+                    <input class="checkbox-4" type="checkbox" id="Concursos Públicos" value="Concursos Públicos" name="cat[]">
                     <label style="color: #212529;" for="Concursos Públicos">Concursos Públicos</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-5" type="checkbox" required="" id="Outro" value="Outro" name="cat[]">
+                    <input class="checkbox-5" type="checkbox" id="Outro" value="Outro" name="cat[]">
                     <label style="color: #212529;" for="Outro">Outro</label>
                 </div>
 
                 <div>
                     <p>Modalidade de Ensino: <?php echo $_SESSION['tipo']; ?></p>
                     <br>
-                    <input class="checkbox-6" type="checkbox" required="" id="Presencial" value="Presencial" name="ens[]">
+                    <input class="checkbox-6" type="checkbox" id="Presencial" value="Presencial" name="ens[]">
                     <label style="color: #212529;" for="Presencial">Presencial</label>
                 </div>
 
                 <div>
-                    <input class="checkbox-7" type="checkbox" required="" id="On-line" value="On-line" name="ens[]">
+                    <input class="checkbox-7" type="checkbox" id="On-line" value="On-line" name="ens[]">
                     <label style="color: #212529;" for="On-line">On-line</label>
 
                 </div>
@@ -96,7 +98,7 @@ include("../php/verifica_login.php");
 
                 <div class="input">
                     <p>Descrição Atual:</p>
-                    <textarea type="text" name="descricao" required="" placeholder="<?php echo $_SESSION['descricao']; ?>"></textarea>
+                    <textarea type="text" name="descricao" placeholder="<?php echo $_SESSION['descricao']; ?>"></textarea>
                 </div>
 
                 <!------------------------------MEIO------------------------------>
@@ -119,21 +121,21 @@ include("../php/verifica_login.php");
 
                 <div class="input">
                     <p>Endereço Atual:</p>
-                    <input type="text" name="endereco" required="" placeholder="<?php echo $_SESSION['endereco']; ?>">
+                    <input type="text" name="endereco" placeholder="<?php echo $_SESSION['endereco']; ?>">
                 </div>
 
                 <div class="input">
                     <p>Telefone Atual:</p>
-                    <input type="text" name="telefone" required="" placeholder="<?php echo $_SESSION['phon']; ?>">
+                    <input type="text" name="telefone" placeholder="<?php echo $_SESSION['phon']; ?>">
                 </div>
 
                 <div class="input">
                     <p>Celular Atual:</p>
-                    <input type="text" name="celular" required="" placeholder="<?php echo $_SESSION['celular']; ?>">
+                    <input type="text" name="celular" placeholder="<?php echo $_SESSION['celular']; ?>">
                 </div>
                 <br>
                 <div class="btn">
-                    <button type="submit" class="btn btn-outline-dark">Salvar Alterações</button>
+                    <button type="submit" name="salvar" class="btn btn-outline-dark">Salvar Alterações</button>
                 </div>
                 <br>
             </form>
