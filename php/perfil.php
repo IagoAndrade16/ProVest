@@ -1,12 +1,9 @@
 <?php
 
 include('conexao.php');
+
 session_start();
-session_start();
-session_start();
-session_start();
-session_start();
-session_start();
+
 $session = $_SESSION['code'];
 
 $usuario = $_POST['usuario'];
