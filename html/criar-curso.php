@@ -46,10 +46,22 @@ include("../php/verifica_login.php");
         <center>
             <form action="../php/criar-cursos.php" method="POST">
                 <div class="input">
+                    <?php if (isset($_SESSION['nomeCursoV'])) : ?>
+                        <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
+                    <?php
+                    endif;
+                    unset($_SESSION['nomeCursoV']);
+                    ?>
                     <input type="text" name="nome" placeholder="Nome:">
                 </div>
 
                 <div>
+                    <?php if (isset($_SESSION['hobCursoV'])) : ?>
+                        <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
+                    <?php
+                    endif;
+                    unset($_SESSION['hobCursoV']);
+                    ?>
                     <p>Categoria:</p>
                     <br>
                     <input class="checkbox-1" type="checkbox" value="Pré-ENEM" id="Categoria-Pré-ENEM" name="hob[]">
@@ -77,6 +89,12 @@ include("../php/verifica_login.php");
                 </div>
 
                 <div>
+                    <?php if (isset($_SESSION['ensinoCursoV'])) : ?>
+                        <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
+                    <?php
+                    endif;
+                    unset($_SESSION['ensinoCursoV']);
+                    ?>
                     <p>Modalidade de Ensino:</p>
                     <br>
                     <input class="checkbox-6" type="checkbox" value="Presencial" id="Presencial" name="ensino[]">
@@ -90,12 +108,22 @@ include("../php/verifica_login.php");
                 </div>
 
                 <div class="input">
-
+                    <?php if (isset($_SESSION['estadoCursoV'])) : ?>
+                        <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
+                    <?php
+                    endif;
+                    unset($_SESSION['estadoCursoV']);
+                    ?>
                     <select id="Estado" name="estado"></select>
-
                 </div>
 
                 <div class="input">
+                    <?php if (isset($_SESSION['descricaoCursoV'])) : ?>
+                        <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
+                    <?php
+                    endif;
+                    unset($_SESSION['descricaoCursoV']);
+                    ?>
                     <textarea type="text" name="descricao" placeholder="Descrição:"></textarea>
                 </div>
 
@@ -111,20 +139,44 @@ include("../php/verifica_login.php");
                 </div>
 
                 <div class="input">
+                    <?php if (isset($_SESSION['cidadeCursoV'])) : ?>
+                        <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
+                    <?php
+                    endif;
+                    unset($_SESSION['cidadeCursoV']);
+                    ?>
                     <select id="Cidade" name="cidade">
                         <option>Cidades</option>
                     </select>
                 </div>
 
                 <div class="input">
+                    <?php if (isset($_SESSION['enderecoCursoV'])) : ?>
+                        <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
+                    <?php
+                    endif;
+                    unset($_SESSION['enderecoCursoV']);
+                    ?>
                     <input type="text" name="endereco" placeholder="Endereço:">
                 </div>
 
                 <div class="input">
+                    <?php if (isset($_SESSION['telefoneCursoV'])) : ?>
+                        <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
+                    <?php
+                    endif;
+                    unset($_SESSION['telefoneCursoV']);
+                    ?>
                     <input type="text" name="telefone" placeholder="Telefone:">
                 </div>
 
                 <div class="input">
+                    <?php if (isset($_SESSION['celularCursoV'])) : ?>
+                        <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
+                    <?php
+                    endif;
+                    unset($_SESSION['celularCursoV']);
+                    ?>
                     <input type="text" name="celular" placeholder="Celular/WhatsApp:">
                 </div>
                 <br>

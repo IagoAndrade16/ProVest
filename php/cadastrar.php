@@ -36,7 +36,7 @@ try {
     }
 
     //VALIDAÇÃO ESTADO
-    if ($_POST['estado_usuario'] == "Estado") {
+    if (empty($_POST['estado_usuario']) || $estado_usuario == "Estado") {
         $_SESSION['eu'] = true;
         echo "<script>window.location = '../html/cadastro.php'</script>";
     }
@@ -51,7 +51,7 @@ try {
     }
 
     //VALIDAÇÃO CIDADE
-    if ($_POST['cidade_usuario'] == "Cidade") {
+    if (empty($_POST['cidade_usuario']) || $cidade_usuario == "Cidade") {
         $_SESSION['ci'] = true;
         echo "<script>window.location = '../html/cadastro.php'</script>";
     }
