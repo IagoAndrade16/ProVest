@@ -49,6 +49,21 @@ header {
     margin-top: 50px;
 }
 
+.btn-login {
+    background-color: #fff;
+    text-decoration: none;
+    color: black;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+
+.btn-login:hover {
+    background-color: black;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
 .btn {
     background-color: #fff;
     text-decoration: none;
