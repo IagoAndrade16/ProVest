@@ -9,7 +9,7 @@ try {
     $email_usuario = addslashes($_POST['e_mail_usuario']);
     $cidade_usuario = addslashes($_POST['cidade_usuario']);
     $mysqli = new mysqli($host, $usuario, $senha, $db);
-    
+
     //FUNÇÃO DE VALIDAR O EMAIL
     function ValidarEmail($email_usuario)
     {
@@ -38,7 +38,7 @@ try {
     //VALIDAÇÃO ESTADO
     if (empty($_POST['estado_usuario']) || $estado_usuario == "Estado") {
         $_SESSION['eu'] = true;
-        echo "<script>window.location = '../html/cadastro.php'</script>";
+        throw new Exception("<script>window.location = '../html/cadastro.php'</script>");
     }
 
     //VALIDAÇÃO EMAIL
@@ -53,7 +53,7 @@ try {
     //VALIDAÇÃO CIDADE
     if (empty($_POST['cidade_usuario']) || $cidade_usuario == "Cidade") {
         $_SESSION['ci'] = true;
-        echo "<script>window.location = '../html/cadastro.php'</script>";
+        throw new Exception("<script>window.location = '../html/cadastro.php'</script>");
     }
 
     //COMANDO QUE PEGA OS DADOS DO CAMPO CADASTRO
@@ -71,5 +71,3 @@ try {
 } catch (Exception $e) {
     echo $e->getMessage();
 }
-
-?>
