@@ -22,4 +22,4 @@ CREATE TABLE usuarios (
 	cidadeU varchar(255) NOT NULL,
 	PRIMARY KEY (codU)
 );
-ALTER TABLE cursos ADD CONSTRAINT usuarios_fk0 FOREIGN KEY (codU) REFERENCES usuarios(codU);
+ALTER TABLE cursos ADD CONSTRAINT usuarios_fk0 FOREIGN KEY (codU) REFERENCES usuarios(codU) ON DELETE CASCADE;
