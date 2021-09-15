@@ -18,6 +18,7 @@ include("../php/verifica_login.php");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/editar-curso.css">
+    <link rel="stylesheet" href="../css/ver-perfil.css">
     <link rel="shortcut icon" href="../img/LogoProVest.ico" type="image/x-icon">
     <title>ProVest | Editar Curso</title>
 </head>
@@ -39,108 +40,149 @@ include("../php/verifica_login.php");
         <br>
         <br>
         <br>
-        <br>
         <h1 class="texto">Editar Curso</h1>
     </center>
 
-    <section class="flex-box">
-        <center>
-            <form action="" method="POST">
-                <div class="input">
-                    <p>Nome Atual:</p>
-                    <input type="text" name="Nome" placeholder="<?php echo $_SESSION['nome']; ?>">
-                </div>
+    <div class="container px-0">
+        <div class="row">
+            <!--1ª coluna(nome, categoria e modalidade)-->
+            <div class="col-md-4">
+                <div class="p-3">
+                    <!--Campo nome -->
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Novo nome</label>
+                    </div>
 
-                <div>
-                    <p>Categoria Atual: <?php echo $_SESSION['categoria']; ?> </p>
+                    <!--Categoria do curso(radios) -->
+                    <label for="exampleFormControlInput1" class="form-label">Categoria</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Pré-ENEM
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Pré-Vestibular
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Concursos Militares
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Concursos Públicos
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Outros
+                        </label>
+                    </div>
                     <br>
-                    <input class="checkbox-1" type="checkbox" id="Categoria-Pré-ENEM" value="Pré-ENEM" name="cat[]">
-                    <label style="color: #212529;" for="Categoria-Pré-ENEM">Pré-ENEM</label>
-                </div>
 
-                <div>
-                    <input class="checkbox-2" type="checkbox" id="Pré-Vestibular" value="Pré-Vestibular" name="cat[]">
-                    <label style="color: #212529;" for="Pré-Vestibular">Pré-Vestibular</label>
+                    <!--Modalidade de ensino(radios) -->
+                    <label for="exampleFormControlInput1" class="form-label">Modalidade de ensino</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Online
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Presencial
+                        </label>
+                    </div>
                 </div>
+            </div>
 
-                <div>
-                    <input class="checkbox-3" type="checkbox" id="Concursos Militares" value="Concursos Militares" name="cat[]">
-                    <label style="color: #212529;" for="Concursos Militares">Concursos Militares</label>
-                </div>
+            <!--Segunda coluna(descrição, endereço, tel/cel)-->
+            <div class="col-md-5">
+                <div class="p-3">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Descrição</label>
+                    </div>
 
-                <div>
-                    <input class="checkbox-4" type="checkbox" id="Concursos Públicos" value="Concursos Públicos" name="cat[]">
-                    <label style="color: #212529;" for="Concursos Públicos">Concursos Públicos</label>
-                </div>
-
-                <div>
-                    <input class="checkbox-5" type="checkbox" id="Outro" value="Outro" name="cat[]">
-                    <label style="color: #212529;" for="Outro">Outro</label>
-                </div>
-
-                <div>
-                    <p>Modalidade de Ensino: <?php echo $_SESSION['tipo']; ?></p>
                     <br>
-                    <input class="checkbox-6" type="checkbox" id="Presencial" value="Presencial" name="ens[]">
-                    <label style="color: #212529;" for="Presencial">Presencial</label>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">
+                            Endereço
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <br>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">
+                            Telefone
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <br>
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">
+                            Celular
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                            </svg>
+                        </label>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!--3ª Coluna(estado, cidade e foto)-->
+            <div class="col-md-3">
+                <div class="p-3">
+                    <select class="form-select" name="estado" aria-label="Default select example" id="Estado"></select> 
                 </div>
 
-                <div>
-                    <input class="checkbox-7" type="checkbox" id="On-line" value="On-line" name="ens[]">
-                    <label style="color: #212529;" for="On-line">On-line</label>
-
+                <div class="p-3">
+                    <select class="form-select" placeholder="<?php echo $_SESSION['cidadeUsuario']; ?>" name="cidade" aria-label="Default select example" id="Cidade">
+                        <option><?php echo $_SESSION['cidadeUsuario']; ?></option>>
+                    </select> 
                 </div>
 
-                <div class="input">
-                    <p>Estado atual:<?php echo $_SESSION['estado']; ?></p>
-                    <select id="Estado" nome="estadoC"></select>
-                </div>
+                <a href="#" id="foto-perfil" title="Trocar foto">
+                    <i style="color: #212529; font-size: 200px; margin-left: 25px" class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <!--<img src="../img/fotoPessoa.jpg" alt="Foto-perfil" width="150px" height="150px" style="border-radius: 100px;">-->
+                </a>
+            </div>
+        </div>
 
-                <div class="input">
-                    <p>Descrição Atual:</p>
-                    <textarea type="text" name="descricao" placeholder="<?php echo $_SESSION['descricao']; ?>"></textarea>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="p-3">
+                <center>
+                    <button type="button" class="btn btn-outline-dark">Salvar Alterações</button>
+                    <button type="button" class="btn btn-outline-danger">Descartar alterações</button>
+                </center>
+                
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <!------------------------------MEIO------------------------------>
 
-                <div>
-                    <p>Adicionar foto</p>
-                    <a href="#">
-                        <div class="icone">
-                            <img src="../img/btn-add.png">
-                        </div>
-                    </a>
-                </div>
 
-                <div class="input">
-                    <p>Cidade Atual:</p>
-                    <select id="Cidade" name="cidadeU">
-                        <option><?php echo $_SESSION['cidade']; ?></option>
-                    </select>
-                </div>
-
-                <div class="input">
-                    <p>Endereço Atual:</p>
-                    <input type="text" name="endereco" placeholder="<?php echo $_SESSION['endereco']; ?>">
-                </div>
-
-                <div class="input">
-                    <p>Telefone Atual:</p>
-                    <input type="text" name="telefone" placeholder="<?php echo $_SESSION['phon']; ?>">
-                </div>
-
-                <div class="input">
-                    <p>Celular Atual:</p>
-                    <input type="text" name="celular" placeholder="<?php echo $_SESSION['celular']; ?>">
-                </div>
-                <br>
-                <div class="btn">
-                    <button type="submit" name="salvar" class="btn btn-outline-dark">Salvar Alterações</button>
-                </div>
-                <br>
-            </form>
-        </center>
-    </section>
 
     <script src="../jquery/select.js"></script>
 
