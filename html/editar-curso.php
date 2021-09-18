@@ -49,6 +49,12 @@ include("../php/verifica_login.php");
                 <div class="col-md-4">
                     <div class="p-3">
                         <!--Campo nome -->
+                        <?php if (isset($_SESSION['categoria-Inv'])) : ?>
+                            <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
+                        <?php
+                        endif;
+                        unset($_SESSION['categoria-Inv']);
+                        ?>
                         <div class="form-floating mb-3">
                             <input type="name" name="nomeC" value="<?php echo $_SESSION['nomeC']; ?>" class="form-control" placeholder="name@example.com">
                             <label>Novo nome</label>
@@ -174,8 +180,8 @@ include("../php/verifica_login.php");
                 <div class="col-md-12">
                     <div class="p-3">
                         <center>
-                            <button type="submit" class="btn btn-outline-dark">Salvar Alterações</button>
-                            <button type="submit" class="btn btn-outline-danger">Descartar alterações</button>
+                            <button type="submit" name="btn-salvar" class="btn btn-outline-dark">Salvar Alterações</button>
+                            <button type="submit" name="btn-Nsalvar" class="btn btn-outline-danger">Descartar alterações</button>
                         </center>
 
                     </div>
