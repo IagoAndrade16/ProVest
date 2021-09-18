@@ -20,11 +20,27 @@ if ($row == 1) {
     $_SESSION['estado'] = $linha['estadoU'];
     $_SESSION['cidadeUsuario'] = $linha['cidadeU'];
     $_SESSION['nomeUsuario'] = $linha['nomeU'];
+
+    $sessionC = $_SESSION['code'];
+
+    $importC = "SELECT categoria, nome, estados, cidadeC, endereçoC, telefC, celularC, tipoEnsino, descricao FROM cursos WHERE codU = '${sessionC}';";
+    $conec = $mysqli->query($importC);
+
+    $lin = $conec->fetch_array();
+
+    $_SESSION['categoriaC'] = $lin['categoria'];
+    $_SESSION['nomeC'] = $lin['nome'];
+    $_SESSION['estadoC'] = $lin['estados'];
+    $_SESSION['cidadeC'] = $lin['cidadeC'];
+    $_SESSION['enderecoC'] = $lin['endereçoC'];
+    $_SESSION['telefoneC'] = $lin['telefC'];
+    $_SESSION['celularC'] = $lin['celularC'];
+    $_SESSION['tipoE'] = $lin['tipoEnsino'];
+    $_SESSION['descriC'] = $lin['descricao'];
+
     header('Location: ../html/navegacao.php');
     exit();
 } else {
     $_SESSION['incorreto'] = true;
     header('Location: ../html/login.php');
 }
-
-?>

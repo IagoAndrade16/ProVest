@@ -167,7 +167,7 @@ include("../php/verifica_login.php");
                     endif;
                     unset($_SESSION['telefoneCursoV']);
                     ?>
-                    <input type="text" name="telefone" placeholder="Telefone:">
+                    <input type="number" name="telefone" placeholder="Telefone:">
                 </div>
 
                 <div class="input">
@@ -177,7 +177,7 @@ include("../php/verifica_login.php");
                     endif;
                     unset($_SESSION['celularCursoV']);
                     ?>
-                    <input type="text" name="celular" placeholder="Celular/WhatsApp:">
+                    <input type="number" name="celular" placeholder="Celular/WhatsApp:">
                 </div>
                 <br>
                 <div class="btn">
