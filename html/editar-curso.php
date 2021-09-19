@@ -61,33 +61,33 @@ include("../php/verifica_login.php");
                         </div>
 
                         <!--Categoria do curso(radios) -->
-                        <label class="form-label">Categoria: <?php echo $_SESSION['categoriaC']; ?></label>
+                        <label class="form-label">Categoria</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="Pré-ENEM" name="Categoria[]">
+                            <input class="form-check-input" type="checkbox" value="Pré-ENEM" id="Pré-ENEM" name="Categoria[]">
                             <label class="form-check-label" for="Pré-ENEM">
                                 Pré-ENEM
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="Pré-Vestibular" name="Categoria[]">
+                            <input class="form-check-input" type="checkbox" value="Pré-Vestibular" id="Pré-Vestibular" name="Categoria[]">
                             <label class="form-check-label" for="Pré-Vestibular">
                                 Pré-Vestibular
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="Concursos Militares" name="Categoria[]">
+                            <input class="form-check-input" type="checkbox" value="Concursos Militares" id="Concursos Militares" name="Categoria[]">
                             <label class="form-check-label" for="Concursos Militares">
                                 Concursos Militares
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="Concursos Públicos" name="Categoria[]">
+                            <input class="form-check-input" type="checkbox" value="Concursos Públicos" id="Concursos Públicos" name="Categoria[]">
                             <label class="form-check-label" for="Concursos Públicos">
                                 Concursos Públicos
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="Outros" name="Categoria[]">
+                            <input class="form-check-input" type="checkbox" value="Outros" id="Outros" name="Categoria[]">
                             <label class="form-check-label" for="Outros">
                                 Outros
                             </label>
@@ -95,15 +95,15 @@ include("../php/verifica_login.php");
                         <br>
 
                         <!--Modalidade de ensino(radios) -->
-                        <label class="form-label">Modalidade de ensino: <?php echo $_SESSION['tipoE']; ?></label>
+                        <label class="form-label">Modalidade de ensino</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="Online" name="ensino[]">
+                            <input class="form-check-input" type="checkbox" value="Online" id="Online" name="ensino[]">
                             <label class="form-check-label" for="Online">
                                 Online
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="Presencial" name="ensino[]">
+                            <input class="form-check-input" type="checkbox" value="Presencial" id="Presencial" name="ensino[]">
                             <label class="form-check-label" for="Presencial">
                                 Presencial
                             </label>
@@ -118,8 +118,8 @@ include("../php/verifica_login.php");
                             <textarea class="form-control" name="descriC" placeholder="Leave a comment here" style="height: 100px"><?php echo $_SESSION['descriC']; ?></textarea>
                             <label>Descrição</label>
                         </div>
-
                         <br>
+                        
                         <div class="form-floating mb-3">
                             <input type="name" value="<?php echo $_SESSION['enderecoC']; ?>" name="endereC" class="form-control" placeholder="name@example.com">
                             <label>
@@ -129,7 +129,6 @@ include("../php/verifica_login.php");
                                 </svg>
                             </label>
                         </div>
-                        <br>
 
                         <div class="form-floating mb-3">
                             <input type="number" value="<?php echo $_SESSION['telefoneC']; ?>" name="tefonC" class="form-control" placeholder="name@example.com">
@@ -140,7 +139,6 @@ include("../php/verifica_login.php");
                                 </svg>
                             </label>
                         </div>
-                        <br>
 
                         <div class="form-floating mb-3">
                             <input type="number" value="<?php echo $_SESSION['celularC']; ?>" name="celularC" class="form-control" placeholder="name@example.com">
