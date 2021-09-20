@@ -111,8 +111,8 @@ include("../php/verifica_login.php");
               <?php endif;
               unset($_SESSION['no']); ?>
             </div>
-            <button name="salvar" type="submit" class="btn btn-dark">Salvar Alterações</button>
-            <button type="submit" name="btn-delete" value="btn-delete" class="btn btn-outline-danger">Excluir Conta <i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button name="salvar" type="submit" class="btn btn-dark" onclick="return confirm('Essa ação desconecta seu usuario. Tem certeza?');">Salvar Alterações</button>
+            <button type="submit" name="btn-delete" value="btn-delete" class="btn btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir sua conta?');">Excluir Conta <i class="fa fa-trash" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
