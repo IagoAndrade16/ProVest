@@ -6,15 +6,15 @@ $sessionedi = $_SESSION['code'];
 
 $categoria = $_POST['Categoria'];
 $cat = "";
-$celularC = $_POST['celularC'];
-$cidadeC = $_POST['cidade'];
-$descricao = $_POST['descriC'];
-$endereçoC = $_POST['endereC'];
-$estados = $_POST['estado'];
-$nome = $_POST['nomeC'];
+$celularC = addslashes($_POST['celularC']);
+$cidadeC = addslashes($_POST['cidade']);
+$descricao = addslashes($_POST['descriC']);
+$endereçoC = addslashes($_POST['endereC']);
+$estados = addslashes($_POST['estado']);
+$nome = addslashes($_POST['nomeC']);
 $tipoEnsino = $_POST['ensino'];
 $tipE = "";
-$telefC = $_POST['tefonC'];
+$telefC = addslashes($_POST['tefonC']);
 
 if (isset($_POST['btn-salvar'])) {
     foreach ($categoria as $categoriaresult) {

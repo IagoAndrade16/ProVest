@@ -86,7 +86,7 @@ include("../php/verifica_login.php");
 
         <div class="col">
           <div class="p-3">
-            <h4 style="margin-bottom: 30px; color: #fff;">Informações gerais</h4>
+            <h4 style="margin-bottom: 30px; color: #fff;">Easter Egg</h4>
             <div class="mb-3">
               <label class="form-label">Estado: <?php echo $_SESSION['estado']; ?></label>
               <select class="form-select" name="estado" aria-label="Default select example" id="Estado"></select>
@@ -149,7 +149,7 @@ include("../php/verifica_login.php");
           $cidadeC[$i] = $linha['cidadeC'];
           $tipoC[$i] = $linha['tipoEnsino'];
       ?>
-          <div class="col">
+          <div class="col-md-4">
             <div class="p-3">
               <div class="card" style="width: 18rem;">
                 <img src="../img/img-exemplo-home.jpg" class="card-img-top" alt="...">

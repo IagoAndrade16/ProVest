@@ -3,10 +3,10 @@
 session_start();
 include("conexao.php");
 
-$senhaU = $_POST['senha'];
-$emailU = $_POST['email'];
+$senhaU = addslashes($_POST['senha']);
+$emailU = addslashes($_POST['email']);
 
-$credenciais = "SELECT codU, estadoU, senhaU, emailU, nomeU, cidadeU FROM usuarios WHERE senhaU = '${senhaU}' and emailU = '${emailU}'";
+$credenciais = "SELECT codU, estadoU, senhaU, emailU, nomeU, cidadeU FROM usuarios WHERE senhaU = MD5('${senhaU}') and emailU = '${emailU}'";
 
 $result = $mysqli->query($credenciais);
 
