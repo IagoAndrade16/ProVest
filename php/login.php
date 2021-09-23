@@ -23,7 +23,14 @@ if ($row == 1) {
 
     $sessionC = $_SESSION['code'];
 
-    $importC = "SELECT categoria, nome, estados, cidadeC, endereçoC, telefC, celularC, tipoEnsino, descricao FROM cursos WHERE codU = '${sessionC}';";
+    $imCodC = "SELECT codC FROM cursos WHERE codU = $sessionC;";
+    $conecCod = $mysqli->query($imCodC);
+    $linhaCodU = $conecCod->fetch_array();
+
+    $_SESSION['codC'] = $linhaCodU['codC'];
+    $codC = $_SESSION['codC'];
+
+    $importC = "SELECT categoria, nome, estados, cidadeC, endereçoC, telefC, celularC, tipoEnsino, descricao FROM cursos WHERE codC = '${codC}';";
     $conec = $mysqli->query($importC);
 
     $lin = $conec->fetch_array();

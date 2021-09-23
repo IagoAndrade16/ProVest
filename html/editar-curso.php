@@ -4,38 +4,6 @@ include("../php/verifica_login.php");
 
 ?>
 
-<?php
-
-include("../php/conexao.php");
-
-$sql = "SELECT * FROM cursos";
-$result = $mysqli->query($sql);
-
-$nomeC = array();
-$categoria = array();
-$cidadeC = array();
-$estadoC = array();
-$enderecoC = array();
-$telefoneC = array();
-$celularC = array();
-$descricaoC = array();
-$tipoC = array();
-
-$i = 0;
-
-$linha = $result->fetch_array();
-$nomeC[$i] = $linha['nome'];
-$categoria[$i] = $linha['categoria'];
-$cidadeC[$i] = $linha['cidadeC'];
-$estadoC[$i] = $linha['estados'];
-$enderecoC[$i] = $linha['endereçoC'];
-$descricaoC[$i] = $linha['descricao'];
-$telefoneC[$i] = $linha['telefC'];
-$celularC[$i] = $linha['celularC'];
-$tipoC[$i] = $linha['tipoEnsino'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -89,7 +57,7 @@ $tipoC[$i] = $linha['tipoEnsino'];
                         unset($_SESSION['categoria-Inv']);
                         ?>
                         <div class="form-floating mb-3">
-                            <input type="name" name="nomeC" value="<?php echo $nomeC[$i]; ?>" class="form-control" placeholder="name@example.com">
+                            <input type="name" name="nomeC" value="<?php echo $_SESSION['nomeC']; ?>" class="form-control" placeholder="name@example.com">
                             <label>Novo nome</label>
                         </div>
 
@@ -148,13 +116,13 @@ $tipoC[$i] = $linha['tipoEnsino'];
                 <div class="col-md-5">
                     <div class="p-3">
                         <div class="form-floating">
-                            <textarea class="form-control" name="descriC" placeholder="Leave a comment here" style="height: 100px"><?php echo $descricaoC[$i]; ?></textarea>
+                            <textarea class="form-control" name="descriC" placeholder="Leave a comment here" style="height: 100px"><?php echo $_SESSION['descriC']; ?></textarea>
                             <label>Descrição</label>
                         </div>
                         <br>
 
                         <div class="form-floating mb-3">
-                            <input type="name" value="<?php echo $enderecoC[$i]; ?>" name="endereC" class="form-control" placeholder="name@example.com">
+                            <input type="name" value="<?php echo $_SESSION['enderecoC']; ?>" name="endereC" class="form-control" placeholder="name@example.com">
                             <label>
                                 Endereço
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -164,7 +132,7 @@ $tipoC[$i] = $linha['tipoEnsino'];
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="number" value="<?php echo $telefoneC[$i]; ?>" name="tefonC" class="form-control" placeholder="name@example.com">
+                            <input type="number" value="<?php echo $_SESSION['telefoneC']; ?>" name="tefonC" class="form-control" placeholder="name@example.com">
                             <label>
                                 Telefone
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
@@ -174,7 +142,7 @@ $tipoC[$i] = $linha['tipoEnsino'];
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="number" value="<?php echo $celularC[$i]; ?>" name="celularC" class="form-control" placeholder="name@example.com">
+                            <input type="number" value="<?php echo $_SESSION['celularC']; ?>" name="celularC" class="form-control" placeholder="name@example.com">
                             <label>
                                 Celular
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
@@ -189,12 +157,12 @@ $tipoC[$i] = $linha['tipoEnsino'];
                 <!--3ª Coluna(estado, cidade e foto)-->
                 <div class="col-md-3">
                     <div class="p-3">
-                        Estado: <?php echo $estadoC[$i]; ?>
+                        Estado: <?php echo $_SESSION['estadoC']; ?>
                         <select class="form-select" name="estado" aria-label="Default select example" id="Estado"></select>
                     </div>
 
                     <div class="p-3">
-                        Cidade: <?php echo $cidadeC[$i]; ?>
+                        Cidade: <?php echo $_SESSION['cidadeC']; ?>
                         <select class="form-select" name="cidade" aria-label="Default select example" id="Cidade">
                             <option>Cidade</option>>
                         </select>
