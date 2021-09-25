@@ -23,9 +23,9 @@ if ($row == 1) {
 
     $sessionC = $_SESSION['code'];
 
-    $imCodC = "SELECT codC FROM cursos WHERE codU = $sessionC;";
+    $imCodC = "SELECT codC FROM cursos";
     $conecCod = $mysqli->query($imCodC);
-    $linhaCodU = $conecCod->fetch_array();
+    $linhaCodU = $conecCod->fetch_assoc();
 
     $_SESSION['codC'] = $linhaCodU['codC'];
     $codC = $_SESSION['codC'];
@@ -48,6 +48,7 @@ if ($row == 1) {
     header('Location: ../html/navegacao.php');
     exit();
 } else {
+    $_SESSION['cursos_ERRO'] = true;
     $_SESSION['incorreto'] = true;
     header('Location: ../html/login.php');
 }

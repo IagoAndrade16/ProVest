@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
 include("../php/verifica_login.php");
 ?>
 
@@ -32,22 +32,10 @@ include("../php/verifica_login.php");
       <!-- Form e botao pesquisar -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <form class="d-flex">
-            <input class="form-control me-3" type="search" placeholder="Pesquise por cursos" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+          <form  action="../php/pesquisa.php" class="d-flex">
+            <input class="form-control me-3" type="search" name="pesquisa" placeholder="Pesquise por cursos" aria-label="Search">
+            <button class="btn btn-outline-light">Pesquisar</button>
           </form>
-          <!--DropDown-->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Cursos
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Militares</a></li>
-              <li><a class="dropdown-item" href="#">Concursos públicos</a></li>
-              <li><a class="dropdown-item" href="#">Enem</a></li>
-              <li><a class="dropdown-item" href="#">Outros vestibulares</a></li>
-            </ul>
-          </li>
         </ul>
 
         <a class="navbar-brand" href="criar-curso.php">
@@ -81,7 +69,7 @@ include("../php/verifica_login.php");
               </div>
               <div class="col">
                 <div class="p-3">
-                  <span style="color: #808080; font-weight: bold;"> Categoria: <span style="color: black;">Pré-enem, Pré-Vestibular, Militares, Concursos Públicos</span></span>
+                  <span style="color: #808080; font-weight: bold;"> Categoria: <span style="color: black;">Pre-Enem</span></span>
                 </div>
               </div>
 
