@@ -20,7 +20,10 @@ include("../php/verifica_login.php");
 
 <body>
   <!--Barra de navegação-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <br>
+  <br>
+  <br>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <!-- Logo -->
       <a class="navbar-brand" href="#">

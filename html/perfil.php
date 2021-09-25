@@ -22,9 +22,12 @@ include("../php/verifica_login.php");
 </head>
 
 <body>
-
+  <br>
+  <br>
+  <br>
+  <br>
   <!--Barra de navegação-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid shadow-sm">
       <!-- Logo -->
       <a class="navbar-brand" href="navegacao.php">
@@ -122,17 +125,16 @@ include("../php/verifica_login.php");
 
   <hr style="margin-bottom: 30px;">
   <!-- Meus cursos-->
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="main-title" style="text-align: center;"> Meus cursos</h1>
+  <?php if (isset($_SESSION['cursos_ERRO'])) : ?>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="main-title" style="text-align: center;"> Meus cursos</h1>
+        </div>
       </div>
-    </div>
 
-    <!-- Cartões dos cursos-->
-    <div class="row gx-5">
-      <?php if (isset($_SESSION['cursos_ERRO'])) : ?>
+      <!-- Cartões dos cursos-->
+      <div class="row gx-5">
         <?php
         include("../php/conexao.php");
         $sql = "SELECT * FROM cursos";
@@ -185,11 +187,10 @@ include("../php/verifica_login.php");
           }
         }
         $i++ ?>
-      <?php endif;
-      unset($_SESSION['cursos_ERRO']); ?>
 
-    </div>
-
+      </div>
+    <?php endif;
+  unset($_SESSION['cursos_ERRO']); ?>
     <script src="../jquery/select.js"></script>
 </body>
 

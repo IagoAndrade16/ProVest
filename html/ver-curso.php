@@ -19,7 +19,11 @@ include("../php/verifica_login.php");
 
 <body>
   <!--Barra de navegação-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <br>
+  <br>
+  <br>
+  <br>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <!-- Logo -->
       <a class="navbar-brand" href="navegacao.php">
@@ -32,7 +36,7 @@ include("../php/verifica_login.php");
       <!-- Form e botao pesquisar -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <form  action="../php/pesquisa.php" class="d-flex">
+          <form action="../php/pesquisa.php" class="d-flex">
             <input class="form-control me-3" type="search" name="pesquisa" placeholder="Pesquise por cursos" aria-label="Search">
             <button class="btn btn-outline-light">Pesquisar</button>
           </form>

@@ -41,7 +41,10 @@ include("../php/verifica_login.php");
 
 <body>
     <!--Barra de navegação-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <br>
+    <br>
+    <br>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand" href="../html/navegacao.php">
@@ -61,12 +64,12 @@ include("../php/verifica_login.php");
                     </form>
                 </ul>
 
-                <a class="navbar-brand" href="../php/criar-cursos.php">
+                <a class="navbar-brand" href="../html/criar-curso.php">
                     Cadastrar Curso
                 </a>
 
                 <!-- Foto e nome do perfil -->
-                <a class="navbar-brand" href="perfil.php">
+                <a class="navbar-brand" href="../html/perfil.php">
                     <i class="fa fa-user" aria-hidden="true"></i>
                     <!--<img src="../img/fotoPessoa.jpg" alt="" width="40" height="24" class="img-fluid" style="border-radius: 50px;">-->
                     <?php echo $_SESSION['nomeUsuario']; ?>
