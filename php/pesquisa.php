@@ -126,7 +126,7 @@ include("../php/verifica_login.php");
                                             <?php echo $linha[10]; ?>
                                         </li>
                                     </ul>
-                                    <a href="../html/ver-curso.php" class="btn btn-dark">Ver curso</a>
+                                    <a href="../html/ver-curso.php?nomeC=<?php echo $linha[3]; ?>&enderecoC=<?php echo $linha[6]; ?>&telefoneC=<?php echo $linha[7]; ?>&celular=<?php echo  $linha[8]; ?>&tipo=<?php echo $linha[10]; ?>&categoria=<?php echo $linha[2]; ?>&descricao=<?php echo $linha[11]; ?>" class="btn btn-dark">Ver curso</a>
                                 </div>
                             </div>
                         </div>

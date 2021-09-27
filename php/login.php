@@ -30,7 +30,7 @@ if ($row == 1) {
     $_SESSION['codC'] = $linhaCodU['codC'];
     $codC = $_SESSION['codC'];
 
-    $importC = "SELECT categoria, nome, estados, cidadeC, endereçoC, telefC, celularC, tipoEnsino, descricao FROM cursos WHERE codC = '${codC}';";
+    $importC = "SELECT categoria, nome, estados, cidadeC, endereçoC, telefC, celularC, tipoEnsino, descricao FROM cursos WHERE codU = '$sessionC' and codC = '$codC';";
     $conec = $mysqli->query($importC);
 
     $lin = $conec->fetch_array();

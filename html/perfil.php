@@ -125,16 +125,17 @@ include("../php/verifica_login.php");
 
   <hr style="margin-bottom: 30px;">
   <!-- Meus cursos-->
-  <?php if (isset($_SESSION['cursos_ERRO'])) : ?>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="main-title" style="text-align: center;"> Meus cursos</h1>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="main-title" style="text-align: center;"> Meus cursos</h1>
       </div>
+    </div>
 
-      <!-- Cartões dos cursos-->
-      <div class="row gx-5">
+    <!-- Cartões dos cursos-->
+    <div class="row gx-5">
+      <?php if (isset($_SESSION['cursos_ERRO'])) :
+      ?>
         <?php
         include("../php/conexao.php");
         $sql = "SELECT * FROM cursos";
@@ -144,12 +145,22 @@ include("../php/verifica_login.php");
           $categoria = array();
           $cidadeC = array();
           $tipoC = array();
+          $enderecoC = array();
+          $telefone = array();
+          $celular = array();
+          $descricao = array();
+          $estado = array();
           $i = 0;
           while ($linha = $result->fetch_array()) {
             $nomeC[$i] = $linha['nome'];
             $categoria[$i] = $linha['categoria'];
             $cidadeC[$i] = $linha['cidadeC'];
             $tipoC[$i] = $linha['tipoEnsino'];
+            $enderecoC[$i] = $linha['endereçoC'];
+            $telefone[$i] = $linha['telefC'];
+            $celular[$i] = $linha['celularC'];
+            $descricao[$i] = $linha['descricao'];
+            $estado[$i] = $linha['estados'];
         ?>
             <div class="col-md-4">
               <div class="p-3">
@@ -177,7 +188,7 @@ include("../php/verifica_login.php");
                         <?php echo $tipoC[$i]; ?>
                       </li>
                     </ul>
-                    <a href="editar-curso.php" class="btn btn-dark">Editar</a>
+                    <a href="editar-curso.php?nomeC=<?php echo $nomeC[$i]; ?>&enderecoC=<?php echo $enderecoC[$i]; ?>&telefoneC=<?php echo $telefone[$i]; ?>&celular=<?php echo  $celular[$i]; ?>&tipo=<?php echo $tipoC[$i]; ?>&categoria=<?php echo $categoria[$i]; ?>&descricao=<?php echo $descricao[$i]; ?>&cidadeC=<?php echo $cidadeC[$i]; ?>&estado=<?php echo  $estado[$i]; ?>" class="btn btn-dark">Editar</a>
                   </div>
                 </div>
               </div>
@@ -187,10 +198,11 @@ include("../php/verifica_login.php");
           }
         }
         $i++ ?>
+      <?php endif;
+      unset($_SESSION['cursos_ERRO']); ?>
 
-      </div>
-    <?php endif;
-  unset($_SESSION['cursos_ERRO']); ?>
+    </div>
+
     <script src="../jquery/select.js"></script>
 </body>
 

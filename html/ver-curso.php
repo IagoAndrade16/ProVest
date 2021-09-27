@@ -2,6 +2,18 @@
 include("../php/verifica_login.php");
 ?>
 
+<?php
+
+$nomeC = $_GET['nomeC'];
+$enderecoC = $_GET['enderecoC'];
+$telefone = $_GET['telefoneC'];
+$celular = $_GET['celular'];
+$tipoC = $_GET['tipo'];
+$categoria = $_GET['categoria'];
+$descricao = $_GET['descricao'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -62,18 +74,18 @@ include("../php/verifica_login.php");
       <!-- Informações do lado esquerdo -->
       <div class="col">
         <div class="p-3">
-          <img src="../img/fotocurso.png" class="img-fluid" alt="foto curso" width="550px" style="margin-bottom: 15px;">
+          <img src="../img/img-exemplo-home.jpg" class="img-fluid" alt="foto curso" width="550px" style="margin-bottom: 15px;">
           <h3>Descrição</h3>
           <hr style="margin-top: 20px; margin-bottom: 20px;">
 
           <div class="row">
             <div class="col">
               <div class="p-3">
-                <span style="color: #808080; font-weight: bold;">Modalidade de ensino: <span style="color: black;">Presencial</span></span>
+                <span style="color: #808080; font-weight: bold;">Modalidade de ensino: <span style="color: black;"><?php echo $tipoC; ?></span></span>
               </div>
               <div class="col">
                 <div class="p-3">
-                  <span style="color: #808080; font-weight: bold;"> Categoria: <span style="color: black;">Pre-Enem</span></span>
+                  <span style="color: #808080; font-weight: bold;"> Categoria: <span style="color: black;"><?php echo $categoria; ?></span></span>
                 </div>
               </div>
 
@@ -82,13 +94,7 @@ include("../php/verifica_login.php");
 
           <hr style="margin-top: 20px; margin-bottom: 20px;">
 
-          <p class="text-md-start" style="color: #808080;">O Centro de Estudos Protetores do Saber atua há mais de 10
-            anos no mercado com diversas
-            modalidades de serviço, como: Aula Particular, Acompanhamento Multidisciplinar, Pré-Enem,
-            Pré-Vestibular, Preparatório para Concursos e Curso de Redação, Interpretação de Textos e
-            Raciocínio Lógico Matemático. É dado suporte à educação com uma metodologia de trabalho
-            centrada na necessidade individual de cada aluno
-          </p>
+          <p class="text-md-start" style="color: #808080;"><?php echo $descricao; ?></p>
         </div>
       </div>
       <!-- Informações do lado direito-->
@@ -96,7 +102,7 @@ include("../php/verifica_login.php");
         <div class="p-3">
           <!-- Nome do curso-->
           <center>
-            <h1>Protetores do saber</h1>
+            <h1><?php echo $nomeC; ?></h1>
           </center>
           <hr style="margin-bottom: 50px;">
 
@@ -110,21 +116,7 @@ include("../php/verifica_login.php");
           </h2>
 
           <div class="text-wrap" style="color: #808080;">
-            R. Vinte e Sete, 18 - Vila Santa Cecília, Volta Redonda - RJ
-          </div>
-
-          <hr style="margin-top: 20px; margin-bottom: 20px;">
-
-          <!-- Email de contato -->
-          <h2 style="margin-bottom: 20px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
-            </svg>
-            Email de contato:
-          </h2>
-
-          <div class="text-wrap" style="color: #808080">
-            exemplo@gmail.com
+            <?php echo $enderecoC; ?>
           </div>
 
           <hr style="margin-top: 20px; margin-bottom: 20px;">
@@ -139,7 +131,7 @@ include("../php/verifica_login.php");
           </h2>
 
           <div class="text-wrap" style="color: #808080">
-            (99)9999-9999
+            <?php echo $telefone; ?>
           </div>
 
           <hr style="margin-top: 20px; margin-bottom: 20px;">
@@ -154,7 +146,7 @@ include("../php/verifica_login.php");
           </h2>
 
           <div class="text-wrap" style="color: #808080">
-            (99)99999-9999
+            <?php echo $celular; ?>
           </div>
 
           <hr style="margin-top: 20px; margin-bottom: 20px;">

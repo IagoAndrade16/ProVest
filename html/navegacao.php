@@ -83,12 +83,20 @@ include("../php/verifica_login.php");
         $categoria = array();
         $cidadeC = array();
         $tipoC = array();
+        $enderecoC = array();
+        $telefone = array();
+        $celular = array();
+        $descricao = array();
         $i = 0;
         while ($linha = $result->fetch_array()) {
           $nomeC[$i] = $linha['nome'];
           $categoria[$i] = $linha['categoria'];
           $cidadeC[$i] = $linha['cidadeC'];
           $tipoC[$i] = $linha['tipoEnsino'];
+          $enderecoC[$i] = $linha['endereçoC'];
+          $telefone[$i] = $linha['telefC'];
+          $celular[$i] = $linha['celularC'];
+          $descricao[$i] = $linha['descricao']
       ?>
 
           <div class="col-md-4">
@@ -117,7 +125,7 @@ include("../php/verifica_login.php");
                       <?php echo $tipoC[$i]; ?>
                     </li>
                   </ul>
-                  <a href="ver-curso.php" class="btn btn-dark">Ver curso</a>
+                  <a href="ver-curso.php?nomeC=<?php echo $nomeC[$i]; ?>&enderecoC=<?php echo $enderecoC[$i]; ?>&telefoneC=<?php echo $telefone[$i]; ?>&celular=<?php echo  $celular[$i]; ?>&tipo=<?php echo $tipoC[$i]; ?>&categoria=<?php echo $categoria[$i]; ?>&descricao=<?php echo $descricao[$i]; ?>" class="btn btn-dark">Ver curso</a>
                 </div>
               </div>
             </div>
