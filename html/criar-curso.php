@@ -132,7 +132,7 @@ include("../php/verifica_login.php");
                 <div>
                     <p>Adicionar foto</p>
                     <br>
-                    <input type="file" name="file">
+                    <input type="file" name="arquivo">
                 </div>
                 <br>
                 <div class="input">
@@ -178,7 +178,7 @@ include("../php/verifica_login.php");
                 </div>
                 <br>
                 <div class="btn">
-                    <button type="submit" name="criar" class="btn btn-outline-dark">Criar</button>
+                    <button type="submit" name="Salvar" class="btn btn-outline-dark">Criar</button>
                 </div>
                 <br>
             </form>
