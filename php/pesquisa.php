@@ -103,7 +103,7 @@ include("../php/verifica_login.php");
                     <div class="col-md-4">
                         <div class="p-3">
                             <div class="card" style="width: 18rem;">
-                                <img src="../img/img-exemplo-home.jpg" class="card-img-top" alt="...">
+                                <img src="<?php echo ("../php/upload/" . $linha[9]); ?>" class="card-img-top" alt="foto curso">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $linha[3]; ?></h5>
                                     <ul class="list-group list-group-flush">
@@ -126,7 +126,7 @@ include("../php/verifica_login.php");
                                             <?php echo $linha[10]; ?>
                                         </li>
                                     </ul>
-                                    <a href="../html/ver-curso.php?nomeC=<?php echo $linha[3]; ?>&enderecoC=<?php echo $linha[6]; ?>&telefoneC=<?php echo $linha[7]; ?>&celular=<?php echo  $linha[8]; ?>&tipo=<?php echo $linha[10]; ?>&categoria=<?php echo $linha[2]; ?>&descricao=<?php echo $linha[11]; ?>" class="btn btn-dark">Ver curso</a>
+                                    <a href="../html/ver-curso.php?nomeC=<?php echo $linha[3]; ?>&enderecoC=<?php echo $linha[6]; ?>&telefoneC=<?php echo $linha[7]; ?>&celular=<?php echo  $linha[8]; ?>&tipo=<?php echo $linha[10]; ?>&categoria=<?php echo $linha[2]; ?>&descricao=<?php echo $linha[11]; ?>&fotoC=<?php echo ("../php/upload/" . $linha[9]); ?>" class="btn btn-dark">Ver curso</a>
                                 </div>
                             </div>
                         </div>

@@ -11,6 +11,7 @@ $celular = $_GET['celular'];
 $tipoC = $_GET['tipo'];
 $categoria = $_GET['categoria'];
 $descricao = $_GET['descricao'];
+$foto = $_GET['fotoC']
 
 ?>
 
@@ -74,7 +75,7 @@ $descricao = $_GET['descricao'];
       <!-- Informações do lado esquerdo -->
       <div class="col">
         <div class="p-3">
-          <img src="../img/img-exemplo-home.jpg" class="img-fluid" alt="foto curso" width="550px" style="margin-bottom: 15px;">
+          <img src="<?php echo $foto; ?>" class="img-fluid" alt="foto curso" width="550px" style="margin-bottom: 15px; border-radius: 5px; border: 1px solid #c4c4c4"">
           <h3>Descrição</h3>
           <hr style="margin-top: 20px; margin-bottom: 20px;">
 

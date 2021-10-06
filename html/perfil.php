@@ -134,7 +134,7 @@ include("../php/verifica_login.php");
 
     <!-- Cartões dos cursos-->
     <div class="row gx-5">
-      <?php if (isset($_SESSION['cursos_ERRO'])) :
+      <?php //if (isset($_SESSION['cursos_ERRO'])) :
       ?>
         <?php
         include("../php/conexao.php");
@@ -150,6 +150,7 @@ include("../php/verifica_login.php");
           $celular = array();
           $descricao = array();
           $estado = array();
+          $fotoC= array();
           $i = 0;
           while ($linha = $result->fetch_array()) {
             $nomeC[$i] = $linha['nome'];
@@ -161,11 +162,12 @@ include("../php/verifica_login.php");
             $celular[$i] = $linha['celularC'];
             $descricao[$i] = $linha['descricao'];
             $estado[$i] = $linha['estados'];
+            $fotoC[$i] = $linha['fotoPerfilC'];
         ?>
             <div class="col-md-4">
               <div class="p-3">
                 <div class="card" style="width: 18rem;">
-                  <img src="../img/img-exemplo-home.jpg" class="card-img-top" alt="...">
+                  <img src="<?php echo("../php/upload/" . $fotoC[$i]); ?>" class="card-img-top" alt="foto curso">
                   <div class="card-body">
                     <h5 class="card-title"> <?php echo $nomeC[$i]; ?> </h5>
                     <ul class="list-group list-group-flush">
@@ -188,7 +190,7 @@ include("../php/verifica_login.php");
                         <?php echo $tipoC[$i]; ?>
                       </li>
                     </ul>
-                    <a href="editar-curso.php?nomeC=<?php echo $nomeC[$i]; ?>&enderecoC=<?php echo $enderecoC[$i]; ?>&telefoneC=<?php echo $telefone[$i]; ?>&celular=<?php echo  $celular[$i]; ?>&tipo=<?php echo $tipoC[$i]; ?>&categoria=<?php echo $categoria[$i]; ?>&descricao=<?php echo $descricao[$i]; ?>&cidadeC=<?php echo $cidadeC[$i]; ?>&estado=<?php echo  $estado[$i]; ?>" class="btn btn-dark">Editar</a>
+                    <a href="editar-curso.php?nomeC=<?php echo $nomeC[$i]; ?>&enderecoC=<?php echo $enderecoC[$i]; ?>&telefoneC=<?php echo $telefone[$i]; ?>&celular=<?php echo  $celular[$i]; ?>&tipo=<?php echo $tipoC[$i]; ?>&categoria=<?php echo $categoria[$i]; ?>&descricao=<?php echo $descricao[$i]; ?>&cidadeC=<?php echo $cidadeC[$i]; ?>&estado=<?php echo  $estado[$i]; ?>&fotoC=<?php echo("../php/upload/".$fotoC[$i]); ?>" class="btn btn-dark">Editar</a>
                   </div>
                 </div>
               </div>
@@ -198,7 +200,7 @@ include("../php/verifica_login.php");
           }
         }
         $i++ ?>
-      <?php endif;
+      <?php //endif;
       unset($_SESSION['cursos_ERRO']); ?>
 
     </div>

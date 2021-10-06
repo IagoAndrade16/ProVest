@@ -64,7 +64,7 @@ include("../php/verifica_login.php");
     <div class="row gx-5">
       <div class="col">
         <div class="p-3">
-          <h4>Bem Vindo ao ProVest!</h4>
+          <h4>Bem vindo ao ProVest!</h4>
         </div>
       </div>
     </div>
@@ -87,6 +87,7 @@ include("../php/verifica_login.php");
         $telefone = array();
         $celular = array();
         $descricao = array();
+        $foto = array();
         $i = 0;
         while ($linha = $result->fetch_array()) {
           $nomeC[$i] = $linha['nome'];
@@ -96,13 +97,14 @@ include("../php/verifica_login.php");
           $enderecoC[$i] = $linha['endereçoC'];
           $telefone[$i] = $linha['telefC'];
           $celular[$i] = $linha['celularC'];
-          $descricao[$i] = $linha['descricao']
+          $descricao[$i] = $linha['descricao'];
+          $foto[$i] = $linha['fotoPerfilC'];
       ?>
 
           <div class="col-md-4">
             <div class="p-3">
               <div class="card" style="width: 18rem;">
-                <img src="../img/img-exemplo-home.jpg" class="card-img-top" alt="...">
+                <img src="<?php echo ("../php/upload/" . $foto[$i]); ?>" class="card-img-top" alt="foto curso">
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $nomeC[$i]; ?></h5>
                   <ul class="list-group list-group-flush">
@@ -125,7 +127,7 @@ include("../php/verifica_login.php");
                       <?php echo $tipoC[$i]; ?>
                     </li>
                   </ul>
-                  <a href="ver-curso.php?nomeC=<?php echo $nomeC[$i]; ?>&enderecoC=<?php echo $enderecoC[$i]; ?>&telefoneC=<?php echo $telefone[$i]; ?>&celular=<?php echo  $celular[$i]; ?>&tipo=<?php echo $tipoC[$i]; ?>&categoria=<?php echo $categoria[$i]; ?>&descricao=<?php echo $descricao[$i]; ?>" class="btn btn-dark">Ver curso</a>
+                  <a href="ver-curso.php?nomeC=<?php echo $nomeC[$i]; ?>&enderecoC=<?php echo $enderecoC[$i]; ?>&telefoneC=<?php echo $telefone[$i]; ?>&celular=<?php echo  $celular[$i]; ?>&tipo=<?php echo $tipoC[$i]; ?>&categoria=<?php echo $categoria[$i]; ?>&descricao=<?php echo $descricao[$i]; ?>&fotoC=<?php echo ("../php/upload/" . $foto[$i]); ?>" class="btn btn-dark">Ver curso</a>
                 </div>
               </div>
             </div>

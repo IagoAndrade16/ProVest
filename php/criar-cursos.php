@@ -69,7 +69,7 @@ try {
 
     if (isset($_FILES['arquivo'])) {
 
-        $extensao = strtolower(substr($_FILES['arquivo']['name'], -4)); //pega a extensao do arquivo
+        $extensao = strtolower(substr($_FILES['arquivo']['name'], -5)); //pega a extensao do arquivo
         $novo_nome = md5(time()) . $extensao; //define o nome do arquivo
         $diretorio = "upload/"; //define o diretorio para onde enviaremos o arquivo
 

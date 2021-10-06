@@ -15,6 +15,7 @@ $categoria = $_GET['categoria'];
 $descricao = $_GET['descricao'];
 $estado = $_GET['estado'];
 $cidade = $_GET['cidadeC'];
+$foto = $_GET['fotoC'];
 
 ?>
 
@@ -57,7 +58,7 @@ $cidade = $_GET['cidadeC'];
         <br>
         <h1 class="texto">Editar Curso</h1>
     </center>
-    <form action="../php/editar-curso.php" method="POST">
+    <form action="../php/editar-curso.php" method="POST" enctype="multipart/form-data">
         <div class="container px-0">
             <div class="row">
                 <!--1ª coluna(nome, categoria e modalidade)-->
@@ -182,10 +183,10 @@ $cidade = $_GET['cidadeC'];
                         </select>
                     </div>
 
-                    <a href="#" id="foto-perfil" title="Trocar foto">
-                        <i style="color: #212529; font-size: 200px; margin-left: 25px" class="fa fa-picture-o" aria-hidden="true"></i>
-                        <!--<img src="../img/fotoPessoa.jpg" alt="Foto-perfil" width="150px" height="150px" style="border-radius: 100px;">-->
-                    </a>
+                    <footer>
+                        <img src="<?php echo $foto; ?>" name="foto curso" style="border-radius: 5px; border: 1px solid #c4c4c4" width="300px" height="200px" alt="foto curso" >
+                        <input style="font-size: 10px;" type="file" name="arquivo" >
+                    </footer>
                 </div>
             </div>
 
