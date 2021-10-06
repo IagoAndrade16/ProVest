@@ -44,7 +44,7 @@ include("../php/verifica_login.php");
 
     <section class="flex-box">
         <center>
-            <form action="../php/criar-cursos.php" method="POST">
+            <form action="../php/criar-cursos.php" method="POST" enctype="multipart/form-data">
                 <div class="input">
                     <?php if (isset($_SESSION['nomeCursoV'])) : ?>
                         <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
@@ -131,13 +131,10 @@ include("../php/verifica_login.php");
 
                 <div>
                     <p>Adicionar foto</p>
-                    <a href="#">
-                        <div class="icone">
-                            <img src="../img/btn-add.png">
-                        </div>
-                    </a>
+                    <br>
+                    <input type="file" name="file">
                 </div>
-
+                <br>
                 <div class="input">
                     <?php if (isset($_SESSION['cidadeCursoV'])) : ?>
                         <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
@@ -181,7 +178,7 @@ include("../php/verifica_login.php");
                 </div>
                 <br>
                 <div class="btn">
-                    <button type="submit" class="btn btn-outline-dark">Criar</button>
+                    <button type="submit" name="criar" class="btn btn-outline-dark">Criar</button>
                 </div>
                 <br>
             </form>
