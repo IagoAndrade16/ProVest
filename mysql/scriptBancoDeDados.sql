@@ -11,6 +11,8 @@ CREATE TABLE cursos (
 	fotoPerfilC varchar(100),
 	tipoEnsino varchar(255) NOT NULL,
 	descricao TEXT NOT NULL,
+	dataInscriçãoC date,
+	horaInscriçãoC time,
 	PRIMARY KEY(codC)
 	    
 );
@@ -24,6 +26,8 @@ CREATE TABLE usuarios (
 	cidadeU varchar(255) NOT NULL,
 	checkout varchar(4) NOT NULL,
 	imgU varchar(100),
+	dataInscriçãoU date,
+	horaInscriçãoU time,
 	PRIMARY KEY (codU)
 	
 );

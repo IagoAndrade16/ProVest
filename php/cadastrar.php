@@ -57,7 +57,7 @@ try {
     }
 
     //COMANDO QUE PEGA OS DADOS DO CAMPO CADASTRO
-    $sql = "INSERT INTO usuarios(senhaU, nomeU, estadoU, emailU, cidadeU) VALUE(MD5('${senha_usuario}'), '${nome_usuario}', '${estado_usuario}', '${email_usuario}', '${cidade_usuario}');";
+    $sql = "INSERT INTO usuarios(senhaU, nomeU, estadoU, emailU, cidadeU, dataInscriçãoU, horaInscriçãoU) VALUE(MD5('${senha_usuario}'), '${nome_usuario}', '${estado_usuario}', '${email_usuario}', '${cidade_usuario}', NOW(), NOW());";
     mysqli_select_db($mysqli, '$db');
 
     if (mysqli_query($mysqli, $sql)) {
