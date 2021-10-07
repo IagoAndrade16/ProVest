@@ -61,8 +61,8 @@ $foto = $_GET['fotoC']
 
         <!-- Foto e nome do perfil -->
         <a class="navbar-brand" href="perfil.php">
-          <i class="fa fa-user" aria-hidden="true"></i>
-          <!--<img src="../img/fotoPessoa.jpg" alt="" width="40" height="24" class="img-fluid" style="border-radius: 50px; margin-right: 10px;">-->
+          <!--<i class="fa fa-user" aria-hidden="true"></i>-->
+          <img width="45px" height="45px" style="border-radius: 100px;" src="<?php echo("../php/upload/" . $_SESSION['fotoU']); ?>">
           <?php echo $_SESSION['nomeUsuario']; ?>
         </a>
         <a class="navbar-brand" style="text-decoration: none; color: #fff;" href="../php/logout.php">Sair</a>

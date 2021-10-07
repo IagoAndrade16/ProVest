@@ -96,3 +96,21 @@ if (isset($_POST["btn-delete"])) {
     session_destroy();
     exit();
 }
+
+if (isset($_POST['salvarfoto'])) {
+    if (isset($_FILES['arquivo'])) {
+
+        $extensao = strtolower(substr($_FILES['arquivo']['name'], -5)); //pega a extensao do arquivo
+        $novo_nome = md5(time()) . $extensao; //define o nome do arquivo
+        $diretorio = "upload/"; //define o diretorio para onde enviaremos o arquivo
+        move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio . $novo_nome); //efetua o upload
+
+        $inseriFoto = "UPDATE usuarios SET imgU = '$novo_nome' WHERE codU = $session; ";
+        $result = $mysqli->query($inseriFoto);
+        session_start();
+        session_destroy();
+    } else {
+        $_SESSION['estaInvalid'] = true;
+        header("Location: ../html/perfil.php");
+    }
+}

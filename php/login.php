@@ -6,7 +6,7 @@ include("conexao.php");
 $senhaU = addslashes($_POST['senha']);
 $emailU = addslashes($_POST['email']);
 
-$credenciais = "SELECT codU, estadoU, senhaU, emailU, nomeU, cidadeU FROM usuarios WHERE senhaU = MD5('${senhaU}') and emailU = '${emailU}'";
+$credenciais = "SELECT codU, estadoU, senhaU, emailU, nomeU, cidadeU, imgU, dataInscriçãoU FROM usuarios WHERE senhaU = MD5('${senhaU}') and emailU = '${emailU}'";
 
 $result = $mysqli->query($credenciais);
 
@@ -20,6 +20,8 @@ if ($row == 1) {
     $_SESSION['estado'] = $linha['estadoU'];
     $_SESSION['cidadeUsuario'] = $linha['cidadeU'];
     $_SESSION['nomeUsuario'] = $linha['nomeU'];
+    $_SESSION['dataU'] = $linha['dataInscriçãoU'];
+    $_SESSION['fotoU'] = $linha['imgU'];
 
     $sessionC = $_SESSION['code'];
 

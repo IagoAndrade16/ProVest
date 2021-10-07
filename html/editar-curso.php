@@ -46,7 +46,7 @@ $foto = $_GET['fotoC'];
 
         <nav class="menu">
             <ul>
-                <li><a href="perfil.php"> <i class="fa fa-user" aria-hidden="true"></i> <?php echo $_SESSION['nomeUsuario']; ?> <a href="../php/logout.php">ㅤSair</a></a></li>
+                <li><a href="perfil.php"> <!--<i class="fa fa-user" aria-hidden="true"></i>--> <img width="45px" height="45px" style="border-radius: 100px;" src="<?php echo("../php/upload/" . $_SESSION['fotoU']); ?>"> <?php echo $_SESSION['nomeUsuario']; ?> <a href="../php/logout.php">ㅤSair</a></a></li>
             </ul>
         </nav>
 

@@ -28,7 +28,7 @@ include("../php/verifica_login.php");
 
         <nav class="menu">
             <ul>
-                <li><a href="perfil.php"> <i class="fa fa-user" aria-hidden="true"></i> <?php echo $_SESSION['nomeUsuario']; ?> <a href="../php/logout.php">ㅤSair</a></a></li>
+                <li><a href="perfil.php"> <img width="45px" height="45px" style="border-radius: 100px;" src="<?php echo("../php/upload/" . $_SESSION['fotoU']); ?>"> <!--<i class="fa fa-user" aria-hidden="true"></i>--> <?php echo $_SESSION['nomeUsuario']; ?> <a href="../php/logout.php">ㅤSair</a></a></li>
             </ul>
         </nav>
 
@@ -132,7 +132,7 @@ include("../php/verifica_login.php");
                 <div>
                     <p>Adicionar foto</p>
                     <br>
-                    <input type="file" name="arquivo">
+                    <input type="file" name="arquivo" required>
                 </div>
                 <br>
                 <div class="input">
