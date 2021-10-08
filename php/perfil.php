@@ -107,10 +107,6 @@ if (isset($_POST['salvarfoto'])) {
 
         $inseriFoto = "UPDATE usuarios SET imgU = '$novo_nome' WHERE codU = $session; ";
         $result = $mysqli->query($inseriFoto);
-        session_start();
         session_destroy();
-    } else {
-        $_SESSION['estaInvalid'] = true;
-        header("Location: ../html/perfil.php");
     }
 }

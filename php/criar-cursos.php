@@ -65,8 +65,6 @@ try {
         throw new Exception("<script>window.location = '../html/criar-curso.php'</script>");
     }
 
-    //$msg = false;
-
     if (isset($_FILES['arquivo'])) {
 
         $extensao = strtolower(substr($_FILES['arquivo']['name'], -5)); //pega a extensao do arquivo
@@ -75,17 +73,7 @@ try {
 
         move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio . $novo_nome); //efetua o upload
 
-        /*
-      $sql_code = "INSERT INTO arquivo (codigo, arquivo, data) VALUES(null, '$novo_nome', NOW())";
-  
-      if($mysqli->query($sql_code))
-        $msg = "Arquivo enviado com sucesso!";
-      else
-        $msg = "Falha ao enviar arquivo.";
-        */
-
     }
-
 
     $criarCurso = "INSERT INTO cursos(categoria, celularC, cidadeC, codU, descricao, endereçoC, fotoPerfilC, estados, nome, tipoEnsino, telefC, dataInscriçãoC, horaInscriçãoC) VALUE('$chk','$celular','$cidade', $sessionC, '$descricao', '$endereco', '$novo_nome', '$estado', '$nome', '$tip', '$telefone', NOW(), NOW());";
     $result1 = $mysqli->query($criarCurso);

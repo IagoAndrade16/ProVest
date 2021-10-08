@@ -47,7 +47,7 @@ include("../php/verifica_login.php");
             <img src="<?php echo ("../php/upload/" . $_SESSION['fotoU']); ?>" width="200px" height="200px" style="border-radius: 100px; border: 1px solid #212529" alt="foto usuario">
             <br>
             <br>
-            <input style="font-size: 13px" type="file" name="arquivo"><br><br>
+            <input style="font-size: 13px" type="file" name="arquivo" required><br><br>
             <input style="font-size: 13px" type="submit" name="salvarfoto">
             <br>
             <br>
