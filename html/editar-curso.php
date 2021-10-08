@@ -5,7 +5,7 @@ include("../php/verifica_login.php");
 ?>
 
 <?php
-
+/*
 $nomeC = $_GET['nomeC'];
 $enderecoC = $_GET['enderecoC'];
 $telefone = $_GET['telefoneC'];
@@ -16,7 +16,7 @@ $descricao = $_GET['descricao'];
 $estado = $_GET['estado'];
 $cidade = $_GET['cidadeC'];
 $foto = $_GET['fotoC'];
-
+*/
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +46,9 @@ $foto = $_GET['fotoC'];
 
         <nav class="menu">
             <ul>
-                <li><a href="perfil.php"> <!--<i class="fa fa-user" aria-hidden="true"></i>--> <img width="45px" height="45px" style="border-radius: 100px;" src="<?php echo("../php/upload/" . $_SESSION['fotoU']); ?>"> <?php echo $_SESSION['nomeUsuario']; ?> <a href="../php/logout.php">ㅤSair</a></a></li>
+                <li><a href="perfil.php">
+                        <!--<i class="fa fa-user" aria-hidden="true"></i>--> <img width="45px" height="45px" style="border-radius: 100px;" src="<?php echo ("../php/upload/" . $_SESSION['fotoU']); ?>"> <?php echo $_SESSION['nomeUsuario']; ?> <a href="../php/logout.php">ㅤSair</a>
+                    </a></li>
             </ul>
         </nav>
 
@@ -72,7 +74,8 @@ $foto = $_GET['fotoC'];
                         unset($_SESSION['categoria-Inv']);
                         ?>
                         <div class="form-floating mb-3">
-                            <input type="name" name="nomeC" value="<?php echo $nomeC; ?>" class="form-control" placeholder="name@example.com">
+                            <input type="name" name="nomeC" value="<?php //echo $nomeC; 
+                                                                    ?>" class="form-control" placeholder="name@example.com">
                             <label>Novo nome</label>
                         </div>
 
@@ -131,13 +134,15 @@ $foto = $_GET['fotoC'];
                 <div class="col-md-5">
                     <div class="p-3">
                         <div class="form-floating">
-                            <textarea class="form-control" name="descriC" placeholder="Leave a comment here" style="height: 100px"><?php echo $descricao; ?></textarea>
+                            <textarea class="form-control" name="descriC" placeholder="Leave a comment here" style="height: 100px"><?php //echo $descricao; 
+                                                                                                                                    ?></textarea>
                             <label>Descrição</label>
                         </div>
                         <br>
 
                         <div class="form-floating mb-3">
-                            <input type="name" value="<?php echo $enderecoC; ?>" name="endereC" class="form-control" placeholder="name@example.com">
+                            <input type="name" value="<?php //echo $enderecoC; 
+                                                        ?>" name="endereC" class="form-control" placeholder="name@example.com">
                             <label>
                                 Endereço
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -147,7 +152,8 @@ $foto = $_GET['fotoC'];
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="number" value="<?php echo $telefone; ?>" name="tefonC" class="form-control" placeholder="name@example.com">
+                            <input type="number" value="<?php //echo $telefone; 
+                                                        ?>" name="tefonC" class="form-control" placeholder="name@example.com<?php echo $telefone; ?>">
                             <label>
                                 Telefone
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
@@ -157,7 +163,8 @@ $foto = $_GET['fotoC'];
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="number" value="<?php echo $celular; ?>" name="celularC" class="form-control" placeholder="name@example.com">
+                            <input type="number" value="<?php //echo $celular; 
+                                                        ?>" name="celularC" class="form-control" placeholder="name@example.com">
                             <label>
                                 Celular
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
@@ -172,20 +179,22 @@ $foto = $_GET['fotoC'];
                 <!--3ª Coluna(estado, cidade e foto)-->
                 <div class="col-md-3">
                     <div class="p-3">
-                        Estado: <?php echo $estado; ?>
+                        Estado: <?php //echo $estado; 
+                                ?>
                         <select class="form-select" name="estado" aria-label="Default select example" id="Estado"></select>
                     </div>
 
                     <div class="p-3">
-                        Cidade: <?php echo $cidade; ?>
+                        Cidade: <?php //echo $cidade; 
+                                ?>
                         <select class="form-select" name="cidade" aria-label="Default select example" id="Cidade">
                             <option>Cidade</option>>
                         </select>
                     </div>
 
                     <footer>
-                        <img src="<?php echo $foto; ?>" name="foto curso" style="border-radius: 5px; border: 1px solid #c4c4c4" width="300px" height="200px" alt="foto curso" >
-                        <input style="font-size: 10px;" type="file" name="arquivo" >
+                        <p>Trocar Foto:</p>
+                        <input style="font-size: 10px;" type="file" name="arquivo">
                     </footer>
                 </div>
             </div>

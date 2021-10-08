@@ -141,7 +141,8 @@ include("../php/verifica_login.php");
       ?>
       <?php
       include("../php/conexao.php");
-      $sql = "SELECT * FROM cursos";
+      $sessionC = $_SESSION['code'];
+      $sql = "SELECT * FROM cursos WHERE codU = $sessionC";
       $result = $mysqli->query($sql);
       if ($result) {
         $nomeC = array();
