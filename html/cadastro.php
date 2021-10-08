@@ -34,9 +34,15 @@
     </div>
 
     <div>
-        <form action="../php/cadastrar.php" method="POST">
-
+        <form action="../php/cadastrar.php" method="POST" enctype="multipart/form-data">
             <center>
+                <?php if (isset($_SESSION['semfoto'])) : ?>
+                    <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Foto não selecionada!</p>
+                <?php endif;
+                unset($_SESSION['semfoto']); ?>
+
+                <input type="file" name="arquivo" style="font-size: 12px;" required>
+
                 <?php if (isset($_SESSION['erro'])) : ?>
                     <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Erro no cadastro</p>
                 <?php endif;
