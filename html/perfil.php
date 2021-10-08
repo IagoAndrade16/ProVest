@@ -194,12 +194,10 @@ include("../php/verifica_login.php");
                     </li>
                   </ul>
                   <a href="editar-curso.php?nomeC=<?php echo $nomeC[$i]; ?>&enderecoC=<?php echo $enderecoC[$i]; ?>&telefoneC=<?php echo $telefone[$i]; ?>&celular=<?php echo  $celular[$i]; ?>&tipo=<?php echo $tipoC[$i]; ?>&categoria=<?php echo $categoria[$i]; ?>&descricao=<?php echo $descricao[$i]; ?>&cidadeC=<?php echo $cidadeC[$i]; ?>&estado=<?php echo  $estado[$i]; ?>&fotoC=<?php echo ("../php/upload/" . $fotoC[$i]); ?>" class="btn btn-dark">Editar</a>
-                  <br><br>
-                  <!--
                   <form action="../php/excluirC.php" method="POST">
-                    <button type="submit" name="excluirCursoIn" class="btn btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir seu curso? Essa ação e irreversível.');">Excluir <i class="fa fa-trash" aria-hidden="true"></i></button>
+                    <button style="margin-top: 5px" type="submit" name="excluirCursoIn" class="btn btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir seu curso? Essa ação e irreversível.');">Excluir <i class="fa fa-trash" aria-hidden="true"></i></button>
                   </form>
-                -->
+
                 </div>
               </div>
             </div>

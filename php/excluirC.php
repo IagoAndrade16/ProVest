@@ -1,5 +1,5 @@
 <?php
-/*
+
 session_start();
 include("conexao.php");
 
@@ -10,5 +10,5 @@ if (isset($_POST['excluirCursoIn'])){
     $resultlixo = $mysqli->query($lixo);
     header("Location: ../html/perfil.php");
 }
-*/
+
 ?>
