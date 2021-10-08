@@ -52,7 +52,7 @@ include("../php/verifica_login.php");
                     endif;
                     unset($_SESSION['nomeCursoV']);
                     ?>
-                    <input type="text" name="nome" placeholder="Nome:">
+                    <input type="text" name="nome" placeholder="Nome:" required>
                 </div>
 
                 <div>
@@ -154,7 +154,7 @@ include("../php/verifica_login.php");
                     endif;
                     unset($_SESSION['enderecoCursoV']);
                     ?>
-                    <input type="text" name="endereco" placeholder="Endereço:">
+                    <input type="text" name="endereco" placeholder="Endereço:" required>
                 </div>
 
                 <div class="input">
@@ -164,7 +164,7 @@ include("../php/verifica_login.php");
                     endif;
                     unset($_SESSION['telefoneCursoV']);
                     ?>
-                    <input type="number" name="telefone" placeholder="Telefone:">
+                    <input type="number" name="telefone" placeholder="Telefone:" required>
                 </div>
 
                 <div class="input">
@@ -174,7 +174,7 @@ include("../php/verifica_login.php");
                     endif;
                     unset($_SESSION['celularCursoV']);
                     ?>
-                    <input type="number" name="celular" placeholder="Celular/WhatsApp:">
+                    <input type="number" name="celular" placeholder="Celular/WhatsApp:" required>
                 </div>
                 <br>
                 <div class="btn">
