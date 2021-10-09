@@ -178,7 +178,7 @@ include("../php/verifica_login.php");
                 </div>
                 <br>
                 <div class="btn">
-                    <button type="submit" name="Salvar" class="btn btn-outline-dark" onclick="return confirm('O curso so poderá ser excluido em uma nova sessão.');">Criar</button>
+                    <button type="submit" name="Salvar" class="btn btn-outline-dark">Criar</button>
                 </div>
                 <br>
             </form>

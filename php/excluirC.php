@@ -3,10 +3,10 @@
 session_start();
 include("conexao.php");
 
-$codC = $_SESSION['codC'];
+$codU = $_SESSION['code'];
 
 if (isset($_POST['excluirCursoIn'])){
-    $lixo = "DELETE FROM cursos WHERE codC = $codC ;";
+    $lixo = "DELETE FROM cursos WHERE codU = $codU ;";
     $resultlixo = $mysqli->query($lixo);
     header("Location: ../html/perfil.php");
 }

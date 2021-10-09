@@ -47,8 +47,8 @@ include("../php/verifica_login.php");
             <img src="<?php echo ("../php/upload/" . $_SESSION['fotoU']); ?>" width="200px" height="200px" style="border-radius: 100px; border: 1px solid #212529" alt="foto usuario">
             <br>
             <br>
-            <input style="font-size: 13px" type="file" name="arquivo" required><br><br>
-            <input style="font-size: 13px" type="submit" name="salvarfoto">
+            <input style="font-size: 13px" type="file" name="arquivo"><br><br>
+            <input style="font-size: 13px" class="btn btn-dark" type="submit" name="salvarfoto">
             <br>
             <br>
             <p>Registrou-se em <strong><?php echo $_SESSION['dataU']; ?></strong></p>
@@ -117,8 +117,8 @@ include("../php/verifica_login.php");
               <?php endif;
               unset($_SESSION['no']); ?>
             </div>
-            <button name="salvar" type="submit" class="btn btn-dark" onclick="return confirm('Essa ação desconecta seu usuario. Tem certeza?');">Salvar Alterações</button>
-            <button type="submit" name="btn-delete" value="btn-delete" class="btn btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir sua conta? Essa ação e irreversível.');">Excluir Conta <i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button name="salvar" type="submit" id="lixo" class="btn btn-dark" onclick="return confirm('Essa ação desconecta seu usuario. Tem certeza?');">Salvar Alterações</button>
+            <button type=" submit" name="btn-delete" value="btn-delete" class="btn btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir sua conta? Essa ação e irreversível.');">Excluir Conta <i class="fa fa-trash" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
@@ -194,11 +194,12 @@ include("../php/verifica_login.php");
                       <?php echo $tipoC[$i]; ?>
                     </li>
                   </ul>
-                  <a href="editar-curso.php?nomeC=<?php echo $nomeC[$i]; ?>&enderecoC=<?php echo $enderecoC[$i]; ?>&telefoneC=<?php echo $telefone[$i]; ?>&celular=<?php echo  $celular[$i]; ?>&tipo=<?php echo $tipoC[$i]; ?>&categoria=<?php echo $categoria[$i]; ?>&descricao=<?php echo $descricao[$i]; ?>&cidadeC=<?php echo $cidadeC[$i]; ?>&estado=<?php echo  $estado[$i]; ?>&fotoC=<?php echo ("../php/upload/" . $fotoC[$i]); ?>" class="btn btn-dark">Editar</a>
-                  <form action="../php/excluirC.php" method="POST">
-                    <button style="margin-top: 5px" type="submit" name="excluirCursoIn" class="btn btn-outline-danger" onclick="return confirm('Tem certeza que deseja excluir seu curso? Essa ação e irreversível.');">Excluir <i class="fa fa-trash" aria-hidden="true"></i></button>
-                  </form>
-
+                  <div style="display: flex; justify-content: flex-start;">
+                    <a href="editar-curso.php?nomeC=<?php echo $nomeC[$i]; ?>&enderecoC=<?php echo $enderecoC[$i]; ?>&telefoneC=<?php echo $telefone[$i]; ?>&celular=<?php echo  $celular[$i]; ?>&tipo=<?php echo $tipoC[$i]; ?>&categoria=<?php echo $categoria[$i]; ?>&descricao=<?php echo $descricao[$i]; ?>&cidadeC=<?php echo $cidadeC[$i]; ?>&estado=<?php echo  $estado[$i]; ?>&fotoC=<?php echo ("../php/upload/" . $fotoC[$i]); ?>" class="btn btn-dark">Editar</a>
+                    <form action="../php/excluirC.php" method="POST">
+                      <button style="margin-left: 5px" type="submit" name="excluirCursoIn" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir seu curso? Essa ação e irreversível.');">Excluir <i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>

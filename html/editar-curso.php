@@ -153,7 +153,8 @@ $foto = $_GET['fotoC'];
 
                         <div class="form-floating mb-3">
                             <input type="number" value="<?php //echo $telefone; 
-                                                        ?>" name="tefonC" class="form-control" placeholder="name@example.com<?php echo $telefone; ?>">
+                                                        ?>" name="tefonC" class="form-control" placeholder="name@example.com<?php //echo $telefone; 
+                                                                                                                            ?>">
                             <label>
                                 Telefone
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
