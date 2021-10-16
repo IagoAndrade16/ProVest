@@ -34,7 +34,6 @@ $foto = $_GET['fotoC'];
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/editar-curso.css">
-    <link rel="stylesheet" href="../css/ver-perfil.css">
     <link rel="shortcut icon" href="../img/LogoProVest.ico" type="image/x-icon">
     <title>ProVest | Editar Curso</title>
 </head>
@@ -47,7 +46,7 @@ $foto = $_GET['fotoC'];
         <nav class="menu">
             <ul>
                 <li><a href="perfil.php">
-                        <!--<i class="fa fa-user" aria-hidden="true"></i>--> <img width="45px" height="45px" style="border-radius: 100px;" src="<?php echo ("../php/upload/" . $_SESSION['fotoU']); ?>"> <?php echo $_SESSION['nomeUsuario']; ?> <a href="../php/logout.php">ㅤSair</a>
+                        <!--<i class="fa fa-user" aria-hidden="true"></i>--> <img width="45px" height="45px" style="border-radius: 100px; object-fit: cover;" src="<?php echo ("../php/upload/" . $_SESSION['fotoU']); ?>"> <?php echo $_SESSION['nomeUsuario']; ?> <a href="../php/logout.php">ㅤSair</a>
                     </a></li>
             </ul>
         </nav>

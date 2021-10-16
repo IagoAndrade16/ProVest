@@ -24,7 +24,6 @@ $foto = $_GET['fotoC']
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../css/ver-curso.css">
   <script src="https://kit.fontawesome.com/b21197af3e.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="../img/LogoProVest.ico" type="image/x-icon">
   <title>ProVest | Ver Curso</title>
@@ -62,7 +61,7 @@ $foto = $_GET['fotoC']
         <!-- Foto e nome do perfil -->
         <a class="navbar-brand" href="perfil.php">
           <!--<i class="fa fa-user" aria-hidden="true"></i>-->
-          <img width="45px" height="45px" style="border-radius: 100px;" src="<?php echo("../php/upload/" . $_SESSION['fotoU']); ?>">
+          <img width="45px" height="45px" style="border-radius: 100px; object-fit: cover;" src="<?php echo("../php/upload/" . $_SESSION['fotoU']); ?>">
           <?php echo $_SESSION['nomeUsuario']; ?>
         </a>
         <a class="navbar-brand" style="text-decoration: none; color: #fff;" href="../php/logout.php">Sair</a>

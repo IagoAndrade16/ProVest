@@ -148,23 +148,6 @@ CSS FLEXBOX 1
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
-/*
-SCROLLBAR
-*/
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: radial-gradient(transparent, #666);
-    border-radius: .25rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: radial-gradient(transparent, black);
-}
-
 @media only screen and (max-width: 340px) {
     .flex-box label {
         font-size: 15px;

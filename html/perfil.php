@@ -16,7 +16,6 @@ include("../php/verifica_login.php");
   <script src="https://kit.fontawesome.com/b21197af3e.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="../img/LogoProVest.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../css/ver-perfil.css">
 
   <title>ProVest | Perfil</title>
 </head>
@@ -44,7 +43,7 @@ include("../php/verifica_login.php");
           <div class="p-3">
             <h1>Meu Perfil</h1>
             <h4 style="margin-bottom: 20px;">Foto de perfil</h4>
-            <img src="<?php echo ("../php/upload/" . $_SESSION['fotoU']); ?>" width="200px" height="200px" style="border-radius: 100px; border: 1px solid #212529" alt="foto usuario">
+            <img src="<?php echo ("../php/upload/" . $_SESSION['fotoU']); ?>" width="200px" height="200px" style="border-radius: 100px; border: 1px solid #212529; object-fit: cover" alt="foto usuario">
             <br>
             <br>
             <input style="font-size: 13px" type="file" name="arquivo"><br><br>
@@ -170,7 +169,7 @@ include("../php/verifica_login.php");
       ?>
           <div class="col-md-4">
             <div class="p-3">
-              <div class="card" style="width: 18rem;">
+              <div class="card" style="width: 15rem;">
                 <img src="<?php echo ("../php/upload/" . $fotoC[$i]); ?>" class="card-img-top" alt="foto curso">
                 <div class="card-body">
                   <h5 class="card-title"> <?php echo $nomeC[$i]; ?> </h5>

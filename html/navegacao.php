@@ -14,7 +14,6 @@ include("../php/verifica_login.php");
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/b21197af3e.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../css/navegacao.css">
   <link rel="shortcut icon" href="../img/LogoProVest.ico" type="image/x-icon">
   <title>ProVest | Home</title>
 </head>
@@ -51,7 +50,7 @@ include("../php/verifica_login.php");
 
         <!-- Foto e nome do perfil -->
         <a class="navbar-brand" href="perfil.php">
-        <img width="45px" height="45px" style="border-radius: 100px;" src="<?php echo("../php/upload/" . $_SESSION['fotoU']); ?>">
+        <img width="45px" height="45px" style="border-radius: 100px; object-fit: cover;" src="<?php echo("../php/upload/" . $_SESSION['fotoU']); ?>">
           <!--<i class="fa fa-user" aria-hidden="true"></i>-->
           <?php echo $_SESSION['nomeUsuario']; ?>
           <a class="navbar-brand" style="text-decoration: none; color: #fff;" href="../php/logout.php">Sair</a>
@@ -104,8 +103,8 @@ include("../php/verifica_login.php");
 
           <div class="col-md-4">
             <div class="p-3">
-              <div class="card" style="width: 18rem;">
-                <img src="<?php echo ("../php/upload/" . $foto[$i]); ?>" class="card-img-top" alt="foto curso">
+              <div class="card" style="width: 15rem;">
+                <img style="object-fit: cover" src="<?php echo ("../php/upload/" . $foto[$i]); ?>" class="card-img-top" alt="foto curso">
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $nomeC[$i]; ?></h5>
                   <ul class="list-group list-group-flush">

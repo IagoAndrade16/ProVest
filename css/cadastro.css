@@ -121,20 +121,3 @@ ESTRUTURA
 .ja-tem-uma-conta {
     color: #708090;
 }
-
-/*
-SCROLLBAR
-*/
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: radial-gradient(transparent, #666);
-    border-radius: .25rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: radial-gradient(transparent, black);
-}
