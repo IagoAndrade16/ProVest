@@ -16,6 +16,20 @@ $tipoEnsino = $_POST['ensino'];
 $tipE = "";
 $telefC = addslashes($_POST['tefonC']);
 
+if (isset($_POST['salvarfoto'])) {
+    if (isset($_FILES['arquivo'])) {
+
+        $extensao = strtolower(substr($_FILES['arquivo']['name'], -5)); //pega a extensao do arquivo
+        $novo_nome = md5(time()) . $extensao; //define o nome do arquivo
+        $diretorio = "upload/"; //define o diretorio para onde enviaremos o arquivo
+        move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio . $novo_nome); //efetua o upload
+
+        $inseriFoto = "UPDATE cursos SET fotoPerfilC = '$novo_nome' WHERE codU = $sessionedi; ";
+        $result = $mysqli->query($inseriFoto);
+        header("Location: ../html/perfil.php");
+    }
+}
+
 if (isset($_POST['btn-salvar'])) {
     foreach ($categoria as $categoriaresult) {
         $cat .= $categoriaresult . ",";

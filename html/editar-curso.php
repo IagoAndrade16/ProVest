@@ -194,7 +194,8 @@ $foto = $_GET['fotoC'];
 
                     <footer>
                         <p>Trocar Foto:</p>
-                        <input style="font-size: 10px;" type="file" name="arquivo">
+                        <input style="font-size: 12px;" type="file" name="arquivo"><br><br>
+                        <input type="submit"  style="font-size: 12px" name="salvarfoto" class="btn btn-dark">
                     </footer>
                 </div>
             </div>
