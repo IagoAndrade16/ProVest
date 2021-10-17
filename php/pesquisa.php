@@ -102,7 +102,7 @@ include("../php/verifica_login.php");
             ?>
                     <div class="col-md-4">
                         <div class="p-3">
-                            <div class="card" style="width: 15rem;">
+                            <div class="card" style="width: 18rem;">
                                 <img src="<?php echo ("../php/upload/" . $linha[9]); ?>" class="card-img-top" alt="foto curso">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $linha[3]; ?></h5>
