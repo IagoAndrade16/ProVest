@@ -48,7 +48,10 @@ include("../php/verifica_login.php");
             <input style="font-size: 13px; margin-left: 4.5rem" class="btn btn-dark" type="submit" name="salvarfoto" onclick="return confirm('Se está ação for execultada sem um arquivo ela irá apagar a foto atual. Essa ação desconecta seu usuario, Tem certeza?');">
             <br>
             <br>
-            <p>Registrou-se em <strong><?php echo $_SESSION['dataU']; ?></strong></p>
+            <p>Registrou-se em <strong><?php $dataAmericana = $_SESSION['dataU'];
+                                        $timestamp = strtotime($dataAmericana);
+                                        $dataBR =  date("d/m/Y", $timestamp);
+                                        echo $dataBR; ?></strong></p>
           </div>
         </div>
 
