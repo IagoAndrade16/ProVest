@@ -14,7 +14,7 @@ $(document).ready(function(){
                 for(var i = 0; i < data.estados.length; i++){
                     if(data.estados[i].sigla == cidade_id){
                         for(var j = 0; j < data.estados[i].cidades.length; j++){
-                            html += '<option value='+ data.estados[i].cidades[j] +'>'+ data.estados[i].cidades[j] + '</option>';
+                            html += "<option value='"+ data.estados[i].cidades[j] +"'>"+ data.estados[i].cidades[j] + "</option>";
                         }
                     }
                 }

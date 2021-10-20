@@ -67,7 +67,7 @@ $foto = $_GET['fotoC'];
                     <div class="p-3">
                         <!--Campo nome -->
                         <?php if (isset($_SESSION['categoria-Inv'])) : ?>
-                            <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados Incorretas</p>
+                            <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Dados incorretos</p>
                         <?php
                         endif;
                         unset($_SESSION['categoria-Inv']);
@@ -193,9 +193,9 @@ $foto = $_GET['fotoC'];
                     </div>
 
                     <footer>
-                        <p>Trocar Foto:</p>
-                        <input style="font-size: 12px;" type="file" name="arquivo"><br><br>
-                        <input type="submit"  style="font-size: 12px" name="salvarfoto" class="btn btn-dark">
+                        <label for="arquivo" style="margin-left: 1rem" class="btn btn-outline-dark"><i class="fa fa-file-image-o" aria-hidden="true"></i> Alterar foto</label>
+                        <input id="arquivo" style="display: none;" type="file" name="arquivo"><br><br>
+                        <input type="submit"  style="font-size: 12px; margin-left: 1rem" name="salvarfoto" class="btn btn-dark" onclick="return confirm('Se está ação for execultada sem um arquivo ela irá apagar a foto atual.');">
                     </footer>
                 </div>
             </div>

@@ -41,13 +41,11 @@ include("../php/verifica_login.php");
       <div class="row gx-5">
         <div class="col-md-4">
           <div class="p-3">
-            <h1>Meu Perfil</h1>
-            <h4 style="margin-bottom: 20px;">Foto de perfil</h4>
-            <img src="<?php echo ("../php/upload/" . $_SESSION['fotoU']); ?>" width="200px" height="200px" style="border-radius: 100px; border: 1px solid #212529; object-fit: cover" alt="foto usuario">
-            <br>
-            <br>
-            <input style="font-size: 13px" type="file" name="arquivo"><br><br>
-            <input style="font-size: 13px" class="btn btn-dark" type="submit" name="salvarfoto">
+            <h1 style="margin-left: 0.5rem ;">Meu Perfil</h1><br>
+            <h4 style="margin-bottom: 20px; margin-left: 2rem">Alterar foto</h4>
+            <label for="arquivo"><img src="<?php echo ("../php/upload/" . $_SESSION['fotoU']); ?>" width="200px" height="200px" style="border-radius: 100px; border: 1px solid #212529; object-fit: cover" alt="foto usuario"></label>
+            <input id="arquivo" style="display: none;" type="file" name="arquivo"><br><br>
+            <input style="font-size: 13px; margin-left: 4.5rem" class="btn btn-dark" type="submit" name="salvarfoto" onclick="return confirm('Se está ação for execultada sem um arquivo ela irá apagar a foto atual. Essa ação desconecta seu usuario, Tem certeza?');">
             <br>
             <br>
             <p>Registrou-se em <strong><?php echo $_SESSION['dataU']; ?></strong></p>
@@ -93,7 +91,7 @@ include("../php/verifica_login.php");
           <div class="p-3">
             <h4 style="margin-bottom: 30px; color: #fff;">Easter Egg</h4>
             <div class="mb-3">
-              <label class="form-label">Estado: <?php echo $_SESSION['estado']; ?></label>
+              <label class="form-label"><?php echo $_SESSION['estado']; ?></label>
               <select class="form-select" name="estado" aria-label="Default select example" id="Estado"></select>
               <?php if (isset($_SESSION['estaInvalid'])) : ?>
                 <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Campo estado invalido</p>

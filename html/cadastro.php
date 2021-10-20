@@ -40,8 +40,9 @@
                     <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Foto não selecionada!</p>
                 <?php endif;
                 unset($_SESSION['semfoto']); ?>
-
-                <input type="file" name="arquivo" style="font-size: 12px;" required>
+                
+                <label for="arquivo" style="padding-right: 4.5rem; padding-left: 4.5rem;" class="btn btn-outline-dark"><i class="fa fa-file-image-o" aria-hidden="true"></i> Adicionar foto</label>
+                <input id="arquivo" type="file" name="arquivo" style="display: none;" required>
 
                 <?php if (isset($_SESSION['erro'])) : ?>
                     <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Erro no cadastro</p>

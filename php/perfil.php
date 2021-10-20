@@ -92,7 +92,7 @@ if (!empty($cidade) && $cidade != "Cidade") {
 if (isset($_POST["btn-delete"])) {
     $delete = "DELETE FROM usuarios WHERE codU = $session;";
     $result6 = $mysqli->query($delete);
-    header("Location: ../html/login.php");
+    header("Location: ../html/index.html");
     session_destroy();
     exit();
 }

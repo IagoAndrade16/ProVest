@@ -28,7 +28,9 @@ include("../php/verifica_login.php");
 
         <nav class="menu">
             <ul>
-                <li><a href="perfil.php"> <img width="45px" height="45px" style="border-radius: 100px; object-fit: cover;" src="<?php echo("../php/upload/" . $_SESSION['fotoU']); ?>"> <!--<i class="fa fa-user" aria-hidden="true"></i>--> <?php echo $_SESSION['nomeUsuario']; ?> <a href="../php/logout.php">ㅤSair</a></a></li>
+                <li><a href="perfil.php"> <img width="45px" height="45px" style="border-radius: 100px; object-fit: cover;" src="<?php echo ("../php/upload/" . $_SESSION['fotoU']); ?>">
+                        <!--<i class="fa fa-user" aria-hidden="true"></i>--> <?php echo $_SESSION['nomeUsuario']; ?> <a href="../php/logout.php">ㅤSair</a>
+                    </a></li>
             </ul>
         </nav>
 
@@ -129,10 +131,9 @@ include("../php/verifica_login.php");
 
                 <!------------------------------MEIO------------------------------>
 
-                <div>
-                    <p>Adicionar foto</p>
-                    <br>
-                    <input type="file" name="arquivo" required>
+                <div><br>
+                    <label for="arquivo" class="btn btn-outline-dark"><i class="fa fa-file-image-o" aria-hidden="true"></i> Adicionar foto</label>
+                    <input id="arquivo" style="display: none;" type="file" name="arquivo" required>
                 </div>
                 <br>
                 <div class="input">
