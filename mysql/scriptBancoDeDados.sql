@@ -24,7 +24,6 @@ CREATE TABLE usuarios (
 	estadoU varchar(255) NOT NULL,
 	emailU varchar(255) NOT NULL,
 	cidadeU varchar(255) NOT NULL,
-	checkout varchar(4) NOT NULL,
 	imgU varchar(100),
 	dataInscriçãoU date,
 	horaInscriçãoU time,
