@@ -204,8 +204,8 @@ $foto = $_GET['fotoC'];
                 <div class="col-md-12">
                     <div class="p-3">
                         <center>
-                            <button type="submit" name="btn-salvar" class="btn btn-outline-dark">Salvar Alterações</button>
-                            <button type="submit" name="btn-Nsalvar" class="btn btn-outline-danger">Descartar alterações</button>
+                            <button type="submit" name="btn-salvar" class="btn btn-dark">Salvar Alterações</button>
+                            <button type="submit" name="btn-Nsalvar" class="btn btn-danger">Descartar alterações</button>
                         </center>
 
                     </div>

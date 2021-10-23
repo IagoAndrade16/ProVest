@@ -21,17 +21,13 @@
 <body>
 
     <header class="barra">
-        <div class="logoprovest">
+        <div style="padding-top: 10px;">
             <center>
-                <img src="../img/logoProVest.png" alt="LogoProVest">
+                <h1 style="color: #fff">Crie sua conta</h1>
             </center>
         </div>
     </header>
-
     <br>
-    <div class="titulo">
-        <h1>Crie sua conta</h1>
-    </div>
 
     <div>
         <form action="../php/cadastrar.php" method="POST" enctype="multipart/form-data">

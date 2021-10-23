@@ -171,7 +171,7 @@ include("../php/verifica_login.php");
           <div class="col-md-4">
             <div class="p-3">
               <div class="card" style="width: 18rem;">
-                <img src="<?php echo ("../php/upload/" . $fotoC[$i]); ?>" class="card-img-top" alt="foto curso">
+                <img style="object-fit: cover" width="286px" height="286px" src="<?php echo ("../php/upload/" . $fotoC[$i]); ?>" alt="foto curso">
                 <div class="card-body">
                   <h5 class="card-title"> <?php echo $nomeC[$i]; ?> </h5>
                   <ul class="list-group list-group-flush">

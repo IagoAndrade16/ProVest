@@ -32,6 +32,7 @@ include("../php/verifica_login.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="refresh" content="60">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b21197af3e.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../img/LogoProVest.ico" type="image/x-icon">
@@ -59,7 +60,7 @@ include("../php/verifica_login.php");
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <form action="../php/pesquisa.php" class="d-flex">
                         <input class="form-control me-3" type="search" name="pesquisa" placeholder="Pesquise por cursos" aria-label="Search">
-                        <button class="btn btn-outline-light">Pesquisar</button>
+                        <button class="btn btn-outline-light"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </ul>
 
@@ -83,7 +84,7 @@ include("../php/verifica_login.php");
         <div class="row gx-5">
             <div class="col">
                 <div class="p-3">
-                    <h4>Resultado da Buscas</h4>
+                    <h4>Resultado da busca</h4>
                 </div>
             </div>
         </div>
@@ -102,7 +103,7 @@ include("../php/verifica_login.php");
                     <div class="col-md-4">
                         <div class="p-3">
                             <div class="card" style="width: 18rem;">
-                                <img src="<?php echo ("../php/upload/" . $linha[9]); ?>" class="card-img-top" alt="foto curso">
+                                <img style="object-fit: cover" width="286px" height="286px" src="<?php echo ("../php/upload/" . $linha[9]); ?>" alt="foto curso">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $linha[3]; ?></h5>
                                     <ul class="list-group list-group-flush">

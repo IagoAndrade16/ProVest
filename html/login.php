@@ -19,23 +19,24 @@
 
 <body>
     <header class="barra">
-        <div class="logoprovest">
+        <div style="padding-top: 10px;">
             <center>
-                <img src="../img/logoProVest.png" alt="LogoProVest">
+                <h1 style="color: #fff">Login</h1>
             </center>
         </div>
     </header>
-
     <br>
-    <div class="titulo-login">
-        <h1>Conecte-se</h1>
-    </div>
+    <br>
+    
+    
+    
+    
 
     <div class="Login">
         <form action="../php/login.php" method="POST">
             <center>
                 <?php if (isset($_SESSION['incorreto'])) : ?>
-                    <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red" ></i> Credenciais Incorretas</p>
+                    <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Credenciais Incorretas</p>
                 <?php
                 endif;
                 unset($_SESSION['incorreto']);
@@ -48,7 +49,7 @@
                     <input type="password" name="senha" required="" placeholder=" Senha">
                 </div>
 
-               <!-- <div class="esqueceu-senha">
+                <!-- <div class="esqueceu-senha">
                     <a href="esqueceu-senha.html">Esqueceu a senha?</a>
                 </div>-->
 
