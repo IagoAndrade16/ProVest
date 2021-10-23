@@ -44,7 +44,7 @@ include("../php/verifica_login.php");
           <!--DropDown-->
         </ul>
 
-        <a class="navbar-brand" href="criar-curso.php">
+        <a class="navbar-brand" href="cadastrar-curso2.html">
           Cadastrar Curso
         </a>
 
