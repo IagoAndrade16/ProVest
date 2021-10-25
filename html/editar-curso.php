@@ -41,7 +41,10 @@ $foto = $_GET['fotoC'];
 <body>
 
     <header>
-        <a href="navegacao.php"><img width="50px" height="50px" src="../img/logoProVest.png"></a>
+    <div style="display: flex; align-items: center; ">
+            <a href="navegacao.php"><img width="50px" height="50px" src="../img/logoProVest.png"></a>
+            <h4 class="texto" style="color: #fff;">Editar Curso</h4>
+        </div>
 
         <nav class="menu">
             <ul>
@@ -57,7 +60,6 @@ $foto = $_GET['fotoC'];
         <br>
         <br>
         <br>
-        <h1 class="texto">Editar Curso</h1>
     </center>
     <form action="../php/editar-curso.php" method="POST" enctype="multipart/form-data">
         <div class="container px-0">
@@ -73,9 +75,9 @@ $foto = $_GET['fotoC'];
                         unset($_SESSION['categoria-Inv']);
                         ?>
                         <div class="form mb-3">
-                        <label>Novo nome</label>
+                            <label>Novo nome</label>
                             <input type="name" name="nomeC" value="<?php //echo $nomeC; 
-                                                                    ?>" class="form-control" >
+                                                                    ?>" class="form-control">
                         </div>
 
                         <!--Categoria do curso(radios) -->
@@ -133,20 +135,20 @@ $foto = $_GET['fotoC'];
                 <div class="col-md-5">
                     <div class="p-3">
                         <div class="form">
-                        <label>Descrição</label>
+                            <label>Descrição</label>
                             <textarea class="form-control" name="descriC" style="height: 100px"><?php //echo $descricao; 
-                                                                                                                                    ?></textarea>
-                            
+                                                                                                ?></textarea>
+
                         </div>
                         <br>
 
                         <div class="form mb-3">
-                        <label>
+                            <label>
                                 Endereço
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                                 </svg>
-                        </label>
+                            </label>
                             <input type="name" value="<?php //echo $enderecoC; 
                                                         ?>" name="endereC" class="form-control">
 
@@ -161,7 +163,7 @@ $foto = $_GET['fotoC'];
                             </label>
                             <input type="number" value="<?php //echo $telefone; 
                                                         ?>" name="tefonC" class="form-control" placeholder="<?php //echo $telefone; 
-                                                                                                                            ?>">
+                                                                                                            ?>">
                         </div>
 
                         <div class="form mb-3">
@@ -172,7 +174,7 @@ $foto = $_GET['fotoC'];
                                 </svg>
                             </label>
                             <input type="number" value="<?php //echo $celular; 
-                                                        ?>" name="celularC" class="form-control" >
+                                                        ?>" name="celularC" class="form-control">
 
                         </div>
 
@@ -182,14 +184,15 @@ $foto = $_GET['fotoC'];
                 <!--3ª Coluna(estado, cidade e foto)-->
                 <div class="col-md-3">
                     <div class="p-3">
-                        Estado: <?php //echo $estado; 
-                                ?>
+                        <br>
+                        <?php //echo $estado; 
+                        ?>
                         <select class="form-select" name="estado" aria-label="Default select example" id="Estado"></select>
                     </div>
 
                     <div class="p-3">
-                        Cidade: <?php //echo $cidade; 
-                                ?>
+                        <?php //echo $cidade; 
+                        ?>
                         <select class="form-select" name="cidade" aria-label="Default select example" id="Cidade">
                             <option>Cidade</option>>
                         </select>
@@ -198,7 +201,7 @@ $foto = $_GET['fotoC'];
                     <footer>
                         <label for="arquivo" style="margin-left: 1rem" class="btn btn-outline-dark"><i class="fa fa-file-image-o" aria-hidden="true"></i> Alterar foto</label>
                         <input id="arquivo" style="display: none;" type="file" name="arquivo"><br><br>
-                        <input type="submit"  style="font-size: 12px; margin-left: 1rem" name="salvarfoto" class="btn btn-dark" onclick="return confirm('Se está ação for execultada sem um arquivo ela irá apagar a foto atual.');">
+                        <input type="submit" style="font-size: 12px; margin-left: 1rem" name="salvarfoto" class="btn btn-dark" onclick="return confirm('Se está ação for execultada sem um arquivo ela irá apagar a foto atual.');">
                     </footer>
                 </div>
             </div>

@@ -3,11 +3,11 @@ session_start();
 
 try {
 
-    $senha_usuario = addslashes($_POST['senha_usuario']);
-    $nome_usuario = addslashes($_POST['nome_usuario']);
-    $estado_usuario = addslashes($_POST['estado_usuario']);
-    $email_usuario = addslashes($_POST['e_mail_usuario']);
-    $cidade_usuario = addslashes($_POST['cidade_usuario']);
+    $senha_usuario = htmlspecialchars(addslashes($_POST['senha_usuario'])); 
+    $nome_usuario = htmlspecialchars(addslashes($_POST['nome_usuario']));
+    $estado_usuario = htmlspecialchars(addslashes($_POST['estado_usuario']));
+    $email_usuario = htmlspecialchars(addslashes($_POST['e_mail_usuario']));
+    $cidade_usuario = htmlspecialchars(addslashes($_POST['cidade_usuario']));
     $mysqli = new mysqli($host, $usuario, $senha, $db);
 
     if (empty($_FILES['arquivo'])) {

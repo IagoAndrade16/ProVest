@@ -25,13 +25,17 @@ include("../php/verifica_login.php");
   <br>
   <br>
   <br>
+  <br>
   <!--Barra de navegação-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid shadow-sm">
       <!-- Logo -->
-      <a class="navbar-brand" href="navegacao.php">
-        <img class="img-fluid" src="../img/logoProVest.png" alt="logo - ProVest" width="50px" height="50px">
-      </a>
+      <div style="display:flex; align-items: center;">
+        <a class="navbar-brand" href="navegacao.php">
+          <img class="img-fluid" src="../img/logoProVest.png" alt="logo - ProVest" width="50px" height="50px">
+        </a>
+        <h4 style="color:#fff">Meu Perfil</h4>
+      </div>
       <a class="navbar-brand" style="text-decoration: none; color: #fff;" href="../php/logout.php">Sair</a>
     </div>
     </div>
@@ -41,8 +45,8 @@ include("../php/verifica_login.php");
       <div class="row gx-5">
         <div class="col-md-4">
           <div class="p-3">
-            <h1 style="margin-left: 0.5rem ;">Meu Perfil</h1><br>
             <h4 style="margin-bottom: 20px; margin-left: 2rem">Alterar foto</h4>
+            <br>
             <label for="arquivo"><img src="<?php echo ("../php/upload/" . $_SESSION['fotoU']); ?>" width="200px" height="200px" style="border-radius: 100px; border: 1px solid #212529; object-fit: cover" alt="foto usuario"></label>
             <input id="arquivo" style="display: none;" type="file" name="arquivo"><br><br>
             <input style="font-size: 13px; margin-left: 4.5rem" class="btn btn-dark" type="submit" name="salvarfoto" onclick="return confirm('Se está ação for execultada sem um arquivo ela irá apagar a foto atual. Essa ação desconecta seu usuario, Tem certeza?');">
@@ -125,7 +129,9 @@ include("../php/verifica_login.php");
   </form>
 
   <!-- Fim das informações do perfil-->
-
+  <br>
+  <br>
+  <br>
   <hr style="margin-bottom: 30px;">
   <!-- Meus cursos-->
   <div class="container">
@@ -171,7 +177,7 @@ include("../php/verifica_login.php");
           <div class="col-md-4">
             <div class="p-3">
               <div class="card" style="width: 18rem;">
-                <img style="object-fit: cover" width="286px" height="286px" src="<?php echo ("../php/upload/" . $fotoC[$i]); ?>" alt="foto curso">
+                <img style="object-fit: cover" width="286px" height="220px" src="<?php echo ("../php/upload/" . $fotoC[$i]); ?>" alt="foto curso">
                 <div class="card-body">
                   <h5 class="card-title"> <?php echo $nomeC[$i]; ?> </h5>
                   <ul class="list-group list-group-flush">

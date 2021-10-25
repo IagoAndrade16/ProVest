@@ -6,11 +6,11 @@ session_start();
 
 $session = $_SESSION['code'];
 
-$usuario = addslashes($_POST['usuario']);
-$email = addslashes($_POST['email']);
-$senha = addslashes($_POST['senha']);
-$estado = addslashes($_POST['estado']);
-$cidade = addslashes($_POST['cidade']);
+$usuario = htmlspecialchars(addslashes($_POST['usuario']));
+$email = htmlspecialchars(addslashes($_POST['email']));
+$senha = htmlspecialchars(addslashes($_POST['senha']));
+$estado = htmlspecialchars(addslashes($_POST['estado']));
+$cidade = htmlspecialchars(addslashes($_POST['cidade']));
 
 
 //FUNÇÃO DE VALIDAR O EMAIL

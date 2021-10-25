@@ -7,15 +7,15 @@ try {
 
     $chkbox = $_POST['hob'];
     $chk = "";
-    $nome = addslashes($_POST['nome']);
-    $estado = addslashes($_POST['estado']);
-    $cidade = addslashes($_POST['cidade']);
-    $endereco = addslashes($_POST['endereco']);
-    $telefone = addslashes($_POST['telefone']);
-    $celular = addslashes($_POST['celular']);
+    $nome = htmlspecialchars(addslashes($_POST['nome']));
+    $estado = htmlspecialchars(addslashes($_POST['estado']));
+    $cidade = htmlspecialchars(addslashes($_POST['cidade']));
+    $endereco = htmlspecialchars(addslashes($_POST['endereco']));
+    $telefone = htmlspecialchars(addslashes($_POST['telefone']));
+    $celular = htmlspecialchars(addslashes($_POST['celular']));
     $tipo = $_POST['ensino'];
     $tip = "";
-    $descricao = addslashes($_POST['descricao']);
+    $descricao = htmlspecialchars(addslashes($_POST['descricao']));
 
     foreach ($chkbox as $chkboxresult) {
         $chk .= $chkboxresult . ",";

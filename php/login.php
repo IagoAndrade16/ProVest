@@ -3,8 +3,8 @@
 session_start();
 include("conexao.php");
 
-$senhaU = addslashes($_POST['senha']);
-$emailU = addslashes($_POST['email']);
+$senhaU = htmlspecialchars(addslashes($_POST['senha']));
+$emailU = htmlspecialchars(addslashes($_POST['email']));
 
 $credenciais = "SELECT codU, estadoU, senhaU, emailU, nomeU, cidadeU, imgU, dataInscriçãoU FROM usuarios WHERE senhaU = MD5('${senhaU}') and emailU = '${emailU}'";
 
