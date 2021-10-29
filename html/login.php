@@ -55,7 +55,7 @@
 
                 <div class="botao-entrar">
                     <center>
-                        <button type="submit" name="botãoLogin" class="btn btn-outline-dark">Entrar</button>
+                        <button type="submit" name="botãoLogin" class="btn btn-dark">Entrar</button>
                     </center>
                 </div>
             </center>

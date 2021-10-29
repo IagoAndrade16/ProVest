@@ -15,6 +15,8 @@ $nome = htmlspecialchars(addslashes($_POST['nomeC']));
 $tipoEnsino = $_POST['ensino'];
 $tipE = "";
 $telefC = htmlspecialchars(addslashes($_POST['tefonC']));
+$linkC = htmlspecialchars(addslashes($_POST['link']));
+$emailC = htmlspecialchars(addslashes($_POST['emailC']));
 
 if (isset($_POST['salvarfoto'])) {
     if (isset($_FILES['arquivo'])) {
@@ -90,6 +92,16 @@ if (isset($_POST['btn-salvar'])) {
     if (!empty($telefC)) {
         $edit9 = "UPDATE cursos SET telefC = '$telefC' WHERE codU = $sessionedi";
         $result9 = $mysqli->query($edit9);
+        header('Location: ../html/perfil.php');
+    }
+    if (!empty($linkC)) {
+        $edit10 = "UPDATE cursos SET links = '$linkC' WHERE codU = $sessionedi";
+        $result10 = $mysqli->query($edit10);
+        header('Location: ../html/perfil.php');
+    }
+    if (!empty($emailC)) {
+        $edit11 = "UPDATE cursos SET emailC = '$emailC' WHERE codU = $sessionedi";
+        $result11 = $mysqli->query($edit11);
         header('Location: ../html/perfil.php');
     }
 }

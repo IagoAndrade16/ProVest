@@ -1,6 +1,11 @@
 <?php include("conexao.php");
 session_start();
 
+$verif = "SELECT emailU FROM usuarios";
+$converif = $mysqli->query($verif);
+$linha = $converif->fetch_array();
+$authent = $linha['emailU'];
+
 try {
 
     $senha_usuario = htmlspecialchars(addslashes($_POST['senha_usuario'])); 
@@ -65,6 +70,10 @@ try {
     //VALIDAÇÃO CIDADE
     if (empty($_POST['cidade_usuario']) || $cidade_usuario == "Cidade") {
         $_SESSION['ci'] = true;
+        throw new Exception("<script>window.location = '../html/cadastro.php'</script>");
+    }
+    if ($email_usuario == $authent){
+        $_SESSION['emailAuthent'] = true;
         throw new Exception("<script>window.location = '../html/cadastro.php'</script>");
     }
 

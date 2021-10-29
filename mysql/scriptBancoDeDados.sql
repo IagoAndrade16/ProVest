@@ -13,6 +13,8 @@ CREATE TABLE cursos (
 	descricao TEXT NOT NULL,
 	dataInscriçãoC date,
 	horaInscriçãoC time,
+	links varchar(255),
+	emailC varchar(255),
 	PRIMARY KEY(codC)
 	    
 );

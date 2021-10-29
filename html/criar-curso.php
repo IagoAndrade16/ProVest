@@ -68,6 +68,12 @@ include("../php/verifica_login.php");
                             </label>
                         </div>
                         <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Pré-Medicina" id="Pré-Medicina" name="hob[]">
+                            <label class="form-check-label" for="Pré-Medicina">
+                                Pré-Medicina
+                            </label>
+                        </div>
+                        <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="Concursos Militares" id="Concursos Militares" name="hob[]">
                             <label class="form-check-label" for="Concursos Militares">
                                 Concursos Militares
@@ -109,7 +115,7 @@ include("../php/verifica_login.php");
                     <div class="p-3">
                         <div class="form">
                             <label>Descrição</label>
-                            <textarea class="form-control" name="descricao" style="height: 100px" required></textarea>
+                            <textarea class="form-control" name="descricao" style="height: 120px" required></textarea>
 
                         </div>
                         <br>
@@ -151,19 +157,40 @@ include("../php/verifica_login.php");
 
                 <!--3ª Coluna(estado, cidade e foto)-->
                 <div class="col-md-3">
+
                     <div class="p-3">
-                        <br>
+                        <label>
+                            Link
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                                <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
+                            </svg><label style="color: #6c757d; font-size: 11px; margin-left: 3px">(Não obrigatório)</labe>
+                            </label>
+                            <input type="text" value="" name="link" class="form-control">
+                    </div>
+
+                    <div style="margin-top: -15px" class="p-3">
+                        <label>
+                            Email
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                            </svg><label style="color: #6c757d; font-size: 11px; margin-left: 3px">(Não obrigatório)</labe>
+                            </label>
+                            <input type="email" value="" name="emailC" class="form-control">
+                    </div>
+
+                    <div style="margin-top: 20px" class="p-3">
                         <select class="form-select" name="estado" aria-label="Default select example" id="Estado"></select>
                     </div>
 
-                    <div class="p-3">
+                    <div style="margin-top: 15px" class="p-3">
                         <select class="form-select" name="cidade" aria-label="Default select example" id="Cidade">
                             <option>Cidade</option>>
                         </select>
                     </div>
 
-                    <footer>
-                        <label for="arquivo" style="margin-left: 1rem" class="btn btn-outline-dark"><i class="fa fa-file-image-o" aria-hidden="true"></i> Alterar foto</label>
+                    <footer><br>
+                        <label for="arquivo" style="margin-left: 1rem" class="btn btn-outline-dark"><i class="fa fa-file-image-o" aria-hidden="true"></i> Adicionar foto</label>
                         <input id="arquivo" style="display: none;" type="file" name="arquivo" require><br><br>
                     </footer>
                 </div>

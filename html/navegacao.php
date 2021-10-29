@@ -88,6 +88,8 @@ include("../php/verifica_login.php");
         $celular = array();
         $descricao = array();
         $foto = array();
+        $linkC = array();
+        $emailC = array(); 
         $i = 0;
         while ($linha = $result->fetch_array()) {
           $nomeC[$i] = $linha['nome'];
@@ -99,6 +101,8 @@ include("../php/verifica_login.php");
           $celular[$i] = $linha['celularC'];
           $descricao[$i] = $linha['descricao'];
           $foto[$i] = $linha['fotoPerfilC'];
+          $linkC[$i] = $linha['links'];
+          $emailC[$i] = $linha['emailC']
       ?>
 
           <div class="col-md-4">
@@ -127,7 +131,7 @@ include("../php/verifica_login.php");
                       <?php echo $tipoC[$i]; ?>
                     </li>
                   </ul>
-                  <a href="ver-curso.php?nomeC=<?php echo $nomeC[$i]; ?>&enderecoC=<?php echo $enderecoC[$i]; ?>&telefoneC=<?php echo $telefone[$i]; ?>&celular=<?php echo  $celular[$i]; ?>&tipo=<?php echo $tipoC[$i]; ?>&categoria=<?php echo $categoria[$i]; ?>&descricao=<?php echo $descricao[$i]; ?>&fotoC=<?php echo ("../php/upload/" . $foto[$i]); ?>" class="btn btn-dark">Ver curso</a>
+                  <a href="ver-curso.php?nomeC=<?php echo $nomeC[$i]; ?>&enderecoC=<?php echo $enderecoC[$i]; ?>&telefoneC=<?php echo $telefone[$i]; ?>&celular=<?php echo  $celular[$i]; ?>&tipo=<?php echo $tipoC[$i]; ?>&categoria=<?php echo $categoria[$i]; ?>&descricao=<?php echo $descricao[$i]; ?>&fotoC=<?php echo ("../php/upload/" . $foto[$i]); ?>&linkC=<?php echo $linkC[$i]; ?>&emailC=<?php echo $emailC[$i]; ?>" class="btn btn-dark">Ver curso</a>
                 </div>
               </div>
             </div>

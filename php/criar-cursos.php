@@ -16,6 +16,8 @@ try {
     $tipo = $_POST['ensino'];
     $tip = "";
     $descricao = htmlspecialchars(addslashes($_POST['descricao']));
+    $linkC = htmlspecialchars(addslashes($_POST['link']));
+    $emailC = htmlspecialchars(addslashes($_POST['emailC']));
 
     foreach ($chkbox as $chkboxresult) {
         $chk .= $chkboxresult . ",";
@@ -74,8 +76,10 @@ try {
         move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio . $novo_nome); //efetua o upload
 
     }
-
-    $criarCurso = "INSERT INTO cursos(categoria, celularC, cidadeC, codU, descricao, endereçoC, fotoPerfilC, estados, nome, tipoEnsino, telefC, dataInscriçãoC, horaInscriçãoC) VALUE('$chk','$celular','$cidade', $sessionC, '$descricao', '$endereco', '$novo_nome', '$estado', '$nome', '$tip', '$telefone', NOW(), NOW());";
+    if(isset($_POST['link'])){}
+    if(isset($_POST['emailC'])){}
+    
+    $criarCurso = "INSERT INTO cursos(categoria, celularC, cidadeC, codU, descricao, endereçoC, fotoPerfilC, estados, nome, tipoEnsino, telefC, dataInscriçãoC, horaInscriçãoC, links, emailC) VALUE('$chk','$celular','$cidade', $sessionC, '$descricao', '$endereco', '$novo_nome', '$estado', '$nome', '$tip', '$telefone', NOW(), NOW(), '$linkC', '$emailC');";
     $result1 = $mysqli->query($criarCurso);
     header('Location:../html/navegacao.php');
 } catch (Exception $e) {

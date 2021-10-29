@@ -32,18 +32,18 @@
     <div>
         <form action="../php/cadastrar.php" method="POST" enctype="multipart/form-data">
             <center>
-                <?php if (isset($_SESSION['semfoto'])) : ?>
-                    <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Foto não selecionada!</p>
-                <?php endif;
-                unset($_SESSION['semfoto']); ?>
-                
-                <label for="arquivo" style="padding-right: 4.5rem; padding-left: 4.5rem;" class="btn btn-outline-dark"><i class="fa fa-file-image-o" aria-hidden="true"></i> Adicionar foto</label>
-                <input id="arquivo" type="file" name="arquivo" style="display: none;" required>
-
                 <?php if (isset($_SESSION['erro'])) : ?>
                     <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Erro no cadastro</p>
                 <?php endif;
                 unset($_SESSION['erro']); ?>
+
+                <?php if (isset($_SESSION['semfoto'])) : ?>
+                    <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Foto não selecionada!</p>
+                <?php endif;
+                unset($_SESSION['semfoto']); ?>
+
+                <label for="arquivo" style="padding-right: 4.5rem; padding-left: 4.5rem;" class="btn btn-outline-dark"><i class="fa fa-file-image-o" aria-hidden="true"></i> Adicionar foto</label>
+                <input id="arquivo" type="file" name="arquivo" style="display: none;" required>
 
                 <div class="nome-usuario">
                     <input type="text" name="nome_usuario" required="" placeholder=" Nome de usuário">
@@ -90,6 +90,11 @@
                         <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Campo e-mail invalido</p>
                     <?php endif;
                     unset($_SESSION['valida']); ?>
+
+                    <?php if (isset($_SESSION['emailAuthent'])) : ?>
+                        <p style="color: red;"><i class="fa fa-info-circle" aria-hidden="true" style="color:red"></i> Este email já foi registrato</p>
+                    <?php endif;
+                    unset($_SESSION['emailAuthent']); ?>
                 </div>
 
                 <div class="senha">
@@ -110,7 +115,7 @@
 
                 <div>
                     <center>
-                        <button type="submit" name="Button" class="btn btn-outline-dark">Cria conta</button>
+                        <button type="submit" name="Button" class="btn btn-dark">Cria conta</button>
                     </center>
                 </div>
 
