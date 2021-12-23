@@ -8,7 +8,7 @@
 body {
     max-width: 100vw;
     max-height: 10vw;
-    /* background-image: url("../img/RE4wppK.jpg"); */
+    background-image: url("../img/RE4wppK.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,20 +19,20 @@ body {
     padding: 28px;
 }
 
-.container video{
+/* .container video{
     position: fixed;
     top: 0;
     left: 0;
     object-fit: cover;
     z-index: -1;
     background-size: cover;
-}
-.bg-rgb{
+} */
+/* .bg-rgb{
     background-color: rgba(0,0,0,0.8);
     width: 100%;
     height: 100vh;
     position: absolute;
-}
+} */
 header {
     width: 100%;
     display: flex;
